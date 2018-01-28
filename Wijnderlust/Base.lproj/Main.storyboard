@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Inspiration-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="Wijnderlust" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inspiration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjT-BD-ppK">
+                                <rect key="frame" x="18" y="51" width="169" height="41"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <color key="textColor" red="0.1803921568627451" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For your trip to Amsterdam in 39 days." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nab-JJ-tTz">
+                                <rect key="frame" x="18" y="101" width="339" height="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                <color key="textColor" red="0.58431372549019611" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="nab-JJ-tTz" secondAttribute="trailing" constant="18" id="5QM-Jr-IWK"/>
+                            <constraint firstItem="nab-JJ-tTz" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="18" id="9PT-li-Z5V"/>
+                            <constraint firstItem="bjT-BD-ppK" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="31" id="NGX-rN-t3y"/>
+                            <constraint firstItem="nab-JJ-tTz" firstAttribute="top" secondItem="bjT-BD-ppK" secondAttribute="bottom" constant="9" id="OnA-MK-Y2B"/>
+                            <constraint firstItem="bjT-BD-ppK" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="18" id="lh7-QW-T5Z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Inspiration" image="Inspiration" id="acW-dT-cKf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-320"/>
+        </scene>
+        <!--Around Me-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Wijnderlust" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Around Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1b-Cw-HPy">
+                                <rect key="frame" x="18" y="51" width="173" height="41"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <color key="textColor" red="0.18039215689999999" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="R1b-Cw-HPy" secondAttribute="trailing" constant="184" id="Py3-Ln-iK3"/>
+                            <constraint firstItem="R1b-Cw-HPy" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="31" id="ecZ-i7-GHm"/>
+                            <constraint firstItem="R1b-Cw-HPy" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="18" id="rod-1S-mUB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Around Me" image="AroundMe" id="cPa-gy-q4n"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1519" y="-321"/>
+        </scene>
+        <!--Third-->
+        <scene sceneID="Bm7-nh-RI5">
+            <objects>
+                <viewController title="Third" id="tMp-jh-2RC" customClass="ThirdViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RWu-Mc-zVf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Trips" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tms-br-BCG">
+                                <rect key="frame" x="18" y="51" width="135" height="41"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <color key="textColor" red="0.18039215689999999" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next Trip • 39 Days • Amsterdam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVO-Tg-z1d">
+                                <rect key="frame" x="18" y="101" width="339" height="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                <color key="textColor" red="0.58431372550000005" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EVO-Tg-z1d" firstAttribute="leading" secondItem="nLD-L1-7am" secondAttribute="leading" constant="18" id="S5i-Dc-SNc"/>
+                            <constraint firstItem="tms-br-BCG" firstAttribute="top" secondItem="nLD-L1-7am" secondAttribute="top" constant="31" id="Uof-po-dg1"/>
+                            <constraint firstItem="tms-br-BCG" firstAttribute="leading" secondItem="nLD-L1-7am" secondAttribute="leading" constant="18" id="cmg-lG-IPl"/>
+                            <constraint firstItem="EVO-Tg-z1d" firstAttribute="top" secondItem="tms-br-BCG" secondAttribute="bottom" constant="9" id="dQG-yb-UAq"/>
+                            <constraint firstItem="nLD-L1-7am" firstAttribute="trailing" secondItem="EVO-Tg-z1d" secondAttribute="trailing" constant="18" id="fAe-7V-3Y4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nLD-L1-7am"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My Trips" image="MyTrips" id="2YE-3n-DwA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M7b-gG-Fd3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2290" y="-321"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="Wjw-9e-aDW">
+            <objects>
+                <viewController id="Kgx-GX-aEe" customClass="FourthViewController" customModule="Wijnderlust" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dCI-sR-Ekn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2o-uX-Ga8">
+                                <rect key="frame" x="18" y="51" width="103" height="41"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <color key="textColor" red="0.18039215689999999" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Details, Reviews, and Rewards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OwN-JT-hZU">
+                                <rect key="frame" x="18" y="101" width="339" height="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                <color key="textColor" red="0.58431372550000005" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ajr-sM-Gv7" firstAttribute="trailing" secondItem="OwN-JT-hZU" secondAttribute="trailing" constant="18" id="USh-T8-LBa"/>
+                            <constraint firstItem="OwN-JT-hZU" firstAttribute="top" secondItem="v2o-uX-Ga8" secondAttribute="bottom" constant="9" id="Xqg-SD-Vtj"/>
+                            <constraint firstItem="v2o-uX-Ga8" firstAttribute="leading" secondItem="ajr-sM-Gv7" secondAttribute="leading" constant="18" id="aiM-6e-2uH"/>
+                            <constraint firstItem="v2o-uX-Ga8" firstAttribute="top" secondItem="ajr-sM-Gv7" secondAttribute="top" constant="31" id="y88-Mi-KtD"/>
+                            <constraint firstItem="OwN-JT-hZU" firstAttribute="leading" secondItem="dCI-sR-Ekn" secondAttribute="leading" constant="18" id="yXQ-D5-087"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ajr-sM-Gv7"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="Profile" id="udx-LI-0rI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bxM-0k-LUM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3025" y="-321"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleAspectFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.58431372550000005" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="barTintColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="tMp-jh-2RC" kind="relationship" relationship="viewControllers" id="Ns0-Wj-3B7"/>
+                        <segue destination="Kgx-GX-aEe" kind="relationship" relationship="viewControllers" id="NPF-eZ-i1p"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1906" y="-1239"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AroundMe" width="88" height="88"/>
+        <image name="Inspiration" width="88" height="88"/>
+        <image name="MyTrips" width="88" height="88"/>
+        <image name="Profile" width="88" height="88"/>
+    </resources>
+</document>
