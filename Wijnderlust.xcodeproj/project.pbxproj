@@ -17,6 +17,15 @@
 		C99E4C6E2019EA5400887281 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99E4C6C2019EA5400887281 /* LaunchScreen.storyboard */; };
 		C99E4C762019EB0600887281 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E4C752019EB0600887281 /* ThirdViewController.swift */; };
 		C9D2906A201E899700F05361 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9D29069201E899700F05361 /* GoogleService-Info.plist */; };
+		C9FCAD712020C91A00047DC6 /* Helper Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD702020C91A00047DC6 /* Helper Classes.swift */; };
+		C9FCAD752020D16900047DC6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD742020D16900047DC6 /* SignUpViewController.swift */; };
+		C9FCAD772020DF9300047DC6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD762020DF9300047DC6 /* User.swift */; };
+		C9FCAD7B2020E70D00047DC6 /* SignUpTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD7A2020E70D00047DC6 /* SignUpTwoViewController.swift */; };
+		C9FCAD7D202151B100047DC6 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD7C202151B100047DC6 /* SignInViewController.swift */; };
+		C9FCAD802021EC7100047DC6 /* Sign Up and In Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD7F2021EC7100047DC6 /* Sign Up and In Methods.swift */; };
+		C9FCAD832021F2D500047DC6 /* FirebaseDBFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD822021F2D500047DC6 /* FirebaseDBFunctions.swift */; };
+		C9FCAD852022035A00047DC6 /* MainNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD842022035A00047DC6 /* MainNavController.swift */; };
+		C9FCAD8720221A3F00047DC6 /* SignInUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD8620221A3F00047DC6 /* SignInUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +42,15 @@
 		C99E4C6F2019EA5400887281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C99E4C752019EB0600887281 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		C9D29069201E899700F05361 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C9FCAD702020C91A00047DC6 /* Helper Classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper Classes.swift"; sourceTree = "<group>"; };
+		C9FCAD742020D16900047DC6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		C9FCAD762020DF9300047DC6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C9FCAD7A2020E70D00047DC6 /* SignUpTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTwoViewController.swift; sourceTree = "<group>"; };
+		C9FCAD7C202151B100047DC6 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		C9FCAD7F2021EC7100047DC6 /* Sign Up and In Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sign Up and In Methods.swift"; sourceTree = "<group>"; };
+		C9FCAD822021F2D500047DC6 /* FirebaseDBFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDBFunctions.swift; sourceTree = "<group>"; };
+		C9FCAD842022035A00047DC6 /* MainNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavController.swift; sourceTree = "<group>"; };
+		C9FCAD8620221A3F00047DC6 /* SignInUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUpViewController.swift; sourceTree = "<group>"; };
 		E42AA67C41B86445D6E366A6 /* Pods-Wijnderlust.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wijnderlust.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wijnderlust/Pods-Wijnderlust.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,10 +96,14 @@
 			isa = PBXGroup;
 			children = (
 				C99E4C612019EA5400887281 /* AppDelegate.swift */,
-				C99E4C632019EA5400887281 /* FirstViewController.swift */,
-				C99E4C652019EA5400887281 /* SecondViewController.swift */,
-				C99E4C752019EB0600887281 /* ThirdViewController.swift */,
-				C996B6642019F1ED0087CBFB /* FourthViewController.swift */,
+				C9FCAD8820221AED00047DC6 /* Main Tabs */,
+				C9FCAD8620221A3F00047DC6 /* SignInUpViewController.swift */,
+				C9FCAD842022035A00047DC6 /* MainNavController.swift */,
+				C9FCAD7C202151B100047DC6 /* SignInViewController.swift */,
+				C9FCAD792020E6E900047DC6 /* SignUp */,
+				C9FCAD782020DF9E00047DC6 /* Data Structs */,
+				C9FCAD812021F2B100047DC6 /* Setup Files */,
+				C9FCAD7E2021EC4400047DC6 /* Functions */,
 				C99E4C672019EA5400887281 /* Main.storyboard */,
 				C99E4C6A2019EA5400887281 /* Assets.xcassets */,
 				C99E4C6C2019EA5400887281 /* LaunchScreen.storyboard */,
@@ -89,6 +111,51 @@
 				C99E4C6F2019EA5400887281 /* Info.plist */,
 			);
 			path = Wijnderlust;
+			sourceTree = "<group>";
+		};
+		C9FCAD782020DF9E00047DC6 /* Data Structs */ = {
+			isa = PBXGroup;
+			children = (
+				C9FCAD762020DF9300047DC6 /* User.swift */,
+			);
+			path = "Data Structs";
+			sourceTree = "<group>";
+		};
+		C9FCAD792020E6E900047DC6 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				C9FCAD742020D16900047DC6 /* SignUpViewController.swift */,
+				C9FCAD7A2020E70D00047DC6 /* SignUpTwoViewController.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		C9FCAD7E2021EC4400047DC6 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				C9FCAD702020C91A00047DC6 /* Helper Classes.swift */,
+				C9FCAD7F2021EC7100047DC6 /* Sign Up and In Methods.swift */,
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
+		C9FCAD812021F2B100047DC6 /* Setup Files */ = {
+			isa = PBXGroup;
+			children = (
+				C9FCAD822021F2D500047DC6 /* FirebaseDBFunctions.swift */,
+			);
+			path = "Setup Files";
+			sourceTree = "<group>";
+		};
+		C9FCAD8820221AED00047DC6 /* Main Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				C99E4C632019EA5400887281 /* FirstViewController.swift */,
+				C99E4C652019EA5400887281 /* SecondViewController.swift */,
+				C99E4C752019EB0600887281 /* ThirdViewController.swift */,
+				C996B6642019F1ED0087CBFB /* FourthViewController.swift */,
+			);
+			path = "Main Tabs";
 			sourceTree = "<group>";
 		};
 		E61959AA79C01FC8B180E2DE /* Pods */ = {
@@ -181,6 +248,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Wijnderlust/Pods-Wijnderlust-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Locksmith/Locksmith.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -188,6 +256,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Locksmith.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -237,10 +306,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				C99E4C662019EA5400887281 /* SecondViewController.swift in Sources */,
+				C9FCAD7B2020E70D00047DC6 /* SignUpTwoViewController.swift in Sources */,
+				C9FCAD752020D16900047DC6 /* SignUpViewController.swift in Sources */,
+				C9FCAD712020C91A00047DC6 /* Helper Classes.swift in Sources */,
 				C99E4C622019EA5400887281 /* AppDelegate.swift in Sources */,
+				C9FCAD772020DF9300047DC6 /* User.swift in Sources */,
 				C99E4C762019EB0600887281 /* ThirdViewController.swift in Sources */,
 				C99E4C642019EA5400887281 /* FirstViewController.swift in Sources */,
+				C9FCAD832021F2D500047DC6 /* FirebaseDBFunctions.swift in Sources */,
+				C9FCAD8720221A3F00047DC6 /* SignInUpViewController.swift in Sources */,
+				C9FCAD802021EC7100047DC6 /* Sign Up and In Methods.swift in Sources */,
+				C9FCAD7D202151B100047DC6 /* SignInViewController.swift in Sources */,
 				C996B6652019F1ED0087CBFB /* FourthViewController.swift in Sources */,
+				C9FCAD852022035A00047DC6 /* MainNavController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

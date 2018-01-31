@@ -12,8 +12,7 @@ class FirstViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let wijnderlustRed = UIColor(red: 149/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1.0)
-        // Do any additional setup after loading the view, typically from a nib.
+
     }
 
     override func didReceiveMemoryWarning() {

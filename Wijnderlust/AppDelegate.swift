@@ -20,6 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
+        let userID = UserDefaults.standard.getCurrentUserId()
+        
+        print(userID)
+        
+        
         return true
     }
 

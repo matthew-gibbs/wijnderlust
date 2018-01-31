@@ -1,19 +1,17 @@
 //
-//  FourthViewController.swift
+//  MainNavController.swift
 //  Wijnderlust
 //
-//  Created by Matt Gibbs on 25/01/2018.
+//  Created by Matt Gibbs on 31/01/2018.
 //  Copyright © 2018 MG Creative Services. All rights reserved.
 //
 
 import UIKit
 
-class FourthViewController: UIViewController {
+class MainNavController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
