@@ -46,7 +46,11 @@ extension UserDefaults {
     }
     
     func getCurrentUserId() -> String {
-        return string(forKey: "userId")!
+        if let userId = string(forKey: "userId") {
+            return userId
+        }
+        
+        return ""
     }
     
     func setIsLoggedIn(value: Bool) {
