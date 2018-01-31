@@ -51,6 +51,9 @@ class SignInViewController: UIViewController {
             Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
                 if let u = user {
                     print(u)
+                    //Set local ID and logged in status
+                    UserDefaults.standard.setIsLoggedIn(value: true)
+                    UserDefaults.standard.setCurrentUser(id: u.uid)
                     self.performSegue(withIdentifier: "goHomeSignIn", sender: self)
                 } else if let e = error {
                     print(error!)

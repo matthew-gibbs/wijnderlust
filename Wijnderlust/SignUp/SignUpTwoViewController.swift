@@ -81,9 +81,10 @@ class SignUpTwoViewController: UIViewController {
                     }
                     //Go to home.
                     self.performSegue(withIdentifier: "goHomeSignUp", sender: self)
-                } else if let e = error {
+                } else if let error = error {
                     //FIXME: Nicer error messages for issues.
-                    self.showAlertWith(title: "Error!", message: "\(e)")
+                    print(error.localizedDescription)
+                    self.showAlertWith(title: "Error!", message: "\(error.localizedDescription)")
                 }
             })
         }

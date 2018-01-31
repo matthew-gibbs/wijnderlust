@@ -7,14 +7,27 @@
 //
 
 import UIKit
+import Firebase 
+import FirebaseDatabase
+
 
 class FourthViewController: UIViewController {
     @IBOutlet weak var dfdf: UILabel!
+    @IBOutlet weak var dataLabel: UILabel!
+    var ref: DatabaseReference! = Database.database().reference()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dfdf.text = UserDefaults.standard.getCurrentUserId()
+        
+        let id = UserDefaults.standard.getCurrentUserId()
+        dfdf.text = id
         // Do any additional setup after loading the view.
+        
+        self.ref.child("users").child(id).child("userData").observe(DataEventType.value, with: { (snapshot) in
+            let data = snapshot.value as? [String : AnyObject] ?? [:]
+            self.dataLabel.text = data["firstName"] as? String
+            // ...
+        })
     }
 
     override func didReceiveMemoryWarning() {

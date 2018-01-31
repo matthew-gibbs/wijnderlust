@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Locksmith
 
 struct User {
     var id: String

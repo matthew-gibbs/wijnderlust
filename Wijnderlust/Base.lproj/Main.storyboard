@@ -134,7 +134,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWC-fj-5LI" userLabel="TestLabel">
-                                <rect key="frame" x="18" y="323" width="339" height="21"/>
+                                <rect key="frame" x="18" y="563" width="339" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -146,6 +146,15 @@
                                     <action selector="logOut:" destination="Kgx-GX-aEe" eventType="touchUpInside" id="uQ9-cp-Mh7"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12p-ec-LUd">
+                                <rect key="frame" x="18" y="164" width="339" height="135"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="135" id="E6I-US-B1o"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -153,10 +162,13 @@
                             <constraint firstItem="ajr-sM-Gv7" firstAttribute="bottom" secondItem="ImT-Xd-4LJ" secondAttribute="bottom" constant="63" id="Mbu-lJ-4yK"/>
                             <constraint firstItem="ajr-sM-Gv7" firstAttribute="trailing" secondItem="vWC-fj-5LI" secondAttribute="trailing" constant="18" id="U4b-j4-Yhd"/>
                             <constraint firstItem="ajr-sM-Gv7" firstAttribute="trailing" secondItem="OwN-JT-hZU" secondAttribute="trailing" constant="18" id="USh-T8-LBa"/>
+                            <constraint firstItem="ajr-sM-Gv7" firstAttribute="bottom" secondItem="vWC-fj-5LI" secondAttribute="bottom" constant="34" id="XpL-cx-Hpd"/>
                             <constraint firstItem="OwN-JT-hZU" firstAttribute="top" secondItem="v2o-uX-Ga8" secondAttribute="bottom" constant="9" id="Xqg-SD-Vtj"/>
+                            <constraint firstItem="12p-ec-LUd" firstAttribute="top" secondItem="OwN-JT-hZU" secondAttribute="bottom" constant="47" id="Zrv-7F-O72"/>
                             <constraint firstItem="v2o-uX-Ga8" firstAttribute="leading" secondItem="ajr-sM-Gv7" secondAttribute="leading" constant="18" id="aiM-6e-2uH"/>
                             <constraint firstItem="ImT-Xd-4LJ" firstAttribute="leading" secondItem="ajr-sM-Gv7" secondAttribute="leading" constant="160" id="bwE-CM-B0U"/>
-                            <constraint firstItem="vWC-fj-5LI" firstAttribute="top" secondItem="OwN-JT-hZU" secondAttribute="bottom" constant="206" id="kav-Vu-xoa"/>
+                            <constraint firstItem="12p-ec-LUd" firstAttribute="leading" secondItem="ajr-sM-Gv7" secondAttribute="leading" constant="18" id="dU2-e2-81c"/>
+                            <constraint firstItem="ajr-sM-Gv7" firstAttribute="trailing" secondItem="12p-ec-LUd" secondAttribute="trailing" constant="18" id="qnr-gY-Vxw"/>
                             <constraint firstItem="v2o-uX-Ga8" firstAttribute="top" secondItem="ajr-sM-Gv7" secondAttribute="top" constant="31" id="y88-Mi-KtD"/>
                             <constraint firstItem="OwN-JT-hZU" firstAttribute="leading" secondItem="dCI-sR-Ekn" secondAttribute="leading" constant="18" id="yXQ-D5-087"/>
                             <constraint firstItem="vWC-fj-5LI" firstAttribute="leading" secondItem="ajr-sM-Gv7" secondAttribute="leading" constant="18" id="yub-Og-E7A"/>
@@ -165,13 +177,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="Profile" id="udx-LI-0rI"/>
                     <connections>
+                        <outlet property="dataLabel" destination="12p-ec-LUd" id="BmQ-hC-qlp"/>
                         <outlet property="dfdf" destination="vWC-fj-5LI" id="Xku-du-IOP"/>
                         <segue destination="87p-Jj-C22" kind="presentation" identifier="logOutSegue" id="oz2-c3-CX0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bxM-0k-LUM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3025" y="-321"/>
+            <point key="canvasLocation" x="3024.8000000000002" y="-321.58920539730138"/>
         </scene>
         <!--Initial View-->
         <scene sceneID="RX7-d2-B7b">
@@ -259,7 +272,7 @@
                         <viewLayoutGuide key="safeArea" id="oTg-M5-oeL"/>
                     </view>
                     <connections>
-                        <segue destination="49e-Tb-3d3" kind="show" identifier="isSignedIn" id="s8K-Oy-dFo"/>
+                        <segue destination="49e-Tb-3d3" kind="showDetail" identifier="isSignedIn" animates="NO" action="showViewController:sender:" id="s8K-Oy-dFo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1CC-f4-RG9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -401,7 +414,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VSm-SE-E1N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-626" y="-2203"/>
+            <point key="canvasLocation" x="140" y="-2015"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="je4-jf-mZc">
@@ -718,7 +731,7 @@
         <image name="SplashLogo" width="236" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="s8K-Oy-dFo"/>
+        <segue reference="4Em-ky-nK9"/>
         <segue reference="oz2-c3-CX0"/>
     </inferredMetricsTieBreakers>
 </document>
