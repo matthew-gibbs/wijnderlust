@@ -36,6 +36,17 @@ class ProfileMenuTableViewController: UITableViewController {
             }
         })
     }
+    
+    //Remove the nav bar.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -60,14 +71,36 @@ class ProfileMenuTableViewController: UITableViewController {
  
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        //Logging Out
-        if indexPath.row == 4
-        {
+        //Profile Options - EDIT PROFILE
+        if indexPath.row == 0 {
+            print("Editing Profile")
+            self.performSegue(withIdentifier: "editProfileSegue", sender: self)
+        }
+        //Profile Options - Your Reviews
+        else if indexPath.row == 1 {
+            print("Your Reviews")
+            self.performSegue(withIdentifier: "yourReviewsSegue", sender: self)
+        }
+        //Profile Options - Trip History
+        else if indexPath.row == 2 {
+            print("Trip History")
+            self.performSegue(withIdentifier: "tripHistorySegue", sender: self)
+        }
+        //Profile Options - Settings
+        else if indexPath.row == 3 {
+            print("Setting")
+            self.performSegue(withIdentifier: "settingsSegue", sender: self)
+        }
+        //Profile Options - LOG OUT
+        else if indexPath.row == 4 {
             print("Logging Out")
             UserDefaults.standard.setIsLoggedIn(value: false)
             UserDefaults.standard.setCurrentUser(id: "")
             self.performSegue(withIdentifier: "logOut", sender: self)
         }
+        
+        //Deselect the cell
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     /*

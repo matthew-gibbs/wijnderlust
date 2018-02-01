@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B8563E5F761C96BAEF340DD8 /* Pods_Wijnderlust.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C74C7A61C3D6CBCF37CBB59 /* Pods_Wijnderlust.framework */; };
 		C91064CE2023555400A71F78 /* ProfileMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91064CD2023555400A71F78 /* ProfileMenuTableViewController.swift */; };
+		C91064D120237AE700A71F78 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91064D020237AE700A71F78 /* EditProfileViewController.swift */; };
 		C996B6652019F1ED0087CBFB /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C996B6642019F1ED0087CBFB /* FourthViewController.swift */; };
 		C99E4C622019EA5400887281 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E4C612019EA5400887281 /* AppDelegate.swift */; };
 		C99E4C642019EA5400887281 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E4C632019EA5400887281 /* FirstViewController.swift */; };
@@ -33,6 +34,7 @@
 		4C74C7A61C3D6CBCF37CBB59 /* Pods_Wijnderlust.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wijnderlust.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D04B44D66B102F96051011D /* Pods-Wijnderlust.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wijnderlust.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wijnderlust/Pods-Wijnderlust.release.xcconfig"; sourceTree = "<group>"; };
 		C91064CD2023555400A71F78 /* ProfileMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMenuTableViewController.swift; sourceTree = "<group>"; };
+		C91064D020237AE700A71F78 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		C996B6642019F1ED0087CBFB /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		C99E4C5E2019EA5400887281 /* Wijnderlust.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wijnderlust.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C99E4C612019EA5400887281 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C91064CF20237AA700A71F78 /* Profile Views */ = {
+			isa = PBXGroup;
+			children = (
+				C91064D020237AE700A71F78 /* EditProfileViewController.swift */,
+			);
+			path = "Profile Views";
+			sourceTree = "<group>";
+		};
 		C99E4C552019EA5400887281 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +110,7 @@
 				C99E4C612019EA5400887281 /* AppDelegate.swift */,
 				C9FCAD8820221AED00047DC6 /* Main Tabs */,
 				C9FCAD8620221A3F00047DC6 /* SignInUpViewController.swift */,
+				C91064CF20237AA700A71F78 /* Profile Views */,
 				C9FCAD842022035A00047DC6 /* MainNavController.swift */,
 				C9FCAD7C202151B100047DC6 /* SignInViewController.swift */,
 				C9FCAD792020E6E900047DC6 /* SignUp */,
@@ -306,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C91064D120237AE700A71F78 /* EditProfileViewController.swift in Sources */,
 				C99E4C662019EA5400887281 /* SecondViewController.swift in Sources */,
 				C9FCAD7B2020E70D00047DC6 /* SignUpTwoViewController.swift in Sources */,
 				C9FCAD752020D16900047DC6 /* SignUpViewController.swift in Sources */,
