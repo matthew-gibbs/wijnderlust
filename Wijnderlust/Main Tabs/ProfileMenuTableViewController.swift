@@ -36,7 +36,7 @@ class ProfileMenuTableViewController: UITableViewController {
         self.ref.child("users").child(id).child("userData").observe(DataEventType.value, with: { (snapshot) in
             let data = snapshot.value as? [String : AnyObject] ?? [:]
             if let userName = data["firstName"] as? String {
-                self.nameLabel.text = "Hello \(userName)"
+                self.nameLabel.text = "Hello \(userName)!"
             }
         })
         navigationController?.setNavigationBarHidden(true, animated: false)

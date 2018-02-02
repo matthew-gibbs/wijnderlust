@@ -21,5 +21,16 @@ func getCurrentUserData(forid id: String) -> [String: AnyObject] {
     
     return data
 }
-
+//FIXME: Make this Function work.
+//func getCurrentUserReviews() -> NSDictionary {
+//    let userID = Auth.auth().currentUser?.uid
+//    var userReviews: NSDictionary
+//    ref.child("users").child(userID!).child("reviews").observeSingleEvent(of: .value, with: { (snapshot) in
+//        if let r = snapshot.value as? NSDictionary {
+//            userReviews = r
+//        }
+//    })
+//    print("Remember to check output for nil")
+//    return userReviews
+//}
 

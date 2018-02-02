@@ -10,7 +10,7 @@
 		B8563E5F761C96BAEF340DD8 /* Pods_Wijnderlust.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C74C7A61C3D6CBCF37CBB59 /* Pods_Wijnderlust.framework */; };
 		C91064CE2023555400A71F78 /* ProfileMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91064CD2023555400A71F78 /* ProfileMenuTableViewController.swift */; };
 		C91064D120237AE700A71F78 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91064D020237AE700A71F78 /* EditProfileViewController.swift */; };
-		C996B6652019F1ED0087CBFB /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C996B6642019F1ED0087CBFB /* FourthViewController.swift */; };
+		C91064D32024C97A00A71F78 /* YourReviewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91064D22024C97A00A71F78 /* YourReviewsTableViewController.swift */; };
 		C99E4C622019EA5400887281 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E4C612019EA5400887281 /* AppDelegate.swift */; };
 		C99E4C642019EA5400887281 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E4C632019EA5400887281 /* FirstViewController.swift */; };
 		C99E4C662019EA5400887281 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E4C652019EA5400887281 /* SecondViewController.swift */; };
@@ -35,7 +35,7 @@
 		6D04B44D66B102F96051011D /* Pods-Wijnderlust.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wijnderlust.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wijnderlust/Pods-Wijnderlust.release.xcconfig"; sourceTree = "<group>"; };
 		C91064CD2023555400A71F78 /* ProfileMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMenuTableViewController.swift; sourceTree = "<group>"; };
 		C91064D020237AE700A71F78 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
-		C996B6642019F1ED0087CBFB /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		C91064D22024C97A00A71F78 /* YourReviewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourReviewsTableViewController.swift; sourceTree = "<group>"; };
 		C99E4C5E2019EA5400887281 /* Wijnderlust.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wijnderlust.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C99E4C612019EA5400887281 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C99E4C632019EA5400887281 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				C91064D020237AE700A71F78 /* EditProfileViewController.swift */,
+				C91064D22024C97A00A71F78 /* YourReviewsTableViewController.swift */,
 			);
 			path = "Profile Views";
 			sourceTree = "<group>";
@@ -167,7 +168,6 @@
 				C99E4C652019EA5400887281 /* SecondViewController.swift */,
 				C91064CD2023555400A71F78 /* ProfileMenuTableViewController.swift */,
 				C99E4C752019EB0600887281 /* ThirdViewController.swift */,
-				C996B6642019F1ED0087CBFB /* FourthViewController.swift */,
 			);
 			path = "Main Tabs";
 			sourceTree = "<group>";
@@ -327,11 +327,11 @@
 				C91064CE2023555400A71F78 /* ProfileMenuTableViewController.swift in Sources */,
 				C99E4C762019EB0600887281 /* ThirdViewController.swift in Sources */,
 				C99E4C642019EA5400887281 /* FirstViewController.swift in Sources */,
+				C91064D32024C97A00A71F78 /* YourReviewsTableViewController.swift in Sources */,
 				C9FCAD832021F2D500047DC6 /* FirebaseDBFunctions.swift in Sources */,
 				C9FCAD8720221A3F00047DC6 /* SignInUpViewController.swift in Sources */,
 				C9FCAD802021EC7100047DC6 /* Sign Up and In Methods.swift in Sources */,
 				C9FCAD7D202151B100047DC6 /* SignInViewController.swift in Sources */,
-				C996B6652019F1ED0087CBFB /* FourthViewController.swift in Sources */,
 				C9FCAD852022035A00047DC6 /* MainNavController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
