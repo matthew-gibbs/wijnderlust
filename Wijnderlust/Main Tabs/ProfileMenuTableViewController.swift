@@ -23,7 +23,11 @@ class ProfileMenuTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
+    }
+    
+    //Remove the nav bar.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         self.tableView.backgroundColor = UIColor.white
         
         let id = UserDefaults.standard.getCurrentUserId()
@@ -35,11 +39,6 @@ class ProfileMenuTableViewController: UITableViewController {
                 self.nameLabel.text = "Hello \(userName)"
             }
         })
-    }
-    
-    //Remove the nav bar.
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
