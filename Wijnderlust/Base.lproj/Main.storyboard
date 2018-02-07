@@ -11,43 +11,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Inspiration-->
-        <scene sceneID="hNz-n2-bh7">
-            <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="Wijnderlust" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inspiration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjT-BD-ppK">
-                                <rect key="frame" x="18" y="51" width="169" height="41"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
-                                <color key="textColor" red="0.1803921568627451" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For your trip to Amsterdam in 39 days." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nab-JJ-tTz">
-                                <rect key="frame" x="18" y="101" width="339" height="16"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
-                                <color key="textColor" red="0.58431372549019611" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="nab-JJ-tTz" secondAttribute="trailing" constant="18" id="5QM-Jr-IWK"/>
-                            <constraint firstItem="nab-JJ-tTz" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="18" id="9PT-li-Z5V"/>
-                            <constraint firstItem="bjT-BD-ppK" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="31" id="NGX-rN-t3y"/>
-                            <constraint firstItem="nab-JJ-tTz" firstAttribute="top" secondItem="bjT-BD-ppK" secondAttribute="bottom" constant="9" id="OnA-MK-Y2B"/>
-                            <constraint firstItem="bjT-BD-ppK" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="18" id="lh7-QW-T5Z"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Inspiration" image="Inspiration" id="acW-dT-cKf"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
-        </scene>
         <!--Around Me-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
@@ -119,7 +82,7 @@
         <scene sceneID="xSF-z5-8Hv">
             <objects>
                 <navigationController id="Ftd-94-4kn" userLabel="Profile Navigation Controller" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="vXn-X1-33O"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="Profile" id="vXn-X1-33O"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="LwO-JZ-Zxp">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -383,7 +346,7 @@
         <!--Trip History-->
         <scene sceneID="gdr-Zc-G21">
             <objects>
-                <tableViewController title="Trip History" id="0Tv-Af-SD7" sceneMemberID="viewController">
+                <tableViewController title="Trip History" id="0Tv-Af-SD7" customClass="TripHistoryTableViewController" customModule="Wijnderlust" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gGU-qG-qT2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -427,13 +390,13 @@
         <scene sceneID="Ctn-Fl-LFB">
             <objects>
                 <tableViewController title="Your Reviews" id="560-yQ-yMY" customClass="YourReviewsTableViewController" customModule="Wijnderlust" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="hx6-Ft-zXp">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hx6-Ft-zXp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Vgj-JD-8P0">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="60"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReviewCell" id="Vgj-JD-8P0" customClass="ReviewCell" customModule="Wijnderlust" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vgj-JD-8P0" id="7Bv-Jd-6gf">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
@@ -441,8 +404,8 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOp-au-F77" userLabel="reviewTitleLabel">
                                             <rect key="frame" x="16" y="19" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                            <color key="textColor" red="0.18039215689999999" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -451,6 +414,9 @@
                                         <constraint firstItem="mOp-au-F77" firstAttribute="centerY" secondItem="7Bv-Jd-6gf" secondAttribute="centerY" id="eEm-vd-nDE"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="reviewLabel" destination="mOp-au-F77" id="ntU-pa-QIe"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1142,6 +1108,197 @@
             </objects>
             <point key="canvasLocation" x="1905" y="-2982"/>
         </scene>
+        <!--Inspiration Navigation Controller-->
+        <scene sceneID="cjG-B9-sD0">
+            <objects>
+                <navigationController title="Inspiration Navigation Controller" id="CvJ-U3-6G3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Inspiration" image="Inspiration" id="dg3-6L-wmU"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="mE5-lJ-dGJ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="saQ-ru-j47" kind="relationship" relationship="rootViewController" id="jRT-9G-c34"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GY3-FF-I7l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="737" y="-322"/>
+        </scene>
+        <!--Inspiration-->
+        <scene sceneID="8za-sp-Eyp">
+            <objects>
+                <tableViewController title="Inspiration" id="saQ-ru-j47" customClass="InspirationController" customModule="Wijnderlust" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="249" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="4yf-4L-skP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <inset key="separatorInset" minX="18" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="VQh-Uf-5Sc" userLabel="InspirationHeader">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inspiration" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qt1-ou-btw">
+                                    <rect key="frame" x="18" y="31" width="169" height="41"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="qt1-ou-btw" firstAttribute="top" secondItem="VQh-Uf-5Sc" secondAttribute="top" constant="31" id="TQD-OG-h3c"/>
+                                <constraint firstItem="qt1-ou-btw" firstAttribute="leading" secondItem="VQh-Uf-5Sc" secondAttribute="leading" constant="18" id="Uiz-1G-DfC"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VenueCell" rowHeight="249" id="BwC-Fj-Dxl" customClass="VenueCell" customModule="Wijnderlust" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="135.5" width="375" height="249"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BwC-Fj-Dxl" id="obT-96-HA5">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="249"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="47H-4A-w36">
+                                            <rect key="frame" x="18" y="8" width="339" height="233"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="APW-Tg-OTK" userLabel="venueImage">
+                                                    <rect key="frame" x="0.0" y="0.0" width="339" height="130"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="130" id="q2f-YF-E4W"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zfQ-J2-aYp">
+                                                    <rect key="frame" x="8" y="140" width="178" height="16"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venue Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGg-rw-DWa" userLabel="venueAddressLabel">
+                                                            <rect key="frame" x="0.0" y="0.0" width="97" height="16"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="•" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Q4-g5-IQ9" userLabel="Venue Divider">
+                                                            <rect key="frame" x="102" y="0.0" width="6" height="16"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="66l-Aj-Vs9" userLabel="venueRating" customClass="CosmosView" customModule="Wijnderlust" customModuleProvider="target">
+                                                            <rect key="frame" x="113" y="1.5" width="65" height="13"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                                                    <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
+                                                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
+                                                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="filledBorderColor">
+                                                                    <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                                                    <integer key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                                    <real key="value" value="13"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="starMargin">
+                                                                    <real key="value" value="0.0"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
+                                                                    <integer key="value" value="0"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venue Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJW-pJ-09L" userLabel="venueNameLabel">
+                                                    <rect key="frame" x="8" y="160" width="323" height="26.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                    <color key="textColor" red="0.18039215689999999" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XTV-fo-ZOj">
+                                                    <rect key="frame" x="8" y="195" width="120" height="30"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image=" Wine Not Filled " translatesAutoresizingMaskIntoConstraints="NO" id="UJv-Wt-3lS" userLabel="wineStatusImage">
+                                                            <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                            <color key="tintColor" red="0.68395806349999999" green="0.096892753760000006" blue="0.00096701340960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="XEn-lr-7sO"/>
+                                                                <constraint firstAttribute="width" constant="30" id="ey0-oO-0rd"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wine List Status" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUg-7S-5SU" userLabel="wineStatusLabel">
+                                                            <rect key="frame" x="38" y="9" width="82" height="12"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
+                                                            <color key="textColor" red="0.58431372550000005" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="XTV-fo-ZOj" firstAttribute="leading" secondItem="47H-4A-w36" secondAttribute="leading" constant="8" id="A0I-d3-c3P"/>
+                                                <constraint firstItem="uJW-pJ-09L" firstAttribute="leading" secondItem="47H-4A-w36" secondAttribute="leading" constant="8" id="Eab-T2-HDJ"/>
+                                                <constraint firstItem="zfQ-J2-aYp" firstAttribute="leading" secondItem="47H-4A-w36" secondAttribute="leading" constant="8" id="Fs2-GJ-bKp"/>
+                                                <constraint firstItem="zfQ-J2-aYp" firstAttribute="top" secondItem="APW-Tg-OTK" secondAttribute="bottom" constant="10" id="GTZ-0Q-WHS"/>
+                                                <constraint firstItem="uJW-pJ-09L" firstAttribute="top" secondItem="zfQ-J2-aYp" secondAttribute="bottom" constant="4" id="IPt-Lt-clx"/>
+                                                <constraint firstAttribute="trailing" secondItem="uJW-pJ-09L" secondAttribute="trailing" constant="8" id="Ioe-11-cUM"/>
+                                                <constraint firstAttribute="bottom" secondItem="XTV-fo-ZOj" secondAttribute="bottom" constant="8" id="NxS-Er-ORD"/>
+                                                <constraint firstItem="XTV-fo-ZOj" firstAttribute="top" secondItem="uJW-pJ-09L" secondAttribute="bottom" constant="8.5" id="aRI-gD-AUp"/>
+                                                <constraint firstItem="APW-Tg-OTK" firstAttribute="leading" secondItem="47H-4A-w36" secondAttribute="leading" id="mYS-0M-apI"/>
+                                                <constraint firstAttribute="trailing" secondItem="APW-Tg-OTK" secondAttribute="trailing" id="qiO-8f-5cd"/>
+                                                <constraint firstAttribute="height" constant="233" id="vaI-Gn-r8U"/>
+                                                <constraint firstItem="APW-Tg-OTK" firstAttribute="top" secondItem="47H-4A-w36" secondAttribute="top" id="xLf-tA-hq6"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                    <integer key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="47H-4A-w36" firstAttribute="top" secondItem="obT-96-HA5" secondAttribute="top" constant="8" id="EZy-L8-wtz"/>
+                                        <constraint firstAttribute="trailing" secondItem="47H-4A-w36" secondAttribute="trailing" constant="18" id="YLR-cJ-UyB"/>
+                                        <constraint firstItem="47H-4A-w36" firstAttribute="leading" secondItem="obT-96-HA5" secondAttribute="leading" constant="18" id="q4d-4N-gmQ"/>
+                                        <constraint firstItem="47H-4A-w36" firstAttribute="centerX" secondItem="obT-96-HA5" secondAttribute="centerX" id="xGt-ns-5HR"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="venueAddressLabel" destination="mGg-rw-DWa" id="fld-dd-b3N"/>
+                                    <outlet property="venueImage" destination="APW-Tg-OTK" id="xBO-IW-52o"/>
+                                    <outlet property="venueNameLabel" destination="uJW-pJ-09L" id="knO-Xt-RWj"/>
+                                    <outlet property="venueRating" destination="66l-Aj-Vs9" id="doz-Z1-9vY"/>
+                                    <outlet property="wineStatusImage" destination="UJv-Wt-3lS" id="7tZ-gT-wFn"/>
+                                    <outlet property="wineStatusLabel" destination="sUg-7S-5SU" id="O6m-Mj-bs8"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="saQ-ru-j47" id="bE8-NK-3MU"/>
+                            <outlet property="delegate" destination="saQ-ru-j47" id="Lnr-Ys-q2k"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="OiF-g2-hLG"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FND-FT-Oy4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="736.79999999999995" y="394.45277361319341"/>
+        </scene>
         <!--Main Nav Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -1161,7 +1318,7 @@
                         </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="CvJ-U3-6G3" kind="relationship" relationship="viewControllers" id="fGG-rm-Z1H"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="tMp-jh-2RC" kind="relationship" relationship="viewControllers" id="Ns0-Wj-3B7"/>
                         <segue destination="Ftd-94-4kn" kind="relationship" relationship="viewControllers" id="oXd-6d-pGB"/>
@@ -1177,6 +1334,7 @@
         <image name=" Reviews" width="50" height="50"/>
         <image name=" Settings" width="50" height="50"/>
         <image name=" Trip History" width="50" height="50"/>
+        <image name=" Wine Not Filled " width="60" height="60"/>
         <image name="AroundMe" width="88" height="88"/>
         <image name="Edit" width="46" height="46"/>
         <image name="Inspiration" width="88" height="88"/>

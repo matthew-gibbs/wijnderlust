@@ -12,6 +12,11 @@ import FirebaseDatabase
 
 class YourReviewsTableViewController: UITableViewController {
     
+    // MARK: - Table view data source
+    let userID = Auth.auth().currentUser?.uid
+    var reviewCount: Int = 0
+    var usersReviews = [Review]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -20,49 +25,29 @@ class YourReviewsTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
 
-    // MARK: - Table view data source
-    let userID = Auth.auth().currentUser?.uid
-    var reviewCount: Int = 0
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         var numOfSections: Int = 0
-        
-        //Query DB to see if there is data.
-        ref.child("users").child(userID!).child("reviews").observe(DataEventType.value, with: { (snapshot) in
-            if let reviews = snapshot.value as? [String: AnyObject] {
-                //Reviews exists and is ready to be populated.
-                tableView.separatorStyle = .singleLine
-                numOfSections            = 1
-                tableView.backgroundView = nil
-                self.reviewCount = Int(reviews.count)
-                print(reviews.count)
-            } else {
-                //Reviews is empty.
-                let noDataLabel: UILabel  = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
-                noDataLabel.text          = "You Haven't Left Any Reviews Yet!"
-                noDataLabel.textColor     = UIColor.init(displayP3Red: 142/255.0, green: 142/255.0, blue: 142/255.0, alpha: 1)
-                noDataLabel.textAlignment = .center
-                tableView.backgroundView  = noDataLabel
-                tableView.separatorStyle  = .none
-            }
-        }) { (error) in
-            self.showAlertWith(title: "Something Went Wrong!", message: "\(error.localizedDescription)")
-        }
-        return numOfSections
+        let noDataLabel: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
+        noDataLabel.text = "You Haven't Left Any Reviews Yet!"
+        noDataLabel.textColor = UIColor.init(displayP3Red: 142/255.0, green: 142/255.0, blue: 142/255.0, alpha: 1)
+        noDataLabel.textAlignment = .center
+        tableView.backgroundView = noDataLabel
+        tableView.separatorStyle = .none
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return reviewCount
+        return 5
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        guard let reviewCell = tableView.dequeueReusableCell(withIdentifier: "ReviewCell", for: indexPath) as? ReviewCell else { fatalError() }
         
-//      Configure the cell...
+        reviewCell.reviewLabel.text = "Test \(indexPath.row)"
 
-        return cell
+        return reviewCell
     }
 
     
@@ -73,5 +58,37 @@ class YourReviewsTableViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
+    
+    // MARK: - Retrieve Reviews Function
+    
+//    func retrieveReviews(){
+//        ref.queryOrdered(byChild: "reviewDate").observe(.childAdded, with: {
+//            (snapshot) in
+//
+//            if let dictionary = snapshot.value as? [String:AnyObject]{
+//
+//                var review = Review().setValuesForKeys(dictionary)
+//
+//                self.usersReviews.append(review)
+//
+//                DispatchQueue.main.async {
+//                    self.tableView.reloadData()
+//                }
+//            }
+//        })
+//    }
+    
+    // MARK: - Query database and see if the table needs a section.
+    //Query DB to see if there is data.
+//    ref.child("users").child(userID!).child("reviews").observe(DataEventType.value, with: { (snapshot) in
+//    if let reviews = snapshot.value as? [String: AnyObject] {
+//    //Reviews exists and is ready to be populated.
+//    numOfSections       = 1
+//    } else {
+//    //Reviews is empty.
+//    }
+//    }) { (error) in
+//    self.showAlertWith(title: "Something Went Wrong!", message: "\(error.localizedDescription)")
+//    }
 
 }

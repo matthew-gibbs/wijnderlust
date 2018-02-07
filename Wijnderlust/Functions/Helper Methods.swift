@@ -1,5 +1,5 @@
 //
-//  Helper Classes.swift
+//  Helper Methods.swift
 //  Wijnderlust
 //
 //  Created by Matt Gibbs on 30/01/2018.

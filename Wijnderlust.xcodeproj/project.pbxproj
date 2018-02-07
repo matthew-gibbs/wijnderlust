@@ -8,23 +8,39 @@
 
 /* Begin PBXBuildFile section */
 		B8563E5F761C96BAEF340DD8 /* Pods_Wijnderlust.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C74C7A61C3D6CBCF37CBB59 /* Pods_Wijnderlust.framework */; };
-		C91064CE2023555400A71F78 /* ProfileMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91064CD2023555400A71F78 /* ProfileMenuTableViewController.swift */; };
+		C90E8B6B202B5DF20087B8EA /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B6A202B5DF20087B8EA /* Venue.swift */; };
+		C90E8B6E202B5E400087B8EA /* JSON Initialisable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B6D202B5E400087B8EA /* JSON Initialisable.swift */; };
+		C90E8B70202B5EA90087B8EA /* Yelp Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B6F202B5EA90087B8EA /* Yelp Category.swift */; };
+		C90E8B73202B5ECE0087B8EA /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B72202B5ECE0087B8EA /* Coordinate.swift */; };
+		C90E8B75202B5F2A0087B8EA /* Yelp Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B74202B5F2A0087B8EA /* Yelp Address.swift */; };
+		C90E8B77202B5F7C0087B8EA /* Yelp Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B76202B5F7C0087B8EA /* Yelp Review.swift */; };
+		C90E8B79202B5FA80087B8EA /* Yelp User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B78202B5FA80087B8EA /* Yelp User.swift */; };
+		C90E8B7C202B6AE90087B8EA /* VenueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B7B202B6AE90087B8EA /* VenueCell.swift */; };
+		C90E8B7F202B6FED0087B8EA /* CosmosStarRatings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B7E202B6FED0087B8EA /* CosmosStarRatings.swift */; };
+		C90E8B82202B75560087B8EA /* VenueCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B81202B75560087B8EA /* VenueCellViewModel.swift */; };
+		C90E8B84202B7B670087B8EA /* InspirationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B83202B7B670087B8EA /* InspirationController.swift */; };
+		C90E8B86202B7CE50087B8EA /* API Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B85202B7CE50087B8EA /* API Endpoint.swift */; };
+		C90E8B88202B7D5A0087B8EA /* Yelp Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B87202B7D5A0087B8EA /* Yelp Client.swift */; };
+		C90E8B8A202B7D880087B8EA /* API Client Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B89202B7D880087B8EA /* API Client Protocol.swift */; };
+		C90E8B8D202B89990087B8EA /* Inspiration Data Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B8C202B89990087B8EA /* Inspiration Data Source.swift */; };
+		C91064CE2023555400A71F78 /* ProfileMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91064CD2023555400A71F78 /* ProfileMenuController.swift */; };
 		C91064D120237AE700A71F78 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91064D020237AE700A71F78 /* EditProfileViewController.swift */; };
 		C91064D32024C97A00A71F78 /* YourReviewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91064D22024C97A00A71F78 /* YourReviewsTableViewController.swift */; };
+		C91064D520260B4B00A71F78 /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91064D420260B4B00A71F78 /* ReviewCell.swift */; };
+		C91064D72028D15C00A71F78 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91064D62028D15C00A71F78 /* Review.swift */; };
+		C91064D92028E48E00A71F78 /* TripHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91064D82028E48E00A71F78 /* TripHistoryTableViewController.swift */; };
 		C99E4C622019EA5400887281 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E4C612019EA5400887281 /* AppDelegate.swift */; };
-		C99E4C642019EA5400887281 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E4C632019EA5400887281 /* FirstViewController.swift */; };
 		C99E4C662019EA5400887281 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E4C652019EA5400887281 /* SecondViewController.swift */; };
 		C99E4C692019EA5400887281 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99E4C672019EA5400887281 /* Main.storyboard */; };
 		C99E4C6B2019EA5400887281 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C99E4C6A2019EA5400887281 /* Assets.xcassets */; };
 		C99E4C6E2019EA5400887281 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99E4C6C2019EA5400887281 /* LaunchScreen.storyboard */; };
 		C99E4C762019EB0600887281 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E4C752019EB0600887281 /* ThirdViewController.swift */; };
 		C9D2906A201E899700F05361 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9D29069201E899700F05361 /* GoogleService-Info.plist */; };
-		C9FCAD712020C91A00047DC6 /* Helper Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD702020C91A00047DC6 /* Helper Classes.swift */; };
+		C9FCAD712020C91A00047DC6 /* Helper Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD702020C91A00047DC6 /* Helper Methods.swift */; };
 		C9FCAD752020D16900047DC6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD742020D16900047DC6 /* SignUpViewController.swift */; };
 		C9FCAD772020DF9300047DC6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD762020DF9300047DC6 /* User.swift */; };
 		C9FCAD7B2020E70D00047DC6 /* SignUpTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD7A2020E70D00047DC6 /* SignUpTwoViewController.swift */; };
 		C9FCAD7D202151B100047DC6 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD7C202151B100047DC6 /* SignInViewController.swift */; };
-		C9FCAD802021EC7100047DC6 /* Sign Up and In Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD7F2021EC7100047DC6 /* Sign Up and In Methods.swift */; };
 		C9FCAD832021F2D500047DC6 /* FirebaseDBFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD822021F2D500047DC6 /* FirebaseDBFunctions.swift */; };
 		C9FCAD852022035A00047DC6 /* MainNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD842022035A00047DC6 /* MainNavController.swift */; };
 		C9FCAD8720221A3F00047DC6 /* SignInUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD8620221A3F00047DC6 /* SignInUpViewController.swift */; };
@@ -33,12 +49,29 @@
 /* Begin PBXFileReference section */
 		4C74C7A61C3D6CBCF37CBB59 /* Pods_Wijnderlust.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wijnderlust.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D04B44D66B102F96051011D /* Pods-Wijnderlust.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wijnderlust.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wijnderlust/Pods-Wijnderlust.release.xcconfig"; sourceTree = "<group>"; };
-		C91064CD2023555400A71F78 /* ProfileMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMenuTableViewController.swift; sourceTree = "<group>"; };
+		C90E8B6A202B5DF20087B8EA /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		C90E8B6D202B5E400087B8EA /* JSON Initialisable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSON Initialisable.swift"; sourceTree = "<group>"; };
+		C90E8B6F202B5EA90087B8EA /* Yelp Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Yelp Category.swift"; sourceTree = "<group>"; };
+		C90E8B72202B5ECE0087B8EA /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		C90E8B74202B5F2A0087B8EA /* Yelp Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Yelp Address.swift"; sourceTree = "<group>"; };
+		C90E8B76202B5F7C0087B8EA /* Yelp Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Yelp Review.swift"; sourceTree = "<group>"; };
+		C90E8B78202B5FA80087B8EA /* Yelp User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Yelp User.swift"; sourceTree = "<group>"; };
+		C90E8B7B202B6AE90087B8EA /* VenueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCell.swift; sourceTree = "<group>"; };
+		C90E8B7E202B6FED0087B8EA /* CosmosStarRatings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CosmosStarRatings.swift; sourceTree = "<group>"; };
+		C90E8B81202B75560087B8EA /* VenueCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCellViewModel.swift; sourceTree = "<group>"; };
+		C90E8B83202B7B670087B8EA /* InspirationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspirationController.swift; sourceTree = "<group>"; };
+		C90E8B85202B7CE50087B8EA /* API Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API Endpoint.swift"; sourceTree = "<group>"; };
+		C90E8B87202B7D5A0087B8EA /* Yelp Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Yelp Client.swift"; sourceTree = "<group>"; };
+		C90E8B89202B7D880087B8EA /* API Client Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API Client Protocol.swift"; sourceTree = "<group>"; };
+		C90E8B8C202B89990087B8EA /* Inspiration Data Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Inspiration Data Source.swift"; sourceTree = "<group>"; };
+		C91064CD2023555400A71F78 /* ProfileMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMenuController.swift; sourceTree = "<group>"; };
 		C91064D020237AE700A71F78 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		C91064D22024C97A00A71F78 /* YourReviewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourReviewsTableViewController.swift; sourceTree = "<group>"; };
+		C91064D420260B4B00A71F78 /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
+		C91064D62028D15C00A71F78 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		C91064D82028E48E00A71F78 /* TripHistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripHistoryTableViewController.swift; sourceTree = "<group>"; };
 		C99E4C5E2019EA5400887281 /* Wijnderlust.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wijnderlust.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C99E4C612019EA5400887281 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C99E4C632019EA5400887281 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		C99E4C652019EA5400887281 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		C99E4C682019EA5400887281 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C99E4C6A2019EA5400887281 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -46,12 +79,11 @@
 		C99E4C6F2019EA5400887281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C99E4C752019EB0600887281 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		C9D29069201E899700F05361 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		C9FCAD702020C91A00047DC6 /* Helper Classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper Classes.swift"; sourceTree = "<group>"; };
+		C9FCAD702020C91A00047DC6 /* Helper Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper Methods.swift"; sourceTree = "<group>"; };
 		C9FCAD742020D16900047DC6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C9FCAD762020DF9300047DC6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C9FCAD7A2020E70D00047DC6 /* SignUpTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTwoViewController.swift; sourceTree = "<group>"; };
 		C9FCAD7C202151B100047DC6 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
-		C9FCAD7F2021EC7100047DC6 /* Sign Up and In Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sign Up and In Methods.swift"; sourceTree = "<group>"; };
 		C9FCAD822021F2D500047DC6 /* FirebaseDBFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDBFunctions.swift; sourceTree = "<group>"; };
 		C9FCAD842022035A00047DC6 /* MainNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavController.swift; sourceTree = "<group>"; };
 		C9FCAD8620221A3F00047DC6 /* SignInUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUpViewController.swift; sourceTree = "<group>"; };
@@ -78,11 +110,68 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C90E8B6C202B5E250087B8EA /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C90E8B6D202B5E400087B8EA /* JSON Initialisable.swift */,
+				C90E8B85202B7CE50087B8EA /* API Endpoint.swift */,
+				C90E8B87202B7D5A0087B8EA /* Yelp Client.swift */,
+				C90E8B89202B7D880087B8EA /* API Client Protocol.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		C90E8B71202B5EAD0087B8EA /* Yelp Objects */ = {
+			isa = PBXGroup;
+			children = (
+				C90E8B6F202B5EA90087B8EA /* Yelp Category.swift */,
+				C90E8B72202B5ECE0087B8EA /* Coordinate.swift */,
+				C90E8B76202B5F7C0087B8EA /* Yelp Review.swift */,
+				C90E8B78202B5FA80087B8EA /* Yelp User.swift */,
+				C90E8B74202B5F2A0087B8EA /* Yelp Address.swift */,
+			);
+			path = "Yelp Objects";
+			sourceTree = "<group>";
+		};
+		C90E8B7A202B6AB90087B8EA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C91064D420260B4B00A71F78 /* ReviewCell.swift */,
+				C90E8B7B202B6AE90087B8EA /* VenueCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C90E8B7D202B6FDD0087B8EA /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				C90E8B7E202B6FED0087B8EA /* CosmosStarRatings.swift */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		C90E8B80202B75470087B8EA /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				C90E8B81202B75560087B8EA /* VenueCellViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		C90E8B8B202B89660087B8EA /* Data Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C90E8B8C202B89990087B8EA /* Inspiration Data Source.swift */,
+			);
+			path = "Data Sources";
+			sourceTree = "<group>";
+		};
 		C91064CF20237AA700A71F78 /* Profile Views */ = {
 			isa = PBXGroup;
 			children = (
 				C91064D020237AE700A71F78 /* EditProfileViewController.swift */,
 				C91064D22024C97A00A71F78 /* YourReviewsTableViewController.swift */,
+				C91064D82028E48E00A71F78 /* TripHistoryTableViewController.swift */,
 			);
 			path = "Profile Views";
 			sourceTree = "<group>";
@@ -108,14 +197,14 @@
 		C99E4C602019EA5400887281 /* Wijnderlust */ = {
 			isa = PBXGroup;
 			children = (
-				C99E4C612019EA5400887281 /* AppDelegate.swift */,
-				C9FCAD8820221AED00047DC6 /* Main Tabs */,
-				C9FCAD8620221A3F00047DC6 /* SignInUpViewController.swift */,
+				C90E8B8B202B89660087B8EA /* Data Sources */,
+				C9FCAD8820221AED00047DC6 /* Main Views and Delegates */,
 				C91064CF20237AA700A71F78 /* Profile Views */,
-				C9FCAD842022035A00047DC6 /* MainNavController.swift */,
-				C9FCAD7C202151B100047DC6 /* SignInViewController.swift */,
-				C9FCAD792020E6E900047DC6 /* SignUp */,
-				C9FCAD782020DF9E00047DC6 /* Data Structs */,
+				C9FCAD792020E6E900047DC6 /* Sign Up and In */,
+				C90E8B80202B75470087B8EA /* View Models */,
+				C90E8B7A202B6AB90087B8EA /* Views */,
+				C9FCAD782020DF9E00047DC6 /* Models */,
+				C90E8B6C202B5E250087B8EA /* Networking */,
 				C9FCAD812021F2B100047DC6 /* Setup Files */,
 				C9FCAD7E2021EC4400047DC6 /* Functions */,
 				C99E4C672019EA5400887281 /* Main.storyboard */,
@@ -123,32 +212,37 @@
 				C99E4C6C2019EA5400887281 /* LaunchScreen.storyboard */,
 				C9D29069201E899700F05361 /* GoogleService-Info.plist */,
 				C99E4C6F2019EA5400887281 /* Info.plist */,
+				C90E8B7D202B6FDD0087B8EA /* Vendor */,
 			);
 			path = Wijnderlust;
 			sourceTree = "<group>";
 		};
-		C9FCAD782020DF9E00047DC6 /* Data Structs */ = {
+		C9FCAD782020DF9E00047DC6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				C9FCAD762020DF9300047DC6 /* User.swift */,
+				C91064D62028D15C00A71F78 /* Review.swift */,
+				C90E8B6A202B5DF20087B8EA /* Venue.swift */,
+				C90E8B71202B5EAD0087B8EA /* Yelp Objects */,
 			);
-			path = "Data Structs";
+			path = Models;
 			sourceTree = "<group>";
 		};
-		C9FCAD792020E6E900047DC6 /* SignUp */ = {
+		C9FCAD792020E6E900047DC6 /* Sign Up and In */ = {
 			isa = PBXGroup;
 			children = (
+				C9FCAD8620221A3F00047DC6 /* SignInUpViewController.swift */,
+				C9FCAD7C202151B100047DC6 /* SignInViewController.swift */,
 				C9FCAD742020D16900047DC6 /* SignUpViewController.swift */,
 				C9FCAD7A2020E70D00047DC6 /* SignUpTwoViewController.swift */,
 			);
-			path = SignUp;
+			path = "Sign Up and In";
 			sourceTree = "<group>";
 		};
 		C9FCAD7E2021EC4400047DC6 /* Functions */ = {
 			isa = PBXGroup;
 			children = (
-				C9FCAD702020C91A00047DC6 /* Helper Classes.swift */,
-				C9FCAD7F2021EC7100047DC6 /* Sign Up and In Methods.swift */,
+				C9FCAD702020C91A00047DC6 /* Helper Methods.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -161,15 +255,17 @@
 			path = "Setup Files";
 			sourceTree = "<group>";
 		};
-		C9FCAD8820221AED00047DC6 /* Main Tabs */ = {
+		C9FCAD8820221AED00047DC6 /* Main Views and Delegates */ = {
 			isa = PBXGroup;
 			children = (
-				C99E4C632019EA5400887281 /* FirstViewController.swift */,
+				C90E8B83202B7B670087B8EA /* InspirationController.swift */,
+				C99E4C612019EA5400887281 /* AppDelegate.swift */,
+				C9FCAD842022035A00047DC6 /* MainNavController.swift */,
 				C99E4C652019EA5400887281 /* SecondViewController.swift */,
-				C91064CD2023555400A71F78 /* ProfileMenuTableViewController.swift */,
+				C91064CD2023555400A71F78 /* ProfileMenuController.swift */,
 				C99E4C752019EB0600887281 /* ThirdViewController.swift */,
 			);
-			path = "Main Tabs";
+			path = "Main Views and Delegates";
 			sourceTree = "<group>";
 		};
 		E61959AA79C01FC8B180E2DE /* Pods */ = {
@@ -318,21 +414,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				C91064D120237AE700A71F78 /* EditProfileViewController.swift in Sources */,
+				C90E8B6B202B5DF20087B8EA /* Venue.swift in Sources */,
 				C99E4C662019EA5400887281 /* SecondViewController.swift in Sources */,
 				C9FCAD7B2020E70D00047DC6 /* SignUpTwoViewController.swift in Sources */,
+				C90E8B73202B5ECE0087B8EA /* Coordinate.swift in Sources */,
+				C90E8B8A202B7D880087B8EA /* API Client Protocol.swift in Sources */,
 				C9FCAD752020D16900047DC6 /* SignUpViewController.swift in Sources */,
-				C9FCAD712020C91A00047DC6 /* Helper Classes.swift in Sources */,
+				C9FCAD712020C91A00047DC6 /* Helper Methods.swift in Sources */,
 				C99E4C622019EA5400887281 /* AppDelegate.swift in Sources */,
+				C90E8B77202B5F7C0087B8EA /* Yelp Review.swift in Sources */,
+				C90E8B7C202B6AE90087B8EA /* VenueCell.swift in Sources */,
+				C90E8B86202B7CE50087B8EA /* API Endpoint.swift in Sources */,
+				C90E8B7F202B6FED0087B8EA /* CosmosStarRatings.swift in Sources */,
+				C91064D520260B4B00A71F78 /* ReviewCell.swift in Sources */,
 				C9FCAD772020DF9300047DC6 /* User.swift in Sources */,
-				C91064CE2023555400A71F78 /* ProfileMenuTableViewController.swift in Sources */,
+				C91064CE2023555400A71F78 /* ProfileMenuController.swift in Sources */,
+				C90E8B84202B7B670087B8EA /* InspirationController.swift in Sources */,
 				C99E4C762019EB0600887281 /* ThirdViewController.swift in Sources */,
-				C99E4C642019EA5400887281 /* FirstViewController.swift in Sources */,
+				C90E8B75202B5F2A0087B8EA /* Yelp Address.swift in Sources */,
+				C90E8B8D202B89990087B8EA /* Inspiration Data Source.swift in Sources */,
+				C90E8B6E202B5E400087B8EA /* JSON Initialisable.swift in Sources */,
+				C91064D92028E48E00A71F78 /* TripHistoryTableViewController.swift in Sources */,
+				C91064D72028D15C00A71F78 /* Review.swift in Sources */,
 				C91064D32024C97A00A71F78 /* YourReviewsTableViewController.swift in Sources */,
 				C9FCAD832021F2D500047DC6 /* FirebaseDBFunctions.swift in Sources */,
 				C9FCAD8720221A3F00047DC6 /* SignInUpViewController.swift in Sources */,
-				C9FCAD802021EC7100047DC6 /* Sign Up and In Methods.swift in Sources */,
 				C9FCAD7D202151B100047DC6 /* SignInViewController.swift in Sources */,
+				C90E8B70202B5EA90087B8EA /* Yelp Category.swift in Sources */,
 				C9FCAD852022035A00047DC6 /* MainNavController.swift in Sources */,
+				C90E8B82202B75560087B8EA /* VenueCellViewModel.swift in Sources */,
+				C90E8B79202B5FA80087B8EA /* Yelp User.swift in Sources */,
+				C90E8B88202B7D5A0087B8EA /* Yelp Client.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
