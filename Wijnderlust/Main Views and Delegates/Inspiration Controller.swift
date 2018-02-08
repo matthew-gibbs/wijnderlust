@@ -41,7 +41,8 @@ class InspirationController: UITableViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: true)
+        
+        navigationController?.setNavigationBarHidden(false, animated: false)
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,11 +57,27 @@ class InspirationController: UITableViewController {
                 let selectedVenue = dataSource.venue(at: selectedIndexPath)
                 let venueDetailController = segue.destination as! VenueInteriorController
                 
-                venueDetailController.venue = selectedVenue
-                print(selectedVenue.photoState)
+                //Set custom back image
+                let backItem = UIBarButtonItem()
+                backItem.title = ""
+                navigationItem.backBarButtonItem = backItem
                 
-                //Pass the current artwork through to the next screen.
-                venueDetailController.venueImage = selectedVenue.photoState == .downloaded ? selectedVenue.photo! : #imageLiteral(resourceName: "placeholder")
+                if let interiorImage = selectedVenue.photo {
+                    print(interiorImage)
+                    venueDetailController.passedVenueImage = interiorImage
+                    venueDetailController.venue = selectedVenue
+                }
+                
+                // API Call - no longer required #SPEEEEEEEEEEEEED
+//                client.venueWithId(selectedVenue.id) { result in
+//                    switch result {
+//                    case .success(let venue):
+//                        venueDetailController.venue = venue
+//                        venueDetailController.title = venue.name
+//                    case .failure(let error):
+//                        print(error)
+//                    }
+//                }
                 
                 //TODO: - Reviews
 //                venueDetailController.dataSource.updateData(selectedVenue.reviews)

@@ -11,13 +11,13 @@ import UIKit
 
 class InspirationDataSource: NSObject, UITableViewDataSource {
     
-    private var data: [Venue]
+    private var venues: [Venue]
     
     let tableView: UITableView
     let pendingOperations = PendingOperations()
     
     init(data: [Venue], tableView: UITableView) {
-        self.data = data
+        self.venues = data
         self.tableView = tableView
         super.init()
     }
@@ -28,7 +28,7 @@ class InspirationDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return venues.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -58,15 +58,15 @@ class InspirationDataSource: NSObject, UITableViewDataSource {
     // MARK: Helpers
     
     func venue(at indexPath: IndexPath) -> Venue {
-        return data[indexPath.row]
+        return venues[indexPath.row]
     }
     
     func update(with data: [Venue]) {
-        self.data = data
+        self.venues = data
     }
     
-    func update(_ object: Venue, at indexPath: IndexPath) {
-        data[indexPath.row] = object
+    func update(_ venue: Venue, at indexPath: IndexPath) {
+        venues[indexPath.row] = venue
     }
     
     func downloadPhotoForVenue(_ venue: Venue, atIndexPath indexPath: IndexPath) {

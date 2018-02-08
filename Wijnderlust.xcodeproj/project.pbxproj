@@ -32,6 +32,8 @@
 		C91064D520260B4B00A71F78 /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91064D420260B4B00A71F78 /* ReviewCell.swift */; };
 		C91064D72028D15C00A71F78 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91064D62028D15C00A71F78 /* Review.swift */; };
 		C91064D92028E48E00A71F78 /* TripHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91064D82028E48E00A71F78 /* TripHistoryTableViewController.swift */; };
+		C9582DF2202C9D0800A28E88 /* VenueInteriorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9582DF1202C9D0800A28E88 /* VenueInteriorViewModel.swift */; };
+		C9582DF4202CB69500A28E88 /* TransparentNavBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9582DF3202CB69500A28E88 /* TransparentNavBarController.swift */; };
 		C99E4C622019EA5400887281 /* App Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E4C612019EA5400887281 /* App Delegate.swift */; };
 		C99E4C692019EA5400887281 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99E4C672019EA5400887281 /* Main.storyboard */; };
 		C99E4C6B2019EA5400887281 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C99E4C6A2019EA5400887281 /* Assets.xcassets */; };
@@ -76,6 +78,8 @@
 		C91064D420260B4B00A71F78 /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
 		C91064D62028D15C00A71F78 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		C91064D82028E48E00A71F78 /* TripHistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripHistoryTableViewController.swift; sourceTree = "<group>"; };
+		C9582DF1202C9D0800A28E88 /* VenueInteriorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueInteriorViewModel.swift; sourceTree = "<group>"; };
+		C9582DF3202CB69500A28E88 /* TransparentNavBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentNavBarController.swift; sourceTree = "<group>"; };
 		C99E4C5E2019EA5400887281 /* Wijnderlust.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wijnderlust.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C99E4C612019EA5400887281 /* App Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App Delegate.swift"; sourceTree = "<group>"; };
 		C99E4C682019EA5400887281 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -162,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				C90E8B81202B75560087B8EA /* VenueCellViewModel.swift */,
+				C9582DF1202C9D0800A28E88 /* VenueInteriorViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -215,7 +220,7 @@
 				C9FCAD782020DF9E00047DC6 /* Models */,
 				C90E8B6C202B5E250087B8EA /* Networking */,
 				C9FCAD812021F2B100047DC6 /* Setup Files */,
-				C9FCAD7E2021EC4400047DC6 /* Functions */,
+				C9FCAD7E2021EC4400047DC6 /* Helpers */,
 				C99E4C672019EA5400887281 /* Main.storyboard */,
 				C99E4C6A2019EA5400887281 /* Assets.xcassets */,
 				C99E4C6C2019EA5400887281 /* LaunchScreen.storyboard */,
@@ -248,12 +253,13 @@
 			path = "Sign Up and In";
 			sourceTree = "<group>";
 		};
-		C9FCAD7E2021EC4400047DC6 /* Functions */ = {
+		C9FCAD7E2021EC4400047DC6 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				C9FCAD702020C91A00047DC6 /* Helper Methods.swift */,
+				C9582DF3202CB69500A28E88 /* TransparentNavBarController.swift */,
 			);
-			path = Functions;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		C9FCAD812021F2B100047DC6 /* Setup Files */ = {
@@ -425,6 +431,7 @@
 				C91064D120237AE700A71F78 /* EditProfileViewController.swift in Sources */,
 				C90E8B6B202B5DF20087B8EA /* Venue.swift in Sources */,
 				C9FCAD7B2020E70D00047DC6 /* SignUpTwoViewController.swift in Sources */,
+				C9582DF4202CB69500A28E88 /* TransparentNavBarController.swift in Sources */,
 				C90E8B73202B5ECE0087B8EA /* Coordinate.swift in Sources */,
 				C90E8B8A202B7D880087B8EA /* API Client Protocol.swift in Sources */,
 				C9FCAD752020D16900047DC6 /* SignUpViewController.swift in Sources */,
@@ -432,6 +439,7 @@
 				C90E8B93202BF0320087B8EA /* Venue Interior Controller.swift in Sources */,
 				C99E4C622019EA5400887281 /* App Delegate.swift in Sources */,
 				C90E8B77202B5F7C0087B8EA /* Yelp Review.swift in Sources */,
+				C9582DF2202C9D0800A28E88 /* VenueInteriorViewModel.swift in Sources */,
 				C90E8B7C202B6AE90087B8EA /* VenueCell.swift in Sources */,
 				C90E8B86202B7CE50087B8EA /* API Endpoint.swift in Sources */,
 				C90E8B7F202B6FED0087B8EA /* CosmosStarRatings.swift in Sources */,

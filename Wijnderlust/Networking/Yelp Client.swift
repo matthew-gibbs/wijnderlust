@@ -33,7 +33,7 @@ class YelpClient: APIClient {
         }, completion: completion)
     }
     
-    func businessWithId(_ id: String, completion: @escaping (Result<Venue, APIError>) -> Void) {
+    func venueWithId(_ id: String, completion: @escaping (Result<Venue, APIError>) -> Void) {
         let endpoint = Yelp.business(id: id)
         var request = endpoint.request
         request.setValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
