@@ -18,25 +18,25 @@
 		C90E8B7C202B6AE90087B8EA /* VenueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B7B202B6AE90087B8EA /* VenueCell.swift */; };
 		C90E8B7F202B6FED0087B8EA /* CosmosStarRatings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B7E202B6FED0087B8EA /* CosmosStarRatings.swift */; };
 		C90E8B82202B75560087B8EA /* VenueCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B81202B75560087B8EA /* VenueCellViewModel.swift */; };
-		C90E8B84202B7B670087B8EA /* InspirationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B83202B7B670087B8EA /* InspirationController.swift */; };
+		C90E8B84202B7B670087B8EA /* Inspiration Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B83202B7B670087B8EA /* Inspiration Controller.swift */; };
 		C90E8B86202B7CE50087B8EA /* API Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B85202B7CE50087B8EA /* API Endpoint.swift */; };
 		C90E8B88202B7D5A0087B8EA /* Yelp Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B87202B7D5A0087B8EA /* Yelp Client.swift */; };
 		C90E8B8A202B7D880087B8EA /* API Client Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B89202B7D880087B8EA /* API Client Protocol.swift */; };
 		C90E8B8D202B89990087B8EA /* Inspiration Data Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B8C202B89990087B8EA /* Inspiration Data Source.swift */; };
 		C90E8B8F202BC8D20087B8EA /* Pending Operation Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B8E202BC8D20087B8EA /* Pending Operation Queue.swift */; };
 		C90E8B91202BC8ED0087B8EA /* Venue Image Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B90202BC8ED0087B8EA /* Venue Image Downloader.swift */; };
-		C91064CE2023555400A71F78 /* ProfileMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91064CD2023555400A71F78 /* ProfileMenuController.swift */; };
+		C90E8B93202BF0320087B8EA /* Venue Interior Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B92202BF0320087B8EA /* Venue Interior Controller.swift */; };
+		C91064CE2023555400A71F78 /* Profile Menu Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91064CD2023555400A71F78 /* Profile Menu Controller.swift */; };
 		C91064D120237AE700A71F78 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91064D020237AE700A71F78 /* EditProfileViewController.swift */; };
 		C91064D32024C97A00A71F78 /* YourReviewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91064D22024C97A00A71F78 /* YourReviewsTableViewController.swift */; };
 		C91064D520260B4B00A71F78 /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91064D420260B4B00A71F78 /* ReviewCell.swift */; };
 		C91064D72028D15C00A71F78 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91064D62028D15C00A71F78 /* Review.swift */; };
 		C91064D92028E48E00A71F78 /* TripHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91064D82028E48E00A71F78 /* TripHistoryTableViewController.swift */; };
-		C99E4C622019EA5400887281 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E4C612019EA5400887281 /* AppDelegate.swift */; };
-		C99E4C662019EA5400887281 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E4C652019EA5400887281 /* SecondViewController.swift */; };
+		C99E4C622019EA5400887281 /* App Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E4C612019EA5400887281 /* App Delegate.swift */; };
 		C99E4C692019EA5400887281 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99E4C672019EA5400887281 /* Main.storyboard */; };
 		C99E4C6B2019EA5400887281 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C99E4C6A2019EA5400887281 /* Assets.xcassets */; };
 		C99E4C6E2019EA5400887281 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99E4C6C2019EA5400887281 /* LaunchScreen.storyboard */; };
-		C99E4C762019EB0600887281 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E4C752019EB0600887281 /* ThirdViewController.swift */; };
+		C99E4C762019EB0600887281 /* Third View Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E4C752019EB0600887281 /* Third View Controller.swift */; };
 		C9D2906A201E899700F05361 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9D29069201E899700F05361 /* GoogleService-Info.plist */; };
 		C9FCAD712020C91A00047DC6 /* Helper Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD702020C91A00047DC6 /* Helper Methods.swift */; };
 		C9FCAD752020D16900047DC6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD742020D16900047DC6 /* SignUpViewController.swift */; };
@@ -44,7 +44,7 @@
 		C9FCAD7B2020E70D00047DC6 /* SignUpTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD7A2020E70D00047DC6 /* SignUpTwoViewController.swift */; };
 		C9FCAD7D202151B100047DC6 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD7C202151B100047DC6 /* SignInViewController.swift */; };
 		C9FCAD832021F2D500047DC6 /* FirebaseDBFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD822021F2D500047DC6 /* FirebaseDBFunctions.swift */; };
-		C9FCAD852022035A00047DC6 /* MainNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD842022035A00047DC6 /* MainNavController.swift */; };
+		C9FCAD852022035A00047DC6 /* Main Nav Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD842022035A00047DC6 /* Main Nav Controller.swift */; };
 		C9FCAD8720221A3F00047DC6 /* SignInUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD8620221A3F00047DC6 /* SignInUpViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,27 +61,27 @@
 		C90E8B7B202B6AE90087B8EA /* VenueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCell.swift; sourceTree = "<group>"; };
 		C90E8B7E202B6FED0087B8EA /* CosmosStarRatings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CosmosStarRatings.swift; sourceTree = "<group>"; };
 		C90E8B81202B75560087B8EA /* VenueCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCellViewModel.swift; sourceTree = "<group>"; };
-		C90E8B83202B7B670087B8EA /* InspirationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspirationController.swift; sourceTree = "<group>"; };
+		C90E8B83202B7B670087B8EA /* Inspiration Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Inspiration Controller.swift"; sourceTree = "<group>"; };
 		C90E8B85202B7CE50087B8EA /* API Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API Endpoint.swift"; sourceTree = "<group>"; };
 		C90E8B87202B7D5A0087B8EA /* Yelp Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Yelp Client.swift"; sourceTree = "<group>"; };
 		C90E8B89202B7D880087B8EA /* API Client Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API Client Protocol.swift"; sourceTree = "<group>"; };
 		C90E8B8C202B89990087B8EA /* Inspiration Data Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Inspiration Data Source.swift"; sourceTree = "<group>"; };
 		C90E8B8E202BC8D20087B8EA /* Pending Operation Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pending Operation Queue.swift"; sourceTree = "<group>"; };
 		C90E8B90202BC8ED0087B8EA /* Venue Image Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Venue Image Downloader.swift"; sourceTree = "<group>"; };
-		C91064CD2023555400A71F78 /* ProfileMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMenuController.swift; sourceTree = "<group>"; };
+		C90E8B92202BF0320087B8EA /* Venue Interior Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Venue Interior Controller.swift"; sourceTree = "<group>"; };
+		C91064CD2023555400A71F78 /* Profile Menu Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile Menu Controller.swift"; sourceTree = "<group>"; };
 		C91064D020237AE700A71F78 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		C91064D22024C97A00A71F78 /* YourReviewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourReviewsTableViewController.swift; sourceTree = "<group>"; };
 		C91064D420260B4B00A71F78 /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
 		C91064D62028D15C00A71F78 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		C91064D82028E48E00A71F78 /* TripHistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripHistoryTableViewController.swift; sourceTree = "<group>"; };
 		C99E4C5E2019EA5400887281 /* Wijnderlust.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wijnderlust.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C99E4C612019EA5400887281 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C99E4C652019EA5400887281 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		C99E4C612019EA5400887281 /* App Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App Delegate.swift"; sourceTree = "<group>"; };
 		C99E4C682019EA5400887281 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C99E4C6A2019EA5400887281 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C99E4C6D2019EA5400887281 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C99E4C6F2019EA5400887281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C99E4C752019EB0600887281 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		C99E4C752019EB0600887281 /* Third View Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Third View Controller.swift"; sourceTree = "<group>"; };
 		C9D29069201E899700F05361 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C9FCAD702020C91A00047DC6 /* Helper Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper Methods.swift"; sourceTree = "<group>"; };
 		C9FCAD742020D16900047DC6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 		C9FCAD7A2020E70D00047DC6 /* SignUpTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTwoViewController.swift; sourceTree = "<group>"; };
 		C9FCAD7C202151B100047DC6 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		C9FCAD822021F2D500047DC6 /* FirebaseDBFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDBFunctions.swift; sourceTree = "<group>"; };
-		C9FCAD842022035A00047DC6 /* MainNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavController.swift; sourceTree = "<group>"; };
+		C9FCAD842022035A00047DC6 /* Main Nav Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Main Nav Controller.swift"; sourceTree = "<group>"; };
 		C9FCAD8620221A3F00047DC6 /* SignInUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUpViewController.swift; sourceTree = "<group>"; };
 		E42AA67C41B86445D6E366A6 /* Pods-Wijnderlust.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wijnderlust.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wijnderlust/Pods-Wijnderlust.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -264,12 +264,12 @@
 		C9FCAD8820221AED00047DC6 /* Main Views and Delegates */ = {
 			isa = PBXGroup;
 			children = (
-				C90E8B83202B7B670087B8EA /* InspirationController.swift */,
-				C99E4C612019EA5400887281 /* AppDelegate.swift */,
-				C9FCAD842022035A00047DC6 /* MainNavController.swift */,
-				C99E4C652019EA5400887281 /* SecondViewController.swift */,
-				C91064CD2023555400A71F78 /* ProfileMenuController.swift */,
-				C99E4C752019EB0600887281 /* ThirdViewController.swift */,
+				C90E8B83202B7B670087B8EA /* Inspiration Controller.swift */,
+				C90E8B92202BF0320087B8EA /* Venue Interior Controller.swift */,
+				C99E4C612019EA5400887281 /* App Delegate.swift */,
+				C9FCAD842022035A00047DC6 /* Main Nav Controller.swift */,
+				C91064CD2023555400A71F78 /* Profile Menu Controller.swift */,
+				C99E4C752019EB0600887281 /* Third View Controller.swift */,
 			);
 			path = "Main Views and Delegates";
 			sourceTree = "<group>";
@@ -421,13 +421,13 @@
 			files = (
 				C91064D120237AE700A71F78 /* EditProfileViewController.swift in Sources */,
 				C90E8B6B202B5DF20087B8EA /* Venue.swift in Sources */,
-				C99E4C662019EA5400887281 /* SecondViewController.swift in Sources */,
 				C9FCAD7B2020E70D00047DC6 /* SignUpTwoViewController.swift in Sources */,
 				C90E8B73202B5ECE0087B8EA /* Coordinate.swift in Sources */,
 				C90E8B8A202B7D880087B8EA /* API Client Protocol.swift in Sources */,
 				C9FCAD752020D16900047DC6 /* SignUpViewController.swift in Sources */,
 				C9FCAD712020C91A00047DC6 /* Helper Methods.swift in Sources */,
-				C99E4C622019EA5400887281 /* AppDelegate.swift in Sources */,
+				C90E8B93202BF0320087B8EA /* Venue Interior Controller.swift in Sources */,
+				C99E4C622019EA5400887281 /* App Delegate.swift in Sources */,
 				C90E8B77202B5F7C0087B8EA /* Yelp Review.swift in Sources */,
 				C90E8B7C202B6AE90087B8EA /* VenueCell.swift in Sources */,
 				C90E8B86202B7CE50087B8EA /* API Endpoint.swift in Sources */,
@@ -435,9 +435,9 @@
 				C91064D520260B4B00A71F78 /* ReviewCell.swift in Sources */,
 				C9FCAD772020DF9300047DC6 /* User.swift in Sources */,
 				C90E8B91202BC8ED0087B8EA /* Venue Image Downloader.swift in Sources */,
-				C91064CE2023555400A71F78 /* ProfileMenuController.swift in Sources */,
-				C90E8B84202B7B670087B8EA /* InspirationController.swift in Sources */,
-				C99E4C762019EB0600887281 /* ThirdViewController.swift in Sources */,
+				C91064CE2023555400A71F78 /* Profile Menu Controller.swift in Sources */,
+				C90E8B84202B7B670087B8EA /* Inspiration Controller.swift in Sources */,
+				C99E4C762019EB0600887281 /* Third View Controller.swift in Sources */,
 				C90E8B75202B5F2A0087B8EA /* Yelp Address.swift in Sources */,
 				C90E8B8D202B89990087B8EA /* Inspiration Data Source.swift in Sources */,
 				C90E8B6E202B5E400087B8EA /* JSON Initialisable.swift in Sources */,
@@ -449,7 +449,7 @@
 				C9FCAD8720221A3F00047DC6 /* SignInUpViewController.swift in Sources */,
 				C9FCAD7D202151B100047DC6 /* SignInViewController.swift in Sources */,
 				C90E8B70202B5EA90087B8EA /* Yelp Category.swift in Sources */,
-				C9FCAD852022035A00047DC6 /* MainNavController.swift in Sources */,
+				C9FCAD852022035A00047DC6 /* Main Nav Controller.swift in Sources */,
 				C90E8B82202B75560087B8EA /* VenueCellViewModel.swift in Sources */,
 				C90E8B79202B5FA80087B8EA /* Yelp User.swift in Sources */,
 				C90E8B88202B7D5A0087B8EA /* Yelp Client.swift in Sources */,
