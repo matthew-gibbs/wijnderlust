@@ -25,6 +25,10 @@
                                 <color key="textColor" red="0.18039215689999999" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="J9U-yC-Oj3">
+                                <rect key="frame" x="0.0" y="100" width="375" height="518"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -38,7 +42,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1519" y="-321"/>
+            <point key="canvasLocation" x="1517.5999999999999" y="-321.58920539730138"/>
         </scene>
         <!--My Trips-->
         <scene sceneID="Bm7-nh-RI5">
@@ -1327,7 +1331,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="03i-4l-CDx">
-                                <rect key="frame" x="213" y="189" width="144" height="16"/>
+                                <rect key="frame" x="213" y="192" width="144" height="16"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venue Category" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1LB-VF-FFs">
                                         <rect key="frame" x="0.0" y="0.0" width="101" height="16"/>
@@ -1350,19 +1354,26 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venue Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dp2-cA-F5G">
-                                <rect key="frame" x="18" y="245" width="339" height="41"/>
+                                <rect key="frame" x="18" y="238" width="339" height="41"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venue Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2OC-IL-6t0">
-                                <rect key="frame" x="18" y="291" width="339" height="16"/>
+                                <rect key="frame" x="18" y="284" width="339" height="16"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                 <color key="textColor" red="0.58431372550000005" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DEJ-sc-rH0">
+                                <rect key="frame" x="16" y="315" width="343" height="1"/>
+                                <color key="backgroundColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="eQB-Eu-SbX"/>
+                                </constraints>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lWY-4F-iZa">
-                                <rect key="frame" x="18" y="332" width="339" height="81"/>
+                                <rect key="frame" x="18" y="326" width="339" height="81"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="YXm-9I-mIU">
                                         <rect key="frame" x="0.0" y="0.0" width="113" height="81"/>
@@ -1412,7 +1423,7 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0dC-cR-tjs" customClass="CosmosView" customModule="Wijnderlust" customModuleProvider="target">
-                                <rect key="frame" x="264" y="27" width="93" height="17"/>
+                                <rect key="frame" x="264" y="30" width="93" height="17"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="rating">
                                         <real key="value" value="4"/>
@@ -1440,32 +1451,45 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u7X-Su-jZT">
+                                <rect key="frame" x="16" y="417" width="343" height="1"/>
+                                <color key="backgroundColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Woc-TB-aCz"/>
+                                </constraints>
+                            </view>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uE9-qz-OOK">
-                                <rect key="frame" x="18" y="483" width="339" height="128"/>
+                                <rect key="frame" x="18" y="428" width="339" height="156"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Dp2-cA-F5G" firstAttribute="top" secondItem="BJw-VD-XJM" secondAttribute="bottom" constant="25" id="57T-B7-4dR"/>
+                            <constraint firstItem="Dp2-cA-F5G" firstAttribute="top" secondItem="BJw-VD-XJM" secondAttribute="bottom" constant="18" id="57T-B7-4dR"/>
                             <constraint firstItem="uE9-qz-OOK" firstAttribute="leading" secondItem="pmq-Op-gIi" secondAttribute="leading" constant="18" id="7Bp-37-Gl3"/>
-                            <constraint firstItem="lWY-4F-iZa" firstAttribute="top" secondItem="2OC-IL-6t0" secondAttribute="bottom" constant="25" id="7X5-Fy-FdU"/>
                             <constraint firstItem="2OC-IL-6t0" firstAttribute="top" secondItem="Dp2-cA-F5G" secondAttribute="bottom" constant="5" id="8Or-EB-wDx"/>
                             <constraint firstItem="lWY-4F-iZa" firstAttribute="leading" secondItem="pmq-Op-gIi" secondAttribute="leading" constant="18" id="95M-bN-JTL"/>
-                            <constraint firstItem="Dp2-cA-F5G" firstAttribute="top" secondItem="03i-4l-CDx" secondAttribute="bottom" constant="40" id="Deq-Nd-SEw"/>
-                            <constraint firstItem="pmq-Op-gIi" firstAttribute="bottom" secondItem="uE9-qz-OOK" secondAttribute="bottom" constant="7" id="Jzn-Od-8VA"/>
+                            <constraint firstItem="Dp2-cA-F5G" firstAttribute="top" secondItem="03i-4l-CDx" secondAttribute="bottom" constant="30" id="Deq-Nd-SEw"/>
+                            <constraint firstItem="u7X-Su-jZT" firstAttribute="trailing" secondItem="DEJ-sc-rH0" secondAttribute="trailing" id="FNi-ER-hAd"/>
+                            <constraint firstItem="lWY-4F-iZa" firstAttribute="top" secondItem="DEJ-sc-rH0" secondAttribute="bottom" constant="10" id="Krz-T5-gn8"/>
+                            <constraint firstItem="pmq-Op-gIi" firstAttribute="bottom" secondItem="uE9-qz-OOK" secondAttribute="bottom" constant="34" id="OBF-sI-Byt"/>
                             <constraint firstItem="BJw-VD-XJM" firstAttribute="leading" secondItem="pmq-Op-gIi" secondAttribute="leading" id="QCi-fs-yjd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DEJ-sc-rH0" secondAttribute="trailing" id="Sjh-Oh-fqM"/>
                             <constraint firstItem="2OC-IL-6t0" firstAttribute="leading" secondItem="pmq-Op-gIi" secondAttribute="leading" constant="18" id="TAk-jl-h8v"/>
                             <constraint firstItem="03i-4l-CDx" firstAttribute="top" secondItem="0dC-cR-tjs" secondAttribute="bottom" constant="145" id="TBz-0K-yjA"/>
                             <constraint firstItem="pmq-Op-gIi" firstAttribute="trailing" secondItem="Dp2-cA-F5G" secondAttribute="trailing" constant="18" id="UPL-Lg-aQb"/>
                             <constraint firstItem="pmq-Op-gIi" firstAttribute="trailing" secondItem="2OC-IL-6t0" secondAttribute="trailing" constant="18" id="Utm-0K-Mrb"/>
                             <constraint firstItem="pmq-Op-gIi" firstAttribute="trailing" secondItem="uE9-qz-OOK" secondAttribute="trailing" constant="18" id="YNP-r1-Lf0"/>
-                            <constraint firstItem="uE9-qz-OOK" firstAttribute="top" secondItem="lWY-4F-iZa" secondAttribute="bottom" constant="70" id="YRl-r8-FRn"/>
                             <constraint firstItem="BJw-VD-XJM" firstAttribute="top" secondItem="pmq-Op-gIi" secondAttribute="top" constant="-64" id="aYl-55-gGo"/>
                             <constraint firstItem="BJw-VD-XJM" firstAttribute="trailing" secondItem="pmq-Op-gIi" secondAttribute="trailing" id="blx-7v-DrG"/>
                             <constraint firstItem="Dp2-cA-F5G" firstAttribute="leading" secondItem="pmq-Op-gIi" secondAttribute="leading" constant="18" id="c47-MQ-Ggx"/>
+                            <constraint firstItem="uE9-qz-OOK" firstAttribute="top" secondItem="u7X-Su-jZT" secondAttribute="bottom" constant="10" id="dBb-28-gRU"/>
+                            <constraint firstItem="DEJ-sc-rH0" firstAttribute="top" secondItem="2OC-IL-6t0" secondAttribute="bottom" constant="15" id="iO0-qP-7MH"/>
                             <constraint firstItem="pmq-Op-gIi" firstAttribute="trailing" secondItem="lWY-4F-iZa" secondAttribute="trailing" constant="18" id="lbo-iV-tha"/>
+                            <constraint firstItem="u7X-Su-jZT" firstAttribute="leading" secondItem="DEJ-sc-rH0" secondAttribute="leading" id="nj1-we-Iiz"/>
                             <constraint firstItem="pmq-Op-gIi" firstAttribute="trailing" secondItem="03i-4l-CDx" secondAttribute="trailing" constant="18" id="oi1-fB-T8e"/>
+                            <constraint firstItem="DEJ-sc-rH0" firstAttribute="leading" secondItem="o24-B9-PMe" secondAttribute="leadingMargin" id="ovt-M9-b8E"/>
                             <constraint firstItem="BJw-VD-XJM" firstAttribute="top" secondItem="o24-B9-PMe" secondAttribute="top" id="qUV-5l-jos"/>
+                            <constraint firstItem="u7X-Su-jZT" firstAttribute="top" secondItem="lWY-4F-iZa" secondAttribute="bottom" constant="10" id="tAw-8B-Gwr"/>
                             <constraint firstAttribute="trailing" secondItem="0dC-cR-tjs" secondAttribute="trailing" constant="18" id="uMS-Qa-PT9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pmq-Op-gIi"/>
@@ -1474,6 +1498,7 @@
                         <outlet property="venueAddressLabel" destination="2OC-IL-6t0" id="w2w-vW-zaQ"/>
                         <outlet property="venueCategoryLabel" destination="1LB-VF-FFs" id="K1E-7R-41k"/>
                         <outlet property="venueImage" destination="BJw-VD-XJM" id="SAY-Mt-EfV"/>
+                        <outlet property="venueLocationOnMap" destination="uE9-qz-OOK" id="ccK-Eg-s1t"/>
                         <outlet property="venueNameLabel" destination="Dp2-cA-F5G" id="aoj-Cj-v13"/>
                         <outlet property="venuePriceLabel" destination="oSZ-0I-oNQ" id="RMO-iI-tOe"/>
                         <outlet property="venueRatingLabel" destination="0dC-cR-tjs" id="uDX-oe-aFV"/>

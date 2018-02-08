@@ -68,17 +68,6 @@ class InspirationController: UITableViewController {
                     venueDetailController.venue = selectedVenue
                 }
                 
-                // API Call - no longer required #SPEEEEEEEEEEEEED
-//                client.venueWithId(selectedVenue.id) { result in
-//                    switch result {
-//                    case .success(let venue):
-//                        venueDetailController.venue = venue
-//                        venueDetailController.title = venue.name
-//                    case .failure(let error):
-//                        print(error)
-//                    }
-//                }
-                
                 //TODO: - Reviews
 //                venueDetailController.dataSource.updateData(selectedVenue.reviews)
             }

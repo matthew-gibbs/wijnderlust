@@ -77,3 +77,16 @@ class Venue: NSObject, JSONInitialisable {
         super.init()
     }
 }
+
+//Conform to the map pin protocol
+import MapKit
+
+extension Venue: MKAnnotation {
+    var coordinate: CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
+    }
+    
+    var title: String? {
+        return name
+    }
+}

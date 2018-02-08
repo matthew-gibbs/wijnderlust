@@ -34,6 +34,7 @@
 		C91064D92028E48E00A71F78 /* TripHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91064D82028E48E00A71F78 /* TripHistoryTableViewController.swift */; };
 		C9582DF2202C9D0800A28E88 /* VenueInteriorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9582DF1202C9D0800A28E88 /* VenueInteriorViewModel.swift */; };
 		C9582DF4202CB69500A28E88 /* TransparentNavBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9582DF3202CB69500A28E88 /* TransparentNavBarController.swift */; };
+		C9582DF6202CCE5900A28E88 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9582DF5202CCE5900A28E88 /* MapKit.framework */; };
 		C99E4C622019EA5400887281 /* App Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E4C612019EA5400887281 /* App Delegate.swift */; };
 		C99E4C692019EA5400887281 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99E4C672019EA5400887281 /* Main.storyboard */; };
 		C99E4C6B2019EA5400887281 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C99E4C6A2019EA5400887281 /* Assets.xcassets */; };
@@ -80,6 +81,7 @@
 		C91064D82028E48E00A71F78 /* TripHistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripHistoryTableViewController.swift; sourceTree = "<group>"; };
 		C9582DF1202C9D0800A28E88 /* VenueInteriorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueInteriorViewModel.swift; sourceTree = "<group>"; };
 		C9582DF3202CB69500A28E88 /* TransparentNavBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentNavBarController.swift; sourceTree = "<group>"; };
+		C9582DF5202CCE5900A28E88 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C99E4C5E2019EA5400887281 /* Wijnderlust.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wijnderlust.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C99E4C612019EA5400887281 /* App Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App Delegate.swift"; sourceTree = "<group>"; };
 		C99E4C682019EA5400887281 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9582DF6202CCE5900A28E88 /* MapKit.framework in Frameworks */,
 				B8563E5F761C96BAEF340DD8 /* Pods_Wijnderlust.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -115,6 +118,7 @@
 		B6DC75DAF7A5C628EB7A87B9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C9582DF5202CCE5900A28E88 /* MapKit.framework */,
 				4C74C7A61C3D6CBCF37CBB59 /* Pods_Wijnderlust.framework */,
 			);
 			name = Frameworks;
@@ -328,6 +332,11 @@
 					C99E4C5D2019EA5400887281 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
