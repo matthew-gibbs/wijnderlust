@@ -23,6 +23,8 @@
 		C90E8B88202B7D5A0087B8EA /* Yelp Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B87202B7D5A0087B8EA /* Yelp Client.swift */; };
 		C90E8B8A202B7D880087B8EA /* API Client Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B89202B7D880087B8EA /* API Client Protocol.swift */; };
 		C90E8B8D202B89990087B8EA /* Inspiration Data Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B8C202B89990087B8EA /* Inspiration Data Source.swift */; };
+		C90E8B8F202BC8D20087B8EA /* Pending Operation Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B8E202BC8D20087B8EA /* Pending Operation Queue.swift */; };
+		C90E8B91202BC8ED0087B8EA /* Venue Image Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B90202BC8ED0087B8EA /* Venue Image Downloader.swift */; };
 		C91064CE2023555400A71F78 /* ProfileMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91064CD2023555400A71F78 /* ProfileMenuController.swift */; };
 		C91064D120237AE700A71F78 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91064D020237AE700A71F78 /* EditProfileViewController.swift */; };
 		C91064D32024C97A00A71F78 /* YourReviewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91064D22024C97A00A71F78 /* YourReviewsTableViewController.swift */; };
@@ -64,6 +66,8 @@
 		C90E8B87202B7D5A0087B8EA /* Yelp Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Yelp Client.swift"; sourceTree = "<group>"; };
 		C90E8B89202B7D880087B8EA /* API Client Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API Client Protocol.swift"; sourceTree = "<group>"; };
 		C90E8B8C202B89990087B8EA /* Inspiration Data Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Inspiration Data Source.swift"; sourceTree = "<group>"; };
+		C90E8B8E202BC8D20087B8EA /* Pending Operation Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pending Operation Queue.swift"; sourceTree = "<group>"; };
+		C90E8B90202BC8ED0087B8EA /* Venue Image Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Venue Image Downloader.swift"; sourceTree = "<group>"; };
 		C91064CD2023555400A71F78 /* ProfileMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMenuController.swift; sourceTree = "<group>"; };
 		C91064D020237AE700A71F78 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		C91064D22024C97A00A71F78 /* YourReviewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourReviewsTableViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 				C90E8B85202B7CE50087B8EA /* API Endpoint.swift */,
 				C90E8B87202B7D5A0087B8EA /* Yelp Client.swift */,
 				C90E8B89202B7D880087B8EA /* API Client Protocol.swift */,
+				C90E8B8E202BC8D20087B8EA /* Pending Operation Queue.swift */,
+				C90E8B90202BC8ED0087B8EA /* Venue Image Downloader.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -428,6 +434,7 @@
 				C90E8B7F202B6FED0087B8EA /* CosmosStarRatings.swift in Sources */,
 				C91064D520260B4B00A71F78 /* ReviewCell.swift in Sources */,
 				C9FCAD772020DF9300047DC6 /* User.swift in Sources */,
+				C90E8B91202BC8ED0087B8EA /* Venue Image Downloader.swift in Sources */,
 				C91064CE2023555400A71F78 /* ProfileMenuController.swift in Sources */,
 				C90E8B84202B7B670087B8EA /* InspirationController.swift in Sources */,
 				C99E4C762019EB0600887281 /* ThirdViewController.swift in Sources */,
@@ -437,6 +444,7 @@
 				C91064D92028E48E00A71F78 /* TripHistoryTableViewController.swift in Sources */,
 				C91064D72028D15C00A71F78 /* Review.swift in Sources */,
 				C91064D32024C97A00A71F78 /* YourReviewsTableViewController.swift in Sources */,
+				C90E8B8F202BC8D20087B8EA /* Pending Operation Queue.swift in Sources */,
 				C9FCAD832021F2D500047DC6 /* FirebaseDBFunctions.swift in Sources */,
 				C9FCAD8720221A3F00047DC6 /* SignInUpViewController.swift in Sources */,
 				C9FCAD7D202151B100047DC6 /* SignInViewController.swift in Sources */,

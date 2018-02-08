@@ -30,7 +30,7 @@ class Venue: NSObject, JSONInitialisable {
     let displayPhone: String
     let price: String
     var photo: UIImage?
-    let photoState = VenuePhotoState.placeholder
+    var photoState = VenuePhotoState.placeholder
     
     // Only available through search results not direct business queries
     var distance: Double?
@@ -48,7 +48,7 @@ class Venue: NSObject, JSONInitialisable {
             let categoriesDict = json["categories"] as? [[String: Any]],
             let rating = json["rating"] as? Double,
             let coordinatesDict = json["coordinates"] as? [String: Any],
-//            let coordinates = Coordinate(json: coordinatesDict),
+            let coordinates = Coordinate(json: coordinatesDict),
             let location = json["location"] as? [String: Any],
             let address = Address(json: location),
             let price = json["price"] as? String,
@@ -64,9 +64,7 @@ class Venue: NSObject, JSONInitialisable {
         self.reviewCount = reviewCount
         self.categories = categoriesDict.flatMap { YelpCategory(json: $0) }
         self.rating = rating
-        //FIXME: - Set this up to be JSON again.
-//        self.location = coordinates
-        self.location = Coordinate(lat: 51.5033640, long: -0.1276250)
+        self.location = coordinates
         self.address = address
         self.phone = phone
         self.displayPhone = displayPhone

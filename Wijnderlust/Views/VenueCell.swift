@@ -17,16 +17,28 @@ class VenueCell: UITableViewCell {
     @IBOutlet weak var wineStatusImage: UIImageView!
     @IBOutlet weak var wineStatusLabel: UILabel!
     @IBOutlet weak var venueNameLabel: UILabel!
+    @IBOutlet weak var containerCell: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        //Round the image corners
+        let rectShape = CAShapeLayer()
+        rectShape.bounds = self.venueImage.frame
+        rectShape.position = self.venueImage.center
+        rectShape.path = UIBezierPath(roundedRect: self.venueImage.bounds, byRoundingCorners: [.topLeft , .topRight], cornerRadii: CGSize(width: 5, height: 5)).cgPath
+        //Here I'm masking the textView's layer with rectShape layer
+        self.venueImage.layer.mask = rectShape
+        
+        //Setup shadow
+        containerCell.layer.shadowColor = UIColor.black.cgColor
+        containerCell.layer.shadowOpacity = 0.2
+        containerCell.layer.shadowOffset = CGSize(width: 0, height: 2)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     //configure from a view model

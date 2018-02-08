@@ -1140,7 +1140,7 @@
                         <inset key="separatorInset" minX="18" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="VQh-Uf-5Sc" userLabel="InspirationHeader">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inspiration" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qt1-ou-btw">
@@ -1149,16 +1149,25 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For your first trip..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yu0-lh-RCJ">
+                                    <rect key="frame" x="18" y="81" width="339" height="16"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                    <color key="textColor" red="0.58431372550000005" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
+                                <constraint firstItem="Yu0-lh-RCJ" firstAttribute="top" secondItem="qt1-ou-btw" secondAttribute="bottom" constant="9" id="Cg4-rT-7O8"/>
                                 <constraint firstItem="qt1-ou-btw" firstAttribute="top" secondItem="VQh-Uf-5Sc" secondAttribute="top" constant="31" id="TQD-OG-h3c"/>
                                 <constraint firstItem="qt1-ou-btw" firstAttribute="leading" secondItem="VQh-Uf-5Sc" secondAttribute="leading" constant="18" id="Uiz-1G-DfC"/>
+                                <constraint firstItem="Yu0-lh-RCJ" firstAttribute="leading" secondItem="VQh-Uf-5Sc" secondAttribute="leading" constant="18" id="Z2g-bV-J30"/>
+                                <constraint firstAttribute="trailing" secondItem="Yu0-lh-RCJ" secondAttribute="trailing" constant="18" id="sHu-on-q9D"/>
                             </constraints>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VenueCell" rowHeight="249" id="BwC-Fj-Dxl" customClass="VenueCell" customModule="Wijnderlust" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="135.5" width="375" height="249"/>
+                                <rect key="frame" x="0.0" y="165.5" width="375" height="249"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BwC-Fj-Dxl" id="obT-96-HA5">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="249"/>
@@ -1167,7 +1176,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="47H-4A-w36">
                                             <rect key="frame" x="18" y="8" width="339" height="233"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="APW-Tg-OTK" userLabel="venueImage">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="APW-Tg-OTK" userLabel="venueImage">
                                                     <rect key="frame" x="0.0" y="0.0" width="339" height="130"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="130" id="q2f-YF-E4W"/>
@@ -1249,7 +1258,7 @@
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
-                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="XTV-fo-ZOj" firstAttribute="leading" secondItem="47H-4A-w36" secondAttribute="leading" constant="8" id="A0I-d3-c3P"/>
                                                 <constraint firstItem="uJW-pJ-09L" firstAttribute="leading" secondItem="47H-4A-w36" secondAttribute="leading" constant="8" id="Eab-T2-HDJ"/>
@@ -1265,7 +1274,7 @@
                                                 <constraint firstItem="APW-Tg-OTK" firstAttribute="top" secondItem="47H-4A-w36" secondAttribute="top" id="xLf-tA-hq6"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <integer key="value" value="5"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
@@ -1279,6 +1288,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="containerCell" destination="47H-4A-w36" id="Ue5-na-cC2"/>
                                     <outlet property="venueAddressLabel" destination="mGg-rw-DWa" id="fld-dd-b3N"/>
                                     <outlet property="venueImage" destination="APW-Tg-OTK" id="xBO-IW-52o"/>
                                     <outlet property="venueNameLabel" destination="uJW-pJ-09L" id="knO-Xt-RWj"/>

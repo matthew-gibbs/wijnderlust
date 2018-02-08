@@ -16,6 +16,7 @@ class InspirationDataSource: NSObject, UITableViewDataSource {
     private var data: [Venue]
     
     let tableView: UITableView
+    let pendingOperations = PendingOperations()
     
     init(data: [Venue], tableView: UITableView) {
         self.data = data
@@ -41,15 +42,20 @@ class InspirationDataSource: NSObject, UITableViewDataSource {
         
         cell.configure(with: viewModel)
         
+        if currentVenue.photoState == .placeholder {
+            downloadPhotoForVenue(currentVenue, atIndexPath: indexPath)
+        }
+        
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
-        case 0: return "Restaurants"
-        default: return nil
-        }
-    }
+
+//  TODO: - Configure proper table headers
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        switch section {
+//        case 0: return "Restaurants"
+//        default: return nil
+//        }
+//    }
     
     // MARK: Helpers
     
@@ -63,6 +69,32 @@ class InspirationDataSource: NSObject, UITableViewDataSource {
     
     func update(_ object: Venue, at indexPath: IndexPath) {
         data[indexPath.row] = object
+    }
+    
+    func downloadPhotoForVenue(_ venue: Venue, atIndexPath indexPath: IndexPath) {
+        //Check to see if we have already started downloading this.
+        if let _ = pendingOperations.downloadsInProgress[indexPath] {
+            //Then cancel.
+            return
+        }
+        
+        //Otherwise download the artwork.
+        let downloader = VenueImageDownloader(venue: venue)
+        
+        downloader.completionBlock = {
+            if downloader.isCancelled {
+                return
+            }
+            
+            DispatchQueue.main.async {
+                //Remove it from our current operations list.
+                self.pendingOperations.downloadsInProgress.removeValue(forKey: indexPath)
+                self.tableView.reloadRows(at: [indexPath], with: .automatic)
+            }
+        }
+        
+        pendingOperations.downloadsInProgress[indexPath] = downloader
+        pendingOperations.downloadQueue.addOperation(downloader)
     }
     
 }
