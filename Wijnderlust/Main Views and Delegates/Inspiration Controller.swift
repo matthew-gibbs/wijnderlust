@@ -57,9 +57,10 @@ class InspirationController: UITableViewController {
                 let venueDetailController = segue.destination as! VenueInteriorController
                 
                 venueDetailController.venue = selectedVenue
+                print(selectedVenue.photoState)
                 
                 //Pass the current artwork through to the next screen.
-                venueDetailController.venueImage = selectedVenue.photo
+                venueDetailController.venueImage = selectedVenue.photoState == .downloaded ? selectedVenue.photo! : #imageLiteral(resourceName: "placeholder")
                 
                 //TODO: - Reviews
 //                venueDetailController.dataSource.updateData(selectedVenue.reviews)

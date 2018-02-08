@@ -1320,7 +1320,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <imageView key="tableHeaderView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" id="MIk-b6-iKl" userLabel="Venue Photo">
+                        <imageView key="tableHeaderView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="MIk-b6-iKl" userLabel="Venue Photo">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="225"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
@@ -1390,7 +1390,6 @@
         <image name="Profile" width="88" height="88"/>
         <image name="SplashBG" width="414" height="736"/>
         <image name="SplashLogo" width="236" height="64"/>
-        <image name="placeholder" width="787" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="1fO-Tv-BKH"/>

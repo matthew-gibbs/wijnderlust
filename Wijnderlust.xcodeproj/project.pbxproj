@@ -38,6 +38,7 @@
 		C99E4C6E2019EA5400887281 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99E4C6C2019EA5400887281 /* LaunchScreen.storyboard */; };
 		C99E4C762019EB0600887281 /* Third View Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E4C752019EB0600887281 /* Third View Controller.swift */; };
 		C9D2906A201E899700F05361 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9D29069201E899700F05361 /* GoogleService-Info.plist */; };
+		C9E63985202C6DE000D1DB79 /* Venue Interior Data Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E63984202C6DE000D1DB79 /* Venue Interior Data Source.swift */; };
 		C9FCAD712020C91A00047DC6 /* Helper Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD702020C91A00047DC6 /* Helper Methods.swift */; };
 		C9FCAD752020D16900047DC6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD742020D16900047DC6 /* SignUpViewController.swift */; };
 		C9FCAD772020DF9300047DC6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD762020DF9300047DC6 /* User.swift */; };
@@ -83,6 +84,7 @@
 		C99E4C6F2019EA5400887281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C99E4C752019EB0600887281 /* Third View Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Third View Controller.swift"; sourceTree = "<group>"; };
 		C9D29069201E899700F05361 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C9E63984202C6DE000D1DB79 /* Venue Interior Data Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Venue Interior Data Source.swift"; sourceTree = "<group>"; };
 		C9FCAD702020C91A00047DC6 /* Helper Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper Methods.swift"; sourceTree = "<group>"; };
 		C9FCAD742020D16900047DC6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C9FCAD762020DF9300047DC6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				C90E8B8C202B89990087B8EA /* Inspiration Data Source.swift */,
+				C9E63984202C6DE000D1DB79 /* Venue Interior Data Source.swift */,
 			);
 			path = "Data Sources";
 			sourceTree = "<group>";
@@ -446,6 +449,7 @@
 				C91064D32024C97A00A71F78 /* YourReviewsTableViewController.swift in Sources */,
 				C90E8B8F202BC8D20087B8EA /* Pending Operation Queue.swift in Sources */,
 				C9FCAD832021F2D500047DC6 /* FirebaseDBFunctions.swift in Sources */,
+				C9E63985202C6DE000D1DB79 /* Venue Interior Data Source.swift in Sources */,
 				C9FCAD8720221A3F00047DC6 /* SignInUpViewController.swift in Sources */,
 				C9FCAD7D202151B100047DC6 /* SignInViewController.swift in Sources */,
 				C90E8B70202B5EA90087B8EA /* Yelp Category.swift in Sources */,

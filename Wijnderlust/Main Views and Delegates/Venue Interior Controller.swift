@@ -11,40 +11,28 @@ import UIKit
 class VenueInteriorController: UITableViewController {
     @IBOutlet weak var venuePhoto: UIImageView!
     
-    //Setup image to pass to venue image
     var venueImage: UIImage?
 
     var venue: Venue? {
         didSet {
-            if let venue = venue {
-                configure(with: venue)
-//                dataSource.update(with: venue)
-                tableView.reloadData()
+            if let currentVenue = venue {
+                configure(with: currentVenue)
+                print("Venue Set")
             }
         }
     }
     
-//    var dataSource = VenueInteriorDataSource()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let venue = venue else { return }
-        self.title = venue.name
         
-        //Set Photo
-        if let venueImage = venueImage {
-            venuePhoto.image = venueImage
-        }
-        
-//        tableView.dataSource = dataSource
     }
     
     
-    
+    //Configure the venue interior.
     func configure(with venue: Venue) {
-        //Configure the view
-        
+        self.title = venue.name
     }
     
 }

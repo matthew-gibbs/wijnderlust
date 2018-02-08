@@ -7,8 +7,6 @@
 //
 
 import Foundation
-
-import Foundation
 import UIKit
 
 class InspirationDataSource: NSObject, UITableViewDataSource {
@@ -74,7 +72,7 @@ class InspirationDataSource: NSObject, UITableViewDataSource {
     func downloadPhotoForVenue(_ venue: Venue, atIndexPath indexPath: IndexPath) {
         //Check to see if we have already started downloading this.
         if let _ = pendingOperations.downloadsInProgress[indexPath] {
-            //Then cancel.
+            print("Already downloading the image.")
             return
         }
         
