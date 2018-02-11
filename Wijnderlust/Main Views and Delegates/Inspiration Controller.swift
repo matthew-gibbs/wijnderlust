@@ -42,7 +42,7 @@ class InspirationController: UITableViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
-        navigationController?.setNavigationBarHidden(false, animated: false)
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,7 +55,7 @@ class InspirationController: UITableViewController {
         if segue.identifier == "showVenue" {
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
                 let selectedVenue = dataSource.venue(at: selectedIndexPath)
-                let venueDetailController = segue.destination as! VenueInteriorController
+                let venueDetailController = segue.destination as! VenueInteriorTableController
                 
                 //Set custom back image
                 let backItem = UIBarButtonItem()
