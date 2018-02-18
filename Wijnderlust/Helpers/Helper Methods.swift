@@ -14,7 +14,6 @@ let textFieldColor = UIColor(displayP3Red: 216/255.0, green: 216/255.0, blue: 21
 let wijnderlustRed = UIColor(red: 149/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1.0)
 let inactiveGrey = UIColor(red: 142/255.0, green: 142/255.0, blue: 147/255.0, alpha: 1.0)
 let inactiveRed = UIColor(red: 226/255.0, green: 191/255.0, blue: 191/255.0, alpha: 1.0)
-
 let baseCategory = [YelpCategory(json: ["alias" : "wine_bars", "title": "Wine Bars"])]
 
 extension UITextField {
@@ -71,12 +70,12 @@ extension UserDefaults {
 func adjustMap(with coordinate: Coordinate, on map: MKMapView) {
     let coordinate2D = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
     
-    let span = MKCoordinateRegionMakeWithDistance(coordinate2D, 2500, 2500).span
+    let span = MKCoordinateRegionMakeWithDistance(coordinate2D, 2000, 2000).span
     let region = MKCoordinateRegion(center: coordinate2D, span: span)
     map.setRegion(region, animated: true)
 }
 
-//Venue Indicators
+//MARK: Venue Indicators
 
 //Wine Serving?
 func doesServeWine(categories: [YelpCategory]) -> Bool {

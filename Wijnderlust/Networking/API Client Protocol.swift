@@ -14,6 +14,7 @@ enum APIError: Error {
     case invalidData
     case responseUnsuccessful
     case jsonParsingFailure
+    case noResults
     
     var localizedDescription: String {
         switch self {
@@ -22,6 +23,7 @@ enum APIError: Error {
         case .responseUnsuccessful: return "Response Unsuccessful"
         case .jsonParsingFailure: return "JSON Parsing Failure"
         case .jsonConversionFailure: return "JSON Conversion Failure"
+        case .noResults: return "No Results"
         }
     }
 }
@@ -115,7 +117,7 @@ extension APIClient {
                 if !value.isEmpty {
                     completion(.success(value))
                 } else {
-                    completion(.failure(.jsonParsingFailure))
+                    completion(.failure(.noResults))
                 }
             }
         }
