@@ -1233,7 +1233,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="66l-Aj-Vs9" userLabel="venueRating" customClass="CosmosView" customModule="Wijnderlust" customModuleProvider="target">
-                                                            <rect key="frame" x="113" y="1.5" width="65" height="13"/>
+                                                            <rect key="frame" x="113" y="0.0" width="65" height="16"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="rating">
@@ -1383,7 +1383,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXW-N8-rv8">
-                                <rect key="frame" x="18" y="312" width="339" height="43"/>
+                                <rect key="frame" x="18" y="341" width="339" height="43"/>
                                 <color key="backgroundColor" red="0.68395806349999999" green="0.096892753760000006" blue="0.00096701340960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="dqt-8u-sG9"/>
@@ -1401,16 +1401,26 @@
                                     <segue destination="VVb-yH-eDl" kind="unwind" unwindAction="unwindToMapWithSegue:" id="gKb-B0-qoR"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W6u-Y9-3Vm">
+                                <rect key="frame" x="0.0" y="109" width="375" height="1"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="dMT-MB-Psx"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="C31-YX-LQ7" firstAttribute="top" secondItem="1yY-sn-S7r" secondAttribute="bottom" constant="4" id="37F-s9-tGD"/>
                             <constraint firstItem="23J-Nj-aP8" firstAttribute="trailing" secondItem="bXW-N8-rv8" secondAttribute="trailing" constant="18" id="7mR-X2-qjM"/>
                             <constraint firstItem="0Tm-it-EUY" firstAttribute="leading" secondItem="C31-YX-LQ7" secondAttribute="trailing" constant="20" id="BFc-Ou-xHG"/>
-                            <constraint firstItem="bXW-N8-rv8" firstAttribute="top" secondItem="C31-YX-LQ7" secondAttribute="bottom" constant="221" id="FoD-Mi-YU1"/>
+                            <constraint firstItem="bXW-N8-rv8" firstAttribute="top" secondItem="C31-YX-LQ7" secondAttribute="bottom" constant="250" id="FoD-Mi-YU1"/>
                             <constraint firstItem="C31-YX-LQ7" firstAttribute="top" secondItem="23J-Nj-aP8" secondAttribute="top" constant="30" id="GCH-cb-VaV"/>
                             <constraint firstItem="1yY-sn-S7r" firstAttribute="leading" secondItem="23J-Nj-aP8" secondAttribute="leading" constant="18" id="GfG-Mf-KZL"/>
+                            <constraint firstItem="W6u-Y9-3Vm" firstAttribute="leading" secondItem="23J-Nj-aP8" secondAttribute="leading" id="IJ1-Vx-uad"/>
                             <constraint firstItem="C31-YX-LQ7" firstAttribute="leading" secondItem="23J-Nj-aP8" secondAttribute="leading" constant="18" id="QCu-Fq-gdD"/>
+                            <constraint firstItem="W6u-Y9-3Vm" firstAttribute="top" secondItem="C31-YX-LQ7" secondAttribute="bottom" constant="18" id="TvT-CB-Tdd"/>
+                            <constraint firstItem="W6u-Y9-3Vm" firstAttribute="trailing" secondItem="23J-Nj-aP8" secondAttribute="trailing" id="UrF-92-3XZ"/>
                             <constraint firstItem="23J-Nj-aP8" firstAttribute="trailing" secondItem="0Tm-it-EUY" secondAttribute="trailing" constant="18" id="WWq-RS-hDL"/>
                             <constraint firstItem="0Tm-it-EUY" firstAttribute="top" secondItem="23J-Nj-aP8" secondAttribute="top" constant="36" id="aJd-b1-CnL"/>
                             <constraint firstItem="1yY-sn-S7r" firstAttribute="top" secondItem="23J-Nj-aP8" secondAttribute="top" constant="10" id="i2S-4o-gOf"/>
