@@ -18,6 +18,7 @@ struct VenueInteriorViewModel {
     let price: String
     let venueType: String
     let location: Coordinate
+    let categories: [YelpCategory]
     
     //Indicators
     let hasWineList: Bool
@@ -33,15 +34,22 @@ extension VenueInteriorViewModel {
         self.venueAddress = venue.address.address1
         self.venueRating = venue.rating
         self.price = venue.price
+        self.categories = venue.categories
         //FIXME: - Make this the first category.
-        self.venueType = "Wine Bar"
+        self.venueType = venue.categories.first!.title
         self.location = venue.location
         
-        //FIXME: - Make Indicators Work
+        //MARK: - Indicators
         self.hasWineList = false
-        self.servesWine = false
-        self.servesFood = false
-        self.offersRooms = false
+        
+        //MARK: - Does it serve wine?
+        self.servesWine = doesServeWine(categories: venue.categories)
+        
+        //MARK: - Does it serve food?
+        self.servesFood = doesServeFood(categories: venue.categories)
+        
+        //MARK: - Does it offer rooms?
+        self.offersRooms = doesOfferRooms(categories: venue.categories)
     }
 }
 

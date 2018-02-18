@@ -50,5 +50,7 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We use your location to find the tastiest wine near you! </string>
 </dict>
 </plist>

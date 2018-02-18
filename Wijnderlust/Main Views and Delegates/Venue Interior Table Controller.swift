@@ -18,6 +18,15 @@ class VenueInteriorTableController: UITableViewController {
     @IBOutlet weak var venueNameLabel: UILabel!
     @IBOutlet weak var venueAddressLabel: UILabel!
     @IBOutlet weak var venueLocationOnMap: MKMapView!
+    
+    //Serving Indicatiors
+    @IBOutlet weak var servesWineLabel: UILabel!
+    @IBOutlet weak var servesWineImage: UIImageView!
+    @IBOutlet weak var servesFoodLabel: UILabel!
+    @IBOutlet weak var servesFoodImage: UIImageView!
+    @IBOutlet weak var offersRoomsLabel: UILabel!
+    @IBOutlet weak var offersRoomsImage: UIImageView!
+    
 
     var passedVenueImage: UIImage?
     
@@ -27,7 +36,7 @@ class VenueInteriorTableController: UITableViewController {
         super.viewDidLoad()
         if let currentVenue = venue {
             configure(with: currentVenue)
-            print("Venue Set")
+            print(currentVenue.categories)
         }
     }
     
@@ -42,7 +51,37 @@ class VenueInteriorTableController: UITableViewController {
         venueAddressLabel.text = viewModel.venueAddress
         venueCategoryLabel.text = viewModel.venueType
         venuePriceLabel.text = viewModel.price
-//        venueRatingLabel.rating = viewModel.venueRating
+        venueRatingLabel.rating = viewModel.venueRating
+        
+        //Wine Serving Indicator
+        if viewModel.servesWine == true {
+            servesWineLabel.text = "Serves Wine"
+            servesWineImage.image = #imageLiteral(resourceName: " Wine Filled")
+        } else {
+            servesWineImage.image = #imageLiteral(resourceName: " Wine Not Filled")
+            servesWineLabel.text = "No Wine"
+            servesWineLabel.textColor = inactiveGrey
+        }
+        
+        //Food Serving Indicator
+        if viewModel.servesFood == true {
+            servesFoodLabel.text = "Serves Food"
+            servesFoodImage.image = #imageLiteral(resourceName: " Dinner Filled")
+        } else {
+            servesFoodImage.image = #imageLiteral(resourceName: " Dinner Not Filled")
+            servesFoodLabel.text = "No Food"
+            servesFoodLabel.textColor = inactiveGrey
+        }
+        
+        //Offers Rooms Indicator
+        if viewModel.offersRooms == true {
+            offersRoomsImage.image = #imageLiteral(resourceName: " Hotel Filled")
+            offersRoomsLabel.text = "Offers Rooms"
+        } else {
+            offersRoomsImage.image = #imageLiteral(resourceName: " Hotel Not Filled")
+            offersRoomsLabel.text = "No Rooms"
+            offersRoomsLabel.textColor = inactiveGrey
+        }
         
         //Set up the map
         adjustMap(with: viewModel.location, on: venueLocationOnMap)

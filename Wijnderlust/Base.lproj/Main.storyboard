@@ -14,7 +14,7 @@
         <!--Around Me-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Wijnderlust" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="AroundMeController" customModule="Wijnderlust" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,7 +25,7 @@
                                 <color key="textColor" red="0.18039215689999999" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="J9U-yC-Oj3">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J9U-yC-Oj3">
                                 <rect key="frame" x="0.0" y="100" width="375" height="518"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
@@ -39,6 +39,9 @@
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Around Me" image="AroundMe" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="aroundMeMap" destination="J9U-yC-Oj3" id="zLT-hS-1oK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -1247,7 +1250,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XTV-fo-ZOj">
                                                     <rect key="frame" x="8" y="195" width="120" height="30"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image=" Wine Not Filled " translatesAutoresizingMaskIntoConstraints="NO" id="UJv-Wt-3lS" userLabel="wineStatusImage">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="UJv-Wt-3lS" userLabel="wineStatusImage">
                                                             <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                                             <color key="tintColor" red="0.68395806349999999" green="0.096892753760000006" blue="0.00096701340960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
@@ -1434,7 +1437,7 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lDQ-a0-148">
                                                             <rect key="frame" x="0.0" y="0.0" width="114.5" height="81"/>
                                                             <subviews>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image=" Wine Not Filled " translatesAutoresizingMaskIntoConstraints="NO" id="egA-qj-noT">
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image=" Wine Not Filled" translatesAutoresizingMaskIntoConstraints="NO" id="egA-qj-noT">
                                                                     <rect key="frame" x="27" y="0.0" width="60" height="60"/>
                                                                     <color key="tintColor" red="0.58431372550000005" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </imageView>
@@ -1449,7 +1452,7 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="KBC-SP-Jmf">
                                                             <rect key="frame" x="114.5" y="0.0" width="114" height="81"/>
                                                             <subviews>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dinner " translatesAutoresizingMaskIntoConstraints="NO" id="5ot-lC-rr1">
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image=" Dinner Not Filled" translatesAutoresizingMaskIntoConstraints="NO" id="5ot-lC-rr1">
                                                                     <rect key="frame" x="27" y="0.0" width="60" height="60"/>
                                                                     <color key="tintColor" red="0.58431372550000005" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </imageView>
@@ -1464,7 +1467,7 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Clb-a8-bj2">
                                                             <rect key="frame" x="228.5" y="0.0" width="114.5" height="81"/>
                                                             <subviews>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hotel" translatesAutoresizingMaskIntoConstraints="NO" id="bnj-8q-HZw">
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image=" Hotel Not Filled" translatesAutoresizingMaskIntoConstraints="NO" id="bnj-8q-HZw">
                                                                     <rect key="frame" x="27.5" y="0.0" width="60" height="60"/>
                                                                     <color key="tintColor" red="0.68395806349999999" green="0.096892753760000006" blue="0.00096701340960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </imageView>
@@ -1525,6 +1528,12 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="offersRoomsImage" destination="bnj-8q-HZw" id="7my-JV-WYN"/>
+                        <outlet property="offersRoomsLabel" destination="KJu-cL-VbN" id="VnM-zT-EyT"/>
+                        <outlet property="servesFoodImage" destination="5ot-lC-rr1" id="wAb-FN-Ser"/>
+                        <outlet property="servesFoodLabel" destination="r0y-EA-017" id="c2h-AS-wGo"/>
+                        <outlet property="servesWineImage" destination="egA-qj-noT" id="QrI-l9-gL0"/>
+                        <outlet property="servesWineLabel" destination="NMW-Ur-61o" id="q7g-IB-NBj"/>
                         <outlet property="venueAddressLabel" destination="lkP-ZR-XGo" id="VzC-k5-3x1"/>
                         <outlet property="venueCategoryLabel" destination="eai-BH-63b" id="sxB-0i-n9W"/>
                         <outlet property="venueImage" destination="6wG-2l-rDs" id="r58-Yc-mvJ"/>
@@ -1569,15 +1578,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name=" Dinner Not Filled" width="60" height="60"/>
+        <image name=" Hotel Not Filled" width="60" height="60"/>
         <image name=" Log Out" width="50" height="50"/>
         <image name=" Reviews" width="50" height="50"/>
         <image name=" Settings" width="50" height="50"/>
         <image name=" Trip History" width="50" height="50"/>
-        <image name=" Wine Not Filled " width="60" height="60"/>
+        <image name=" Wine Not Filled" width="60" height="60"/>
         <image name="AroundMe" width="88" height="88"/>
-        <image name="Dinner " width="60" height="60"/>
         <image name="Edit" width="46" height="46"/>
-        <image name="Hotel" width="60" height="60"/>
         <image name="Inspiration" width="88" height="88"/>
         <image name="MyTrips" width="88" height="88"/>
         <image name="Profile" width="88" height="88"/>

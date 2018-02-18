@@ -49,5 +49,14 @@ class VenueCell: UITableViewCell {
         venueNameLabel.text = viewModel.venueName
         
         //FIXME: - Wine Status Indicator.
+        if viewModel.wineList == false {
+            wineStatusImage.image = #imageLiteral(resourceName: " Wine Not Filled")
+            wineStatusLabel.text = "Wine List Unavailable"
+            wineStatusLabel.textColor = inactiveGrey
+        } else {
+            wineStatusImage.image = #imageLiteral(resourceName: " Wine Filled")
+            wineStatusLabel.text = "Wine List Available"
+            wineStatusLabel.textColor = wijnderlustRed
+        }
     }
 }

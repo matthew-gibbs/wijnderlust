@@ -22,7 +22,7 @@ class InspirationController: UITableViewController {
         
         tableView.dataSource = dataSource
         
-        client.search(withTerm: "wine bar", at: Coordinate(lat: 51.5033640, long: -0.1276250)) { [weak self] result in
+        client.search(withTerm: "wine", at: Coordinate(lat: 51.5033640, long: -0.1276250), categories: baseCategory as! [YelpCategory]) { [weak self] result in
             switch result {
             case .success(let businesses):
                 self?.dataSource.update(with: businesses)

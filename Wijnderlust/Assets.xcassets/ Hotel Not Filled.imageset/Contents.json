@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : " Wine Not Filled .pdf",
+      "filename" : " Hotel Not Filled.pdf",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : " Wine Not Filled @2x.pdf",
+      "filename" : " Hotel Not Filled@2x.pdf",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : " Wine Not Filled @3x.pdf",
+      "filename" : " Hotel Not Filled@3x.pdf",
       "scale" : "3x"
     }
   ],

@@ -26,7 +26,6 @@
 		C90E8B8D202B89990087B8EA /* Inspiration Data Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B8C202B89990087B8EA /* Inspiration Data Source.swift */; };
 		C90E8B8F202BC8D20087B8EA /* Pending Operation Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B8E202BC8D20087B8EA /* Pending Operation Queue.swift */; };
 		C90E8B91202BC8ED0087B8EA /* Venue Image Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B90202BC8ED0087B8EA /* Venue Image Downloader.swift */; };
-		C90E8B93202BF0320087B8EA /* Venue Interior Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B92202BF0320087B8EA /* Venue Interior Controller.swift */; };
 		C91064CE2023555400A71F78 /* Profile Menu Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91064CD2023555400A71F78 /* Profile Menu Controller.swift */; };
 		C91064D120237AE700A71F78 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91064D020237AE700A71F78 /* EditProfileViewController.swift */; };
 		C91064D32024C97A00A71F78 /* YourReviewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91064D22024C97A00A71F78 /* YourReviewsTableViewController.swift */; };
@@ -38,10 +37,12 @@
 		C9582DF6202CCE5900A28E88 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9582DF5202CCE5900A28E88 /* MapKit.framework */; };
 		C99E4C622019EA5400887281 /* App Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E4C612019EA5400887281 /* App Delegate.swift */; };
 		C99E4C692019EA5400887281 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99E4C672019EA5400887281 /* Main.storyboard */; };
-		C99E4C6B2019EA5400887281 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C99E4C6A2019EA5400887281 /* Assets.xcassets */; };
 		C99E4C6E2019EA5400887281 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99E4C6C2019EA5400887281 /* LaunchScreen.storyboard */; };
 		C99E4C762019EB0600887281 /* Third View Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E4C752019EB0600887281 /* Third View Controller.swift */; };
 		C9D2906A201E899700F05361 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9D29069201E899700F05361 /* GoogleService-Info.plist */; };
+		C9F02B572039906600F1FF80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C99E4C6A2019EA5400887281 /* Assets.xcassets */; };
+		C9F02B5A2039AD0400F1FF80 /* Location Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F02B592039AD0400F1FF80 /* Location Manager.swift */; };
+		C9F02B602039B85400F1FF80 /* AroundMeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F02B5F2039B85400F1FF80 /* AroundMeController.swift */; };
 		C9FCAD712020C91A00047DC6 /* Helper Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD702020C91A00047DC6 /* Helper Methods.swift */; };
 		C9FCAD752020D16900047DC6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD742020D16900047DC6 /* SignUpViewController.swift */; };
 		C9FCAD772020DF9300047DC6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD762020DF9300047DC6 /* User.swift */; };
@@ -73,7 +74,6 @@
 		C90E8B8C202B89990087B8EA /* Inspiration Data Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Inspiration Data Source.swift"; sourceTree = "<group>"; };
 		C90E8B8E202BC8D20087B8EA /* Pending Operation Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pending Operation Queue.swift"; sourceTree = "<group>"; };
 		C90E8B90202BC8ED0087B8EA /* Venue Image Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Venue Image Downloader.swift"; sourceTree = "<group>"; };
-		C90E8B92202BF0320087B8EA /* Venue Interior Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Venue Interior Controller.swift"; sourceTree = "<group>"; };
 		C91064CD2023555400A71F78 /* Profile Menu Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile Menu Controller.swift"; sourceTree = "<group>"; };
 		C91064D020237AE700A71F78 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		C91064D22024C97A00A71F78 /* YourReviewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourReviewsTableViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +91,8 @@
 		C99E4C6F2019EA5400887281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C99E4C752019EB0600887281 /* Third View Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Third View Controller.swift"; sourceTree = "<group>"; };
 		C9D29069201E899700F05361 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C9F02B592039AD0400F1FF80 /* Location Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location Manager.swift"; sourceTree = "<group>"; };
+		C9F02B5F2039B85400F1FF80 /* AroundMeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AroundMeController.swift; sourceTree = "<group>"; };
 		C9FCAD702020C91A00047DC6 /* Helper Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper Methods.swift"; sourceTree = "<group>"; };
 		C9FCAD742020D16900047DC6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C9FCAD762020DF9300047DC6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 		C99E4C602019EA5400887281 /* Wijnderlust */ = {
 			isa = PBXGroup;
 			children = (
+				C9F02B582039ACF500F1FF80 /* Permissions */,
 				C90E8B8B202B89660087B8EA /* Data Sources */,
 				C9FCAD8820221AED00047DC6 /* Main Views and Delegates */,
 				C91064CF20237AA700A71F78 /* Profile Views */,
@@ -232,6 +235,14 @@
 				C90E8B7D202B6FDD0087B8EA /* Vendor */,
 			);
 			path = Wijnderlust;
+			sourceTree = "<group>";
+		};
+		C9F02B582039ACF500F1FF80 /* Permissions */ = {
+			isa = PBXGroup;
+			children = (
+				C9F02B592039AD0400F1FF80 /* Location Manager.swift */,
+			);
+			path = Permissions;
 			sourceTree = "<group>";
 		};
 		C9FCAD782020DF9E00047DC6 /* Models */ = {
@@ -277,7 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				C90E8B83202B7B670087B8EA /* Inspiration Controller.swift */,
-				C90E8B92202BF0320087B8EA /* Venue Interior Controller.swift */,
+				C9F02B5F2039B85400F1FF80 /* AroundMeController.swift */,
 				C9085E622030FBA9005BE89E /* Venue Interior Table Controller.swift */,
 				C99E4C612019EA5400887281 /* App Delegate.swift */,
 				C9FCAD842022035A00047DC6 /* Main Nav Controller.swift */,
@@ -365,7 +376,7 @@
 			files = (
 				C99E4C6E2019EA5400887281 /* LaunchScreen.storyboard in Resources */,
 				C9D2906A201E899700F05361 /* GoogleService-Info.plist in Resources */,
-				C99E4C6B2019EA5400887281 /* Assets.xcassets in Resources */,
+				C9F02B572039906600F1FF80 /* Assets.xcassets in Resources */,
 				C99E4C692019EA5400887281 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,9 +454,9 @@
 				C9582DF4202CB69500A28E88 /* TransparentNavBarController.swift in Sources */,
 				C90E8B73202B5ECE0087B8EA /* Coordinate.swift in Sources */,
 				C90E8B8A202B7D880087B8EA /* API Client Protocol.swift in Sources */,
+				C9F02B5A2039AD0400F1FF80 /* Location Manager.swift in Sources */,
 				C9FCAD752020D16900047DC6 /* SignUpViewController.swift in Sources */,
 				C9FCAD712020C91A00047DC6 /* Helper Methods.swift in Sources */,
-				C90E8B93202BF0320087B8EA /* Venue Interior Controller.swift in Sources */,
 				C99E4C622019EA5400887281 /* App Delegate.swift in Sources */,
 				C90E8B77202B5F7C0087B8EA /* Yelp Review.swift in Sources */,
 				C9582DF2202C9D0800A28E88 /* VenueInteriorViewModel.swift in Sources */,
@@ -474,6 +485,7 @@
 				C90E8B82202B75560087B8EA /* VenueCellViewModel.swift in Sources */,
 				C90E8B79202B5FA80087B8EA /* Yelp User.swift in Sources */,
 				C90E8B88202B7D5A0087B8EA /* Yelp Client.swift in Sources */,
+				C9F02B602039B85400F1FF80 /* AroundMeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

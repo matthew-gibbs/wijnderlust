@@ -16,7 +16,9 @@ struct YelpCategory {
 extension YelpCategory: JSONInitialisable {
     init?(json: [String : Any]) {
         guard let aliasValue = json["alias"] as? String, let titleValue = json["title"] as? String else { return nil }
+        
         self.alias = aliasValue
         self.title = titleValue
     }
 }
+
