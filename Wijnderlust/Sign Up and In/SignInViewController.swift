@@ -57,7 +57,7 @@ class SignInViewController: UIViewController {
                     self.performSegue(withIdentifier: "goHomeSignIn", sender: self)
                 } else if let e = error {
                     print(error!)
-                    self.showAlertWith(title: "Error!", message: "\(e)")
+                    self.showAlertWith(title: "Error!", message: "\(e.localizedDescription)")
                 }
             })
         }
