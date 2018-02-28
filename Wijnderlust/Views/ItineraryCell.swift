@@ -49,6 +49,32 @@ class ItineraryCell: UITableViewCell {
         endDateLabel.text = viewModel.endDate
         destinationLabel.text = viewModel.title
         //FIXME: Do the indicators
+        if viewModel.hasFlights {
+            flightStatusIcon.image = #imageLiteral(resourceName: " Flight Filled")
+            flightStatusLabel.text = "Flights Added"
+            flightStatusLabel.textColor = wijnderlustRed
+        } else {
+            flightStatusLabel.text = "No Flights Yet"
+            flightStatusIcon.image = #imageLiteral(resourceName: " Flight Not Filled")
+        }
+        
+        if viewModel.hasHotel {
+            hotelStatusIcon.image = #imageLiteral(resourceName: " Hotel Filled")
+            hotelStatusLabel.text = "Hotel Added"
+            hotelStatusLabel.textColor = wijnderlustRed
+        } else {
+            hotelStatusIcon.image = #imageLiteral(resourceName: " Hotel Not Filled")
+            hotelStatusLabel.text = "No Hotel Yet"
+        }
+        
+        if viewModel.hasItinerary {
+            itineraryStatusIcon.image = #imageLiteral(resourceName: " Itinerary Filled")
+            itineraryStatusLabel.text = "Venues Added"
+            itineraryStatusLabel.textColor = wijnderlustRed
+        } else {
+            itineraryStatusIcon.image = #imageLiteral(resourceName: " Itinerary Not Filled")
+            itineraryStatusLabel.text = "No Venues Yet"
+        }
     }
 
 }

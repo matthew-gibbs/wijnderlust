@@ -13,7 +13,8 @@ import FirebaseDatabase
 
 class MyTripsController: UITableViewController {
     
-    var client: DatabaseReference! = Database.database().reference()
+    var tripsClient: DatabaseReference! = Database.database().reference()
+    var imageClient = UnsplashClient()
     let userId = UserDefaults.standard.getCurrentUserId()
     
     lazy var dataSource: MyTripsDataSource = {
@@ -25,7 +26,7 @@ class MyTripsController: UITableViewController {
         
         tableView.dataSource = dataSource
         
-        self.client.child("users").child(userId).child("itineraries").observe(DataEventType.value, with: { (snapshot) in
+        self.tripsClient.child("users").child(userId).child("itineraries").observe(DataEventType.value, with: { (snapshot) in
             
             if (snapshot.childrenCount) > 0 {
 
@@ -58,7 +59,7 @@ class MyTripsController: UITableViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
-        navigationController?.setNavigationBarHidden(false, animated: true)
+//        navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     override func didReceiveMemoryWarning() {
@@ -69,9 +70,28 @@ class MyTripsController: UITableViewController {
     //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showItinerary" {
-            
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                let selectedItinerary = dataSource.itinerary(at: selectedIndexPath)
+                let itineraryDetailController = segue.destination as! ItineraryInteriorController
+                
+                if let interiorImage = selectedItinerary.photo {
+                    print(interiorImage)
+                    itineraryDetailController.passedDestinationImage = interiorImage
+                    itineraryDetailController.itinerary = selectedItinerary
+                }
+                
             }
         }
     }
+    
+    
+    //MARK: Unwind Segue
+    
+    @IBAction func unwindToItineraries(segue: UIStoryboardSegue) {
+        let source = segue.source as? ItineraryInteriorController
+    }
+}
+
+
     
 
