@@ -18,6 +18,10 @@ class VenueCell: UITableViewCell {
     @IBOutlet weak var wineStatusLabel: UILabel!
     @IBOutlet weak var venueNameLabel: UILabel!
     @IBOutlet weak var containerCell: UIView!
+    //Outlets for Itinerary Interiors
+    @IBOutlet weak var fullLine: UIView!
+    @IBOutlet weak var lineDetachBottom: UIView!
+    @IBOutlet weak var lineDetachTop: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,6 +38,7 @@ class VenueCell: UITableViewCell {
         //Setup shadow
         containerCell.layer.shadowColor = UIColor.black.cgColor
         containerCell.layer.shadowOpacity = 0.2
+        containerCell.layer.cornerRadius = 5
         containerCell.layer.shadowOffset = CGSize(width: 0, height: 2)
     }
 

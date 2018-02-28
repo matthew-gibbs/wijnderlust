@@ -27,6 +27,38 @@ class ItineraryInteriorController: UITableViewController {
         tableView.dataSource = dataSource
         
         itineraryTitleLabel.text = itinerary?.name.capitalized
+        
+        if let itinerary = itinerary {
+            if let hotel = itinerary.hotelId {
+                client.venueWithId(hotel) { result in
+                    switch result {
+                    case .success(let hotel):
+                        self.dataSource.updateHotel(with: hotel)
+                        self.tableView.reloadData()
+                    case .failure(let error):
+                        print(error)
+                    }
+                }
+            }
+            
+            if let venueIds = itinerary.unparsedPlaces {
+                var places: [Venue] = []
+                for id in venueIds {
+                    print(id)
+                    client.venueWithId(id) { result in
+                        switch result {
+                        case .success(let venue):
+                            print(venue)
+                            places.append(venue)
+                            self.dataSource.updateVenues(with: venue)
+                        case .failure(let error):
+                            print(error)
+                        }
+                    }
+                }
+            }
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

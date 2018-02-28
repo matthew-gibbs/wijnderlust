@@ -18,9 +18,9 @@ struct HotelCellViewModel {
 }
 
 extension HotelCellViewModel {
-    init(itinerary: Itinerary) {
-        self.hotelImage = itinerary.photoState == .downloaded ? itinerary.photo! : #imageLiteral(resourceName: "placeholder")
-        self.hotelName = "Ambassade Hotel Test"
+    init(itinerary: Itinerary, hotel: Venue) {
+        self.hotelImage = hotel.photoState == .downloaded ? hotel.photo! : #imageLiteral(resourceName: "placeholder")
+        self.hotelName = hotel.name
         self.checkInDate = itinerary.startDate
         self.checkOutDate = itinerary.endDate
     }

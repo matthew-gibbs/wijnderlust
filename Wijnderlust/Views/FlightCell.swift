@@ -11,6 +11,7 @@ import UIKit
 class FlightCell: UITableViewCell {
     @IBOutlet weak var containerCell: UIView!
     @IBOutlet weak var flightImage: UIImageView!
+    @IBOutlet weak var imageOverlay: UIView!
     @IBOutlet weak var lineDetachBottom: UIView!
     @IBOutlet weak var lineFullLength: UIView!
     @IBOutlet weak var departureDate: UILabel!
@@ -33,11 +34,17 @@ class FlightCell: UITableViewCell {
         
         //Round the image corners
         let rectShape = CAShapeLayer()
+        let overlayShape = CAShapeLayer()
         rectShape.bounds = self.flightImage.frame
         rectShape.position = self.flightImage.center
         rectShape.path = UIBezierPath(roundedRect: self.flightImage.bounds, byRoundingCorners: [.topLeft , .topRight], cornerRadii: CGSize(width: 5, height: 5)).cgPath
         //Here I'm masking the textView's layer with rectShape layer
         self.flightImage.layer.mask = rectShape
+        overlayShape.bounds = self.imageOverlay.frame
+        overlayShape.position = self.imageOverlay.center
+        overlayShape.path = UIBezierPath(roundedRect: self.imageOverlay.bounds, byRoundingCorners: [.topLeft , .topRight], cornerRadii: CGSize(width: 5, height: 5)).cgPath
+        //Here I'm masking the textView's layer with rectShape layer
+        self.imageOverlay.layer.mask = overlayShape
         
         //Setup shadow
         containerCell.layer.shadowColor = UIColor.black.cgColor

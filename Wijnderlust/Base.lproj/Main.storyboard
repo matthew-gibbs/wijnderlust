@@ -1214,7 +1214,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="66l-Aj-Vs9" userLabel="venueRating" customClass="CosmosView" customModule="Wijnderlust" customModuleProvider="target">
-                                                            <rect key="frame" x="113" y="1.5" width="65" height="13"/>
+                                                            <rect key="frame" x="113" y="0.0" width="65" height="16"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="rating">
@@ -1430,7 +1430,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexBackgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="r3D-a7-dSB" userLabel="MyTripsHeader">
+                        <view key="tableHeaderView" contentMode="scaleToFill" misplaced="YES" id="r3D-a7-dSB" userLabel="MyTripsHeader">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
@@ -1620,11 +1620,12 @@
         <scene sceneID="m70-fG-p71">
             <objects>
                 <tableViewController id="oia-Dv-4OL" customClass="ItineraryInteriorController" customModule="Wijnderlust" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="2Wi-31-hky">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="2Wi-31-hky">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="sGn-pU-1eC" userLabel="Itinerary Interior Header">
+                        <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" misplaced="YES" id="sGn-pU-1eC" userLabel="Itinerary Interior Header">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
@@ -1933,6 +1934,7 @@
                                     <outlet property="departureDate" destination="C5V-sc-AIB" id="Nmz-9F-hpq"/>
                                     <outlet property="flightImage" destination="PuZ-80-x2r" id="uB9-hF-Ubs"/>
                                     <outlet property="flightNo" destination="eCs-06-FES" id="FxO-GE-lvL"/>
+                                    <outlet property="imageOverlay" destination="nIS-6H-q4i" id="gTq-2R-p6t"/>
                                     <outlet property="lineDetachBottom" destination="t8R-Nf-h0I" id="TAm-yb-58E"/>
                                     <outlet property="lineFullLength" destination="9Nh-Yc-Mew" id="YiY-Cl-pzf"/>
                                     <outlet property="mainLabel" destination="6cq-Kk-t9f" id="6b1-ZN-TaW"/>
@@ -1941,7 +1943,7 @@
                                     <outlet property="wineStatusLabel" destination="Bzb-F1-DuS" id="zfh-3S-vOq"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HotelCell" rowHeight="250" id="zdA-uR-wNe" customClass="HotelCell" customModule="Wijnderlust" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="HotelCell" rowHeight="250" id="zdA-uR-wNe" customClass="HotelCell" customModule="Wijnderlust" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="521.5" width="375" height="250"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zdA-uR-wNe" id="ceE-sY-3eM">
@@ -1951,7 +1953,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v0C-Og-a8A">
                                             <rect key="frame" x="38" y="10" width="319" height="229"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BN8-Ib-LEV">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BN8-Ib-LEV">
                                                     <rect key="frame" x="0.0" y="0.0" width="319" height="132"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="132" id="N3C-HQ-PuA"/>
@@ -2020,13 +2022,6 @@
                                                 <constraint firstItem="9fH-1c-Ns3" firstAttribute="leading" secondItem="v0C-Og-a8A" secondAttribute="leading" constant="10" id="swn-o3-vFL"/>
                                             </constraints>
                                         </view>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Timeline Hotel" translatesAutoresizingMaskIntoConstraints="NO" id="Td6-tk-RS0">
-                                            <rect key="frame" x="15" y="155" width="9" height="9"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="9" id="d7T-ZQ-jgY"/>
-                                                <constraint firstAttribute="width" constant="9" id="e1G-ZT-UHt"/>
-                                            </constraints>
-                                        </imageView>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="65s-Vg-Ecc">
                                             <rect key="frame" x="19" y="0.0" width="1" height="160"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2037,6 +2032,14 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="0.68395806349999999" green="0.096892753760000006" blue="0.00096701340960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </view>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Timeline Hotel" translatesAutoresizingMaskIntoConstraints="NO" id="Td6-tk-RS0">
+                                            <rect key="frame" x="15" y="155" width="9" height="9"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="9" id="d7T-ZQ-jgY"/>
+                                                <constraint firstAttribute="width" constant="9" id="e1G-ZT-UHt"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Td6-tk-RS0" firstAttribute="top" secondItem="ceE-sY-3eM" secondAttribute="top" constant="155" id="6KH-6q-HQE"/>
@@ -2057,6 +2060,151 @@
                                     <outlet property="startDateLabel" destination="DMG-cQ-rhG" id="93d-XQ-KkV"/>
                                     <outlet property="wineStatusImage" destination="dBw-3Q-AKH" id="wYJ-JS-i0e"/>
                                     <outlet property="wineStatusLabel" destination="ON1-nW-CVe" id="Hxd-7l-lNM"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="VenueCell" rowHeight="250" id="arf-5Q-SeZ" customClass="VenueCell" customModule="Wijnderlust" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="771.5" width="375" height="250"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="arf-5Q-SeZ" id="H3n-L1-5V2">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="249.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z9F-uJ-8g6">
+                                            <rect key="frame" x="38" y="10" width="319" height="229"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KKA-yh-gkK">
+                                                    <rect key="frame" x="0.0" y="0.0" width="319" height="132"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="132" id="sOc-7f-3yL"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="uT5-Ww-a69">
+                                                    <rect key="frame" x="10" y="142" width="176.5" height="13"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venue Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2h1-TW-b33">
+                                                            <rect key="frame" x="0.0" y="0.0" width="95" height="13"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                                            <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="•" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sch-Lt-o5s">
+                                                            <rect key="frame" x="100" y="0.0" width="6.5" height="13"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                                            <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D5E-cM-vyx" customClass="CosmosView" customModule="Wijnderlust" customModuleProvider="target">
+                                                            <rect key="frame" x="111.5" y="0.0" width="65" height="13"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="65" id="Xvu-rC-udZ"/>
+                                                                <constraint firstAttribute="height" constant="13" id="mHq-jd-3Pa"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                                                    <real key="value" value="4"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                                                    <integer key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                                    <real key="value" value="13"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                                                    <color key="value" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="filledBorderColor">
+                                                                    <color key="value" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
+                                                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
+                                                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="starMargin">
+                                                                    <real key="value" value="0.0"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venue Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZz-Fr-ogI">
+                                                    <rect key="frame" x="10" y="157" width="299" height="26.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                    <color key="textColor" red="0.18039215689999999" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="P1Q-gK-Qc7">
+                                                    <rect key="frame" x="10" y="187.5" width="117" height="30"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eGv-Rg-PVo">
+                                                            <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="30" id="2GF-MA-s1Q"/>
+                                                                <constraint firstAttribute="height" constant="30" id="hBz-7k-mTi"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wine List Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EyK-68-HvD">
+                                                            <rect key="frame" x="35" y="0.0" width="82" height="30"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
+                                                            <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="KKA-yh-gkK" firstAttribute="leading" secondItem="z9F-uJ-8g6" secondAttribute="leading" id="7WK-h6-Z29"/>
+                                                <constraint firstItem="P1Q-gK-Qc7" firstAttribute="leading" secondItem="z9F-uJ-8g6" secondAttribute="leading" constant="10" id="B9P-hz-Myo"/>
+                                                <constraint firstItem="KKA-yh-gkK" firstAttribute="top" secondItem="z9F-uJ-8g6" secondAttribute="top" id="DQ6-sy-FVa"/>
+                                                <constraint firstItem="uT5-Ww-a69" firstAttribute="top" secondItem="KKA-yh-gkK" secondAttribute="bottom" constant="10" id="Euh-Om-x25"/>
+                                                <constraint firstAttribute="trailing" secondItem="aZz-Fr-ogI" secondAttribute="trailing" constant="10" id="LVV-sP-bNq"/>
+                                                <constraint firstAttribute="height" constant="229" id="REm-el-ZBb"/>
+                                                <constraint firstItem="uT5-Ww-a69" firstAttribute="leading" secondItem="z9F-uJ-8g6" secondAttribute="leading" constant="10" id="a8j-BI-LiY"/>
+                                                <constraint firstAttribute="trailing" secondItem="KKA-yh-gkK" secondAttribute="trailing" id="jHq-cX-BaY"/>
+                                                <constraint firstItem="P1Q-gK-Qc7" firstAttribute="top" secondItem="aZz-Fr-ogI" secondAttribute="bottom" constant="4" id="oGK-Kz-aR6"/>
+                                                <constraint firstItem="aZz-Fr-ogI" firstAttribute="top" secondItem="uT5-Ww-a69" secondAttribute="bottom" constant="2" id="qEe-1L-lgN"/>
+                                                <constraint firstItem="aZz-Fr-ogI" firstAttribute="leading" secondItem="z9F-uJ-8g6" secondAttribute="leading" constant="10" id="xgl-nS-Jcc"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jqS-ed-ySK">
+                                            <rect key="frame" x="19" y="0.0" width="1" height="160"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.68395806349999999" green="0.096892753760000006" blue="0.00096701340960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kmz-HS-eXY">
+                                            <rect key="frame" x="19" y="0.0" width="1" height="249"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.68395806349999999" green="0.096892753760000006" blue="0.00096701340960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </view>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Timeline POI" translatesAutoresizingMaskIntoConstraints="NO" id="EzX-30-Bbc">
+                                            <rect key="frame" x="15" y="155" width="9" height="9"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="9" id="3EK-y3-GmV"/>
+                                                <constraint firstAttribute="width" constant="9" id="JBP-Ga-YtF"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="z9F-uJ-8g6" firstAttribute="top" secondItem="H3n-L1-5V2" secondAttribute="top" constant="10" id="InG-DI-i46"/>
+                                        <constraint firstItem="EzX-30-Bbc" firstAttribute="leading" secondItem="H3n-L1-5V2" secondAttribute="leading" constant="15" id="OnS-UZ-arn"/>
+                                        <constraint firstItem="EzX-30-Bbc" firstAttribute="top" secondItem="H3n-L1-5V2" secondAttribute="top" constant="155" id="iqp-iG-3vw"/>
+                                        <constraint firstAttribute="bottom" secondItem="z9F-uJ-8g6" secondAttribute="bottom" constant="10" id="n8n-XL-TZL"/>
+                                        <constraint firstItem="z9F-uJ-8g6" firstAttribute="leading" secondItem="H3n-L1-5V2" secondAttribute="leading" constant="38" id="rBP-X1-sJk"/>
+                                        <constraint firstAttribute="trailing" secondItem="z9F-uJ-8g6" secondAttribute="trailing" constant="18" id="sPJ-OI-RfN"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="containerCell" destination="z9F-uJ-8g6" id="3tT-aN-cka"/>
+                                    <outlet property="venueAddressLabel" destination="2h1-TW-b33" id="zHZ-w9-aRX"/>
+                                    <outlet property="venueImage" destination="KKA-yh-gkK" id="WhS-e1-p12"/>
+                                    <outlet property="venueNameLabel" destination="aZz-Fr-ogI" id="oeU-lx-exS"/>
+                                    <outlet property="venueRating" destination="D5E-cM-vyx" id="MOn-mb-3e3"/>
+                                    <outlet property="wineStatusImage" destination="eGv-Rg-PVo" id="w6L-63-Wwy"/>
+                                    <outlet property="wineStatusLabel" destination="EyK-68-HvD" id="PXS-Bd-hRG"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -2093,7 +2241,7 @@
                                         <constraint firstAttribute="height" constant="220" id="rlE-0m-TBN"/>
                                     </constraints>
                                 </imageView>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BJg-Bk-png" customClass="CosmosView" customModule="Wijnderlust" customModuleProvider="target">
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BJg-Bk-png" customClass="CosmosView" customModule="Wijnderlust" customModuleProvider="target">
                                     <rect key="frame" x="278" y="-34" width="89" height="17"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="rating">
@@ -2356,6 +2504,7 @@
         <image name="Timeline" width="360" height="26"/>
         <image name="Timeline Flight" width="18" height="18"/>
         <image name="Timeline Hotel" width="18" height="18"/>
+        <image name="Timeline POI" width="18" height="18"/>
         <image name="Timeline Point" width="18" height="18"/>
         <image name="placeholder" width="787" height="512"/>
     </resources>

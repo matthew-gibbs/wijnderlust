@@ -9,9 +9,11 @@
 import Foundation
 import UIKit
 import CoreLocation
+import Firebase
 
 var imageClient = UnsplashClient()
 let geoCoder = CLGeocoder()
+let client = YelpClient()
 
 enum ItineraryPhotoState {
     case placeholder
@@ -33,6 +35,7 @@ class Itinerary: NSObject, JSONInitialisable {
     let endDate: String
     var hotelId: String?
     var places: [Venue]?
+    var unparsedPlaces: [String]?
     let destination: Coordinate
     
     init(name: String, startDate: String, endDate: String, origin: String) {
@@ -42,7 +45,7 @@ class Itinerary: NSObject, JSONInitialisable {
         self.endDate = endDate
         self.destination = getCoordForDest(name)
         self.origin = origin
-        self.imageUrl = "https://images.unsplash.com/photo-1468436385273-8abca6dfd8d3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjIxODE1fQ&s=2b7a96aa6b9bbe88b6bca8035f97c0dc"
+        self.imageUrl = "void"
     }
     
     required init?(json: [String : Any]) {
@@ -53,15 +56,8 @@ class Itinerary: NSObject, JSONInitialisable {
         let origin = json["origin"] as? String
         else { return nil }
         
-        var places: [Venue] = []
-        
-        if let unparsedPlaces = json["places"] as? [[String : Any]] {
-            for place in unparsedPlaces {
-                if let currentVenue = Venue(json: place) {
-                    places.append(currentVenue)
-                }
-            }
-            print(places)
+        if let unparsedPlaces = json["places"] as? [String] {
+            self.unparsedPlaces = unparsedPlaces
         }
         
         if let flights = json["flights"] as? [String : Any] {
@@ -99,3 +95,5 @@ func getCoordForDest(_ dest: String) -> Coordinate {
     }
     return coordLocation
 }
+
+

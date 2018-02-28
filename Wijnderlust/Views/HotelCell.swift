@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum FlightStatus {
+    case hasFlights
+    case doesNotHaveFlights
+}
+
 class HotelCell: UITableViewCell {
     @IBOutlet weak var containerCell: UIView!
     @IBOutlet weak var hotelImage: UIImageView!
@@ -46,11 +51,17 @@ class HotelCell: UITableViewCell {
     }
     
     //configure from a view model
-    func configure(with viewModel: HotelCellViewModel) {
+    func configure(with viewModel: HotelCellViewModel, flightStatus: FlightStatus) {
         startDateLabel.text = viewModel.checkInDate
         endDateLabel.text = viewModel.checkOutDate
         hotelName.text = viewModel.hotelName
         hotelImage.image = viewModel.hotelImage
+        
+        if flightStatus == .hasFlights {
+            lineFullLength.isHidden = false
+        } else if flightStatus == .doesNotHaveFlights {
+            lineDetachBottom.isHidden = false
+        }
         
         if viewModel.wineListStatus == true {
             wineStatusImage.image = #imageLiteral(resourceName: " Wine Filled")

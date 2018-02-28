@@ -27,11 +27,12 @@ class MyTripsDataSource: NSObject, UITableViewDataSource {
         return 1
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {        return itineraries.count
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return itineraries.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print(Date())
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItineraryCell", for: indexPath) as! ItineraryCell
         
         let currentItinerary = itinerary(at: indexPath)
@@ -55,7 +56,6 @@ class MyTripsDataSource: NSObject, UITableViewDataSource {
     
     func update(with data: [Itinerary]) {
         self.itineraries = data
-        print("Successfully updated data source")
     }
     
     func update(_ itinerary: Itinerary, at indexPath: IndexPath) {
