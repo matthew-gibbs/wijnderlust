@@ -41,6 +41,7 @@
 		C9255A4420463A100037B3B8 /* HotelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9255A4320463A100037B3B8 /* HotelCell.swift */; };
 		C9255A46204653790037B3B8 /* HotelCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9255A45204653790037B3B8 /* HotelCellViewModel.swift */; };
 		C92D79DC2039EB5F003EB729 /* AroundMeSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92D79DB2039EB5F003EB729 /* AroundMeSearchController.swift */; };
+		C9434801204EC93300BBCA6D /* ItineraryDateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9434800204EC93300BBCA6D /* ItineraryDateController.swift */; };
 		C9582DF2202C9D0800A28E88 /* VenueInteriorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9582DF1202C9D0800A28E88 /* VenueInteriorViewModel.swift */; };
 		C9582DF4202CB69500A28E88 /* TransparentNavBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9582DF3202CB69500A28E88 /* TransparentNavBarController.swift */; };
 		C9582DF6202CCE5900A28E88 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9582DF5202CCE5900A28E88 /* MapKit.framework */; };
@@ -60,6 +61,9 @@
 		C9F02B5A2039AD0400F1FF80 /* Location Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F02B592039AD0400F1FF80 /* Location Manager.swift */; };
 		C9F02B602039B85400F1FF80 /* AroundMeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F02B5F2039B85400F1FF80 /* AroundMeController.swift */; };
 		C9F02B622039DEEA00F1FF80 /* Map Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F02B612039DEEA00F1FF80 /* Map Pin.swift */; };
+		C9F65E0C204E9CEE005D8099 /* Destinations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F65E0B204E9CEE005D8099 /* Destinations.swift */; };
+		C9F65E0E204EA591005D8099 /* ItineraryAddDestinationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F65E0D204EA591005D8099 /* ItineraryAddDestinationController.swift */; };
+		C9F65E10204EA5FF005D8099 /* DestinationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F65E0F204EA5FF005D8099 /* DestinationCell.swift */; };
 		C9FCAD712020C91A00047DC6 /* Helper Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD702020C91A00047DC6 /* Helper Methods.swift */; };
 		C9FCAD752020D16900047DC6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD742020D16900047DC6 /* SignUpViewController.swift */; };
 		C9FCAD772020DF9300047DC6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD762020DF9300047DC6 /* User.swift */; };
@@ -106,6 +110,7 @@
 		C9255A4320463A100037B3B8 /* HotelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelCell.swift; sourceTree = "<group>"; };
 		C9255A45204653790037B3B8 /* HotelCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelCellViewModel.swift; sourceTree = "<group>"; };
 		C92D79DB2039EB5F003EB729 /* AroundMeSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AroundMeSearchController.swift; sourceTree = "<group>"; };
+		C9434800204EC93300BBCA6D /* ItineraryDateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryDateController.swift; sourceTree = "<group>"; };
 		C9582DF1202C9D0800A28E88 /* VenueInteriorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueInteriorViewModel.swift; sourceTree = "<group>"; };
 		C9582DF3202CB69500A28E88 /* TransparentNavBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentNavBarController.swift; sourceTree = "<group>"; };
 		C9582DF5202CCE5900A28E88 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -127,6 +132,9 @@
 		C9F02B592039AD0400F1FF80 /* Location Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location Manager.swift"; sourceTree = "<group>"; };
 		C9F02B5F2039B85400F1FF80 /* AroundMeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AroundMeController.swift; sourceTree = "<group>"; };
 		C9F02B612039DEEA00F1FF80 /* Map Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Map Pin.swift"; sourceTree = "<group>"; };
+		C9F65E0B204E9CEE005D8099 /* Destinations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destinations.swift; sourceTree = "<group>"; };
+		C9F65E0D204EA591005D8099 /* ItineraryAddDestinationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryAddDestinationController.swift; sourceTree = "<group>"; };
+		C9F65E0F204EA5FF005D8099 /* DestinationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationCell.swift; sourceTree = "<group>"; };
 		C9FCAD702020C91A00047DC6 /* Helper Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper Methods.swift"; sourceTree = "<group>"; };
 		C9FCAD742020D16900047DC6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C9FCAD762020DF9300047DC6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -192,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				C91064D420260B4B00A71F78 /* ReviewCell.swift */,
+				C9F65E0F204EA5FF005D8099 /* DestinationCell.swift */,
 				C90E8B7B202B6AE90087B8EA /* VenueCell.swift */,
 				C9255A3720457E730037B3B8 /* PlaceholderCell.swift */,
 				C9255A3D204605CA0037B3B8 /* FlightCell.swift */,
@@ -264,6 +273,8 @@
 			isa = PBXGroup;
 			children = (
 				C96AAA6720432A6A00514151 /* My Trips Controller.swift */,
+				C9F65E0D204EA591005D8099 /* ItineraryAddDestinationController.swift */,
+				C9434800204EC93300BBCA6D /* ItineraryDateController.swift */,
 				C9255A392045BA6C0037B3B8 /* Itinerary Interior Controller.swift */,
 			);
 			path = "My Trips Views";
@@ -330,6 +341,7 @@
 				C90E8B6A202B5DF20087B8EA /* Venue.swift */,
 				C9255A35204569040037B3B8 /* UnsplashImage.swift */,
 				C96AAA6020430BCB00514151 /* Itinerary.swift */,
+				C9F65E0B204E9CEE005D8099 /* Destinations.swift */,
 				C9F02B612039DEEA00F1FF80 /* Map Pin.swift */,
 				C90E8B71202B5EAD0087B8EA /* Yelp Objects */,
 			);
@@ -530,6 +542,7 @@
 				C96AAA6A20432A9100514151 /* My Trips Data Source.swift in Sources */,
 				C90E8B73202B5ECE0087B8EA /* Coordinate.swift in Sources */,
 				C90E8B8A202B7D880087B8EA /* API Client Protocol.swift in Sources */,
+				C9434801204EC93300BBCA6D /* ItineraryDateController.swift in Sources */,
 				C92D79DC2039EB5F003EB729 /* AroundMeSearchController.swift in Sources */,
 				C9F02B5A2039AD0400F1FF80 /* Location Manager.swift in Sources */,
 				C9FCAD752020D16900047DC6 /* SignUpViewController.swift in Sources */,
@@ -552,6 +565,7 @@
 				C9255A40204610D80037B3B8 /* FlightCellViewModel.swift in Sources */,
 				C9FCAD772020DF9300047DC6 /* User.swift in Sources */,
 				C90E8B91202BC8ED0087B8EA /* Venue Image Downloader.swift in Sources */,
+				C9F65E0E204EA591005D8099 /* ItineraryAddDestinationController.swift in Sources */,
 				C96AAA7020432E2100514151 /* ItineraryCellViewModel.swift in Sources */,
 				C91064CE2023555400A71F78 /* Profile Menu Controller.swift in Sources */,
 				C96AAA6520431F1D00514151 /* Unsplash API Endpoint.swift in Sources */,
@@ -572,7 +586,9 @@
 				C9FCAD8720221A3F00047DC6 /* SignInUpViewController.swift in Sources */,
 				C9FCAD7D202151B100047DC6 /* SignInViewController.swift in Sources */,
 				C90E8B70202B5EA90087B8EA /* Yelp Category.swift in Sources */,
+				C9F65E10204EA5FF005D8099 /* DestinationCell.swift in Sources */,
 				C9FCAD852022035A00047DC6 /* Main Nav Controller.swift in Sources */,
+				C9F65E0C204E9CEE005D8099 /* Destinations.swift in Sources */,
 				C90E8B82202B75560087B8EA /* VenueCellViewModel.swift in Sources */,
 				C90E8B79202B5FA80087B8EA /* Yelp User.swift in Sources */,
 				C9255A46204653790037B3B8 /* HotelCellViewModel.swift in Sources */,

@@ -12,6 +12,7 @@ import Firebase
 import FirebaseDatabase
 
 class MyTripsController: UITableViewController {
+    @IBOutlet weak var myTripsNextTripLabel: UILabel!
     
     var tripsClient: DatabaseReference! = Database.database().reference()
     var imageClient = UnsplashClient()
@@ -38,12 +39,30 @@ class MyTripsController: UITableViewController {
                     let snap = child as! DataSnapshot
                     let dict = snap.value as! [String: Any]
                     if let itinerary = Itinerary(json: dict) {
-                        itineraries.append(itinerary)
+                        if itinerary.endDate > Date() {
+                            itineraries.append(itinerary)
+                        }
                     }
                 }
                 
+                let sortedItineraries = itineraries.sorted(by: { $0.startDate < $1.startDate })
+                itineraries = sortedItineraries
                 self.dataSource.update(with: itineraries)
                 self.tableView.reloadData()
+                
+                
+                //MARK: Set the top subtitle to the next
+                if let firstItinerary = itineraries.first {
+                    //MARK: Update the day counter
+                    let calendar = NSCalendar.current
+                    
+                    // Replace the hour (time) of both dates with 00:00
+                    let date1 = calendar.startOfDay(for: Date())
+                    let date2 = calendar.startOfDay(for: firstItinerary.startDate)
+                    
+                    let components = calendar.dateComponents([.day], from: date1, to: date2)
+                    self.myTripsNextTripLabel.text = "Next Trip • \(components.day!) Days • \(firstItinerary.name)"
+                }
                 
             } else {
                 print("No Itineraries")
@@ -88,7 +107,7 @@ class MyTripsController: UITableViewController {
     //MARK: Unwind Segue
     
     @IBAction func unwindToItineraries(segue: UIStoryboardSegue) {
-        let source = segue.source as? ItineraryInteriorController
+        
     }
 }
 

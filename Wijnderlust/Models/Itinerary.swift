@@ -8,12 +8,11 @@
 
 import Foundation
 import UIKit
-import CoreLocation
 import Firebase
 
 var imageClient = UnsplashClient()
-let geoCoder = CLGeocoder()
 let client = YelpClient()
+
 
 enum ItineraryPhotoState {
     case placeholder
@@ -31,21 +30,21 @@ class Itinerary: NSObject, JSONInitialisable {
     var flights: [String: Any]?
     var outboundFlightNumber: String?
     var inboundFlightNumber: String?
-    let startDate: String
-    let endDate: String
+    let startDate: Date
+    let endDate: Date
     var hotelId: String?
     var places: [Venue]?
     var unparsedPlaces: [String]?
     let destination: Coordinate
     
-    init(name: String, startDate: String, endDate: String, origin: String) {
+    init(name: String, startDate: Date, endDate: Date, origin: String, imageUrl: String) {
         self.id = "\(name)\(startDate)\(endDate)"
         self.name = name
         self.startDate = startDate
         self.endDate = endDate
-        self.destination = getCoordForDest(name)
+        self.destination = returnCoords(for: name)
         self.origin = origin
-        self.imageUrl = "void"
+        self.imageUrl = imageUrl
     }
     
     required init?(json: [String : Any]) {
@@ -55,6 +54,9 @@ class Itinerary: NSObject, JSONInitialisable {
         let imageUrl = json["imageUrl"] as? String,
         let origin = json["origin"] as? String
         else { return nil }
+        
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "yyyy-MM-dd HH:mm:ss ZZZ"
         
         if let unparsedPlaces = json["places"] as? [String] {
             self.unparsedPlaces = unparsedPlaces
@@ -71,29 +73,26 @@ class Itinerary: NSObject, JSONInitialisable {
             self.hotelId = hotelId
         }
         
+        guard let formattedStartDate = dateFormatterGet.date(from: startDate) else {
+            fatalError("ERROR: Date conversion failed due to mismatched format.")
+        }
+        
+        guard let formattedEndDate = dateFormatterGet.date(from: endDate) else {
+            fatalError("ERROR: Date conversion failed due to mismatched format.")
+        }
+        
         self.id = "\(name)\(startDate)\(endDate)"
         self.name = name
         self.origin = origin
-        self.startDate = startDate
-        self.endDate = endDate
+        self.startDate = formattedStartDate
+        self.endDate = formattedEndDate
         self.imageUrl = imageUrl
-        self.destination = getCoordForDest(name)
-        print(getCoordForDest(name))
+        self.destination = returnCoords(for: name)
 
         super.init()
     }
 }
 
 
-//Get coordinate for destination
-func getCoordForDest(_ dest: String) -> Coordinate {
-    var coordLocation: Coordinate = Coordinate(lat: 0, long: 0)
-    geoCoder.geocodeAddressString(dest) { (placemarks, error) in
-    guard let placemarks = placemarks, let location = placemarks.first?.location else { return }
-        
-        coordLocation = Coordinate(lat: location.coordinate.latitude, long: location.coordinate.longitude)
-    }
-    return coordLocation
-}
 
 

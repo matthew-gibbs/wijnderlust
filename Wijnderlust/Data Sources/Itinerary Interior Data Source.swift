@@ -35,8 +35,14 @@ class ItineraryInteriorDataSource: NSObject, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var rows: Int = 0
         
-        if section < numberOfRowsAtSection.count {
-            rows = numberOfRowsAtSection[section]
+        if section == 0 {
+            rows = 3
+        } else {
+            if places.count == 0 {
+                rows = 1
+            } else {
+                rows = places.count
+            }
         }
         
         return rows

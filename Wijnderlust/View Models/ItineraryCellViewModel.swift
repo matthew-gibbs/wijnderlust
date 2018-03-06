@@ -21,16 +21,13 @@ struct ItineraryCellViewModel {
 
 extension ItineraryCellViewModel {
     init(itinerary: Itinerary) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .short
-        dateFormatter.timeStyle = .none
+        let dateFormatterPrint = DateFormatter()
+        dateFormatterPrint.dateFormat = "dd MMM yy"
         
         self.itineraryImage = itinerary.photoState == .downloaded ? itinerary.photo! : #imageLiteral(resourceName: "placeholder")
         self.title = itinerary.name.capitalized
-        self.startDate = itinerary.startDate
-        self.endDate = itinerary.endDate
-//        self.startDate = dateFormatter.string(from: itinerary.startDate)
-//        self.endDate = dateFormatter.string(from: itinerary.endDate)
+        self.startDate = dateFormatterPrint.string(from: itinerary.startDate)
+        self.endDate = dateFormatterPrint.string(from: itinerary.endDate)
         if (itinerary.flights != nil) {
             self.hasFlights = true
         }

@@ -19,9 +19,12 @@ struct HotelCellViewModel {
 
 extension HotelCellViewModel {
     init(itinerary: Itinerary, hotel: Venue) {
+        let dateFormatterPrint = DateFormatter()
+        dateFormatterPrint.dateFormat = "dd MMM yy"
+        
         self.hotelImage = hotel.photoState == .downloaded ? hotel.photo! : #imageLiteral(resourceName: "placeholder")
         self.hotelName = hotel.name
-        self.checkInDate = itinerary.startDate
-        self.checkOutDate = itinerary.endDate
+        self.checkInDate = dateFormatterPrint.string(from: itinerary.startDate)
+        self.checkOutDate = dateFormatterPrint.string(from: itinerary.endDate)
     }
 }

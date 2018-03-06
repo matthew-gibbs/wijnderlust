@@ -57,9 +57,22 @@ class ItineraryInteriorController: UITableViewController {
                     }
                 }
             }
+            
+            //MARK: Update the day counter
+            let calendar = NSCalendar.current
+            
+            // Replace the hour (time) of both dates with 00:00
+            let date1 = calendar.startOfDay(for: Date())
+            let date2 = calendar.startOfDay(for: itinerary.startDate)
+            
+            let components = calendar.dateComponents([.day], from: date1, to: date2)
+            
+            itinerarySubtitleLabel.text = "Only \(components.day!) Days To Go"
+            
         }
         
     }
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -79,8 +92,25 @@ class ItineraryInteriorController: UITableViewController {
     
     //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showFlight" {
-            
+        if segue.identifier == "showVenue" {
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                let selectedVenue = dataSource.place(at: selectedIndexPath)
+                let venueDetailController = segue.destination as! VenueInteriorTableController
+                
+                //Set custom back image
+                let backItem = UIBarButtonItem()
+                backItem.title = ""
+                navigationItem.backBarButtonItem = backItem
+                
+                if let interiorImage = selectedVenue.photo {
+                    print(interiorImage)
+                    venueDetailController.passedVenueImage = interiorImage
+                    venueDetailController.venue = selectedVenue
+                }
+                
+                //TODO: - Reviews
+                //                venueDetailController.dataSource.updateData(selectedVenue.reviews)
+            }
         }
     }
 }

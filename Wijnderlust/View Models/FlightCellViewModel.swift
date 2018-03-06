@@ -27,6 +27,9 @@ struct FlightCellViewModel {
 
 extension FlightCellViewModel {
     init(itinerary: Itinerary, flightType: FlightType) {
+        let dateFormatterPrint = DateFormatter()
+        dateFormatterPrint.dateFormat = "dd MMM yy"
+        
         self.flightImage = itinerary.photoState == .downloaded ? itinerary.photo! : #imageLiteral(resourceName: "placeholder")
         self.destination = itinerary.name.capitalized
         self.origin = itinerary.origin.capitalized
@@ -34,10 +37,10 @@ extension FlightCellViewModel {
         if flightType == .inbound {
             self.mainLabel = "Inbound to \(itinerary.origin.capitalized)"
             self.flightNo = itinerary.inboundFlightNumber!
-            self.departureDate = itinerary.endDate
+            self.departureDate = dateFormatterPrint.string(from: itinerary.endDate)
         } else {
             self.flightNo = itinerary.outboundFlightNumber!
-            self.departureDate = itinerary.startDate
+            self.departureDate = dateFormatterPrint.string(from: itinerary.startDate)
             self.mainLabel = "Outbound to \(itinerary.name.capitalized)"
         }
     }
