@@ -138,7 +138,7 @@ class ItineraryDateController: UITableViewController {
     
     @IBAction func saveItinerary(_ sender: Any) {
         print("Itinerary Saved!!!")
-        let newItinerary = Itinerary(name: destination!.name, startDate: departureDate, endDate: returnDate!, origin: Destinations.london.data.name, imageUrl: destination!.image)
+        let newItinerary = Itinerary(name: destination!.name, startDate: departureDate, endDate: returnDate!, origin: Destinations.london.data.name, imageUrl: destination!.image, originImageUrl: Destinations.london.data.image)
         let newId = "\(newItinerary.name)\(newItinerary.startDate)\(newItinerary.endDate)"
         
         self.ref.child("users/\(userId)/itineraries").child(newId).setValue([
@@ -146,6 +146,7 @@ class ItineraryDateController: UITableViewController {
             "startDate": newItinerary.startDate.description,
             "endDate": newItinerary.endDate.description,
             "origin": newItinerary.origin,
+            "originImageUrl": newItinerary.originImageUrl,
             "imageUrl": newItinerary.imageUrl
         ])
     }

@@ -59,19 +59,27 @@ class FlightCell: UITableViewCell {
     
     //configure from a view model
     func configure(with viewModel: FlightCellViewModel) {
-        self.flightImage.image = viewModel.flightImage
         self.departureDate.text = viewModel.departureDate
         self.flightNo.text = viewModel.flightNo
         self.mainLabel.text = viewModel.mainLabel
-        self.airportDepLabel.text = viewModel.origin
-        self.airportDestLabel.text = viewModel.destination
+        
         
         if viewModel.flightType == .outbound {
+            self.flightImage.image = viewModel.flightImage
             lineFullLength.isHidden = false
+            self.airportDepLabel.text = viewModel.origin
+            self.airportDestLabel.text = viewModel.destination
+            self.airportDepCodeLabel.text = String(viewModel.origin.prefix(3).uppercased())
+            self.airportDestCodeLabel.text = String(viewModel.destination.prefix(3).uppercased())
         } else {
+            self.flightImage.image = #imageLiteral(resourceName: "originDefault")
             lineDetachBottom.isHidden = false
             timelinePoint.image = nil
             timelinePoint.backgroundColor = nil
+            self.airportDepLabel.text = viewModel.destination
+            self.airportDestLabel.text = viewModel.origin
+            self.airportDepCodeLabel.text = String(viewModel.destination.prefix(3).uppercased())
+            self.airportDestCodeLabel.text = String(viewModel.origin.prefix(3).uppercased())
         }
         
         if viewModel.wineListStatus == true {

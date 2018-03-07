@@ -48,6 +48,8 @@ class ItineraryInteriorDataSource: NSObject, UITableViewDataSource {
         return rows
     }
     
+    
+    
     //MARK: View for Sections
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -66,7 +68,7 @@ class ItineraryInteriorDataSource: NSObject, UITableViewDataSource {
                     flightCell.configure(with: outboundFlightViewModel)
                     return flightCell
                 } else if (indexPath.row == 1) {
-                    placeholderCell.configure(for: "hotelMiddle", at: indexPath)
+                    placeholderCell.configure(for: .hotel, at: indexPath)
                     return placeholderCell
                 } else if (indexPath.row == 2) {
                     flightCell.configure(with: inboundFlightViewModel)
@@ -108,7 +110,7 @@ class ItineraryInteriorDataSource: NSObject, UITableViewDataSource {
             
             if (indexPath.section == 0) {
                 if (indexPath.row == 0) {
-                    placeholderCell.configure(for: "flightOutbound", at: indexPath)
+                    placeholderCell.configure(for: .flightOutbound, at: indexPath)
                     return placeholderCell
                 } else if (indexPath.row == 1) {
                     hotelCell.configure(with: hotelCellViewModel, flightStatus: .hasFlights)
@@ -117,12 +119,12 @@ class ItineraryInteriorDataSource: NSObject, UITableViewDataSource {
                     }
                     return hotelCell
                 } else if (indexPath.row == 2) {
-                    placeholderCell.configure(for: "flightInbound", at: indexPath)
+                    placeholderCell.configure(for: .flightInbound, at: indexPath)
                     return placeholderCell
                 }
             }
         }
-        
+            
         //MARK: Itinerary Places
         if (places.count > 0) {
             if(indexPath.section == 1) {
@@ -143,28 +145,30 @@ class ItineraryInteriorDataSource: NSObject, UITableViewDataSource {
         //MARK: Placeholder Fallbacks
         if (indexPath.section == 0) {
             if (indexPath.row == 0) {
-                placeholderCell.configure(for: "flightOutbound", at: indexPath)
+                placeholderCell.configure(for: .flightOutbound, at: indexPath)
                 return placeholderCell
             } else if (indexPath.row == 1) {
-                placeholderCell.configure(for: "hotel", at: indexPath)
+                placeholderCell.configure(for: .hotel, at: indexPath)
                 return placeholderCell
             } else if (indexPath.row == 2) {
-                placeholderCell.configure(for: "flightInbound", at: indexPath)
+                placeholderCell.configure(for: .flightInbound, at: indexPath)
                 return placeholderCell
             }
         }
         if (indexPath.section == 1) {
-            placeholderCell.configure(for: "places", at: indexPath)
+            placeholderCell.configure(for: .places, at: indexPath)
             return placeholderCell
         }
         //End Placeholder Fallbacks
         
         //MARK: Final Failure Clause for Compile purposes
         else {
-            placeholderCell.configure(for: "error", at: indexPath)
+            placeholderCell.configure(for: .error, at: indexPath)
             return placeholderCell
         }
     }
+    
+    
     
     //MARK: Helper methods
     func updateHotel(with data: Venue) {

@@ -31,7 +31,7 @@ extension VenueInteriorViewModel {
     init(venue: Venue) {
         self.venueName = venue.name
         self.venueImage = venue.photoState == .downloaded ? venue.photo! : #imageLiteral(resourceName: "placeholder")
-        self.venueAddress = venue.address.address1
+        self.venueAddress = "\(venue.address.address1) • \(venue.address.city)"
         self.venueRating = venue.rating
         self.price = venue.price
         self.categories = venue.categories

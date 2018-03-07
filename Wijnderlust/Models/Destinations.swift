@@ -25,6 +25,12 @@ enum Destinations: String {
     case berlin = "Berlin"
     case paris = "Paris"
     case london = "London"
+    case vienna = "Vienna"
+    case brussels = "Brussels"
+    case dublin = "Dublin"
+    case lisbon = "Lisbon"
+    case milan = "Milan"
+    case prague = "Prague"
     
     var data: Destination {
         switch self {
@@ -36,12 +42,18 @@ enum Destinations: String {
         case .florence: return Destination(name: rawValue, location: Coordinate(lat: 43.7696, long: 11.2558), icon: #imageLiteral(resourceName: "dest-florence"), image: "https://images.unsplash.com/photo-1484918593501-d4ee2779f900?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjIxODE1fQ&s=b8fb9166428ef13252cd3155a4125321")
         case .paris: return Destination(name: rawValue, location: Coordinate(lat: 48.8566, long: 2.3522), icon: #imageLiteral(resourceName: "dest-paris"), image: "https://images.unsplash.com/photo-1481828238384-55757d1249b8?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjIxODE1fQ&s=6e4bc4bd11bb8a96850f67b15bc2300c")
         case .london: return Destination(name: rawValue, location: Coordinate(lat: 51.5074, long: 0.1278), icon: #imageLiteral(resourceName: "dest-london"), image: "https://images.unsplash.com/photo-1508711046474-2f4c2d3d30ca?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjIxODE1fQ&s=61dbab6964fb7e32c8e6b6bc79aa070e")
+        case .vienna: return Destination(name: rawValue, location: Coordinate(lat: 48.2082, long: 16.3738), icon: #imageLiteral(resourceName: "dest-vienna"), image: "https://images.unsplash.com/photo-1516550893923-42d28e5677af?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjIxODE1fQ&s=193e962d611ca2cd210679352e1a60a4")
+        case .brussels: return Destination(name: rawValue, location: Coordinate(lat: 50.8503, long: 4.3517), icon: #imageLiteral(resourceName: "dest-brussels"), image: "https://images.unsplash.com/photo-1518295794878-3b4452a5a49f?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjIxODE1fQ&s=9f1f3c2f3777868cb1f6fe2f87adbfe2")
+        case .dublin: return Destination(name: rawValue, location: Coordinate(lat: 53.3498, long: 6.2603), icon: #imageLiteral(resourceName: "dest-dublin"), image: "https://images.unsplash.com/photo-1518005068251-37900150dfca?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjIxODE1fQ&s=7ee06a3eb089716e10ed70e75942718b")
+        case .lisbon: return Destination(name: rawValue, location: Coordinate(lat: 38.7223, long: 9.1393), icon: #imageLiteral(resourceName: "dest-lisbon"), image: "https://images.unsplash.com/photo-1442265367415-27e484dcdceb?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjIxODE1fQ&s=85292cb20cefb0a6ee943bee38984692")
+        case .milan: return Destination(name: rawValue, location: Coordinate(lat: 45.4642, long: 9.1900), icon: #imageLiteral(resourceName: "dest-milan"), image: "https://images.unsplash.com/photo-1470253267745-0160f3678150?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjIxODE1fQ&s=235cda53557255c71fef94ff171f072e")
+        case .prague: return Destination(name: rawValue, location: Coordinate(lat: 50.0755, long: 14.4378), icon: #imageLiteral(resourceName: "dest-prague"), image: "https://images.unsplash.com/photo-1482057638314-8bc5dc8c3c53?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjIxODE1fQ&s=f07b019ae306c3f92a8a7a900967ed6e")
         }
     }
     
-    static var count: Int { return self.london.hashValue + 1 }
+    static var count: Int { return self.prague.hashValue + 1 }
     
-    static var allDestinations = [amsterdam.data, barcelona.data, edinburgh.data, rome.data, florence.data, berlin.data, paris.data, london.data]
+    static var allDestinations = [amsterdam.data, barcelona.data, edinburgh.data, rome.data, florence.data, berlin.data, paris.data, london.data, vienna.data, brussels.data, dublin.data, lisbon.data, milan.data, prague.data]
 }
 
 func returnCoords(for dest: Destinations.RawValue) -> Coordinate {

@@ -8,7 +8,16 @@
 
 import UIKit
 
+enum PlaceHolderCellType {
+    case hotel
+    case flightOutbound
+    case flightInbound
+    case places
+    case error
+}
+
 class PlaceholderCell: UITableViewCell {
+    var type: PlaceHolderCellType = .error
     @IBOutlet weak var containerCell: UIView!
     @IBOutlet weak var cellImage: UIImageView!
     @IBOutlet weak var label: UILabel!
@@ -45,23 +54,24 @@ class PlaceholderCell: UITableViewCell {
     }
     
     //configure from a view model
-    func configure(for type: String, at indexPath: IndexPath) {
+    func configure(for type: PlaceHolderCellType, at indexPath: IndexPath) {
+        self.type = type
         switch type {
-        case "flightOutbound":
+        case .flightOutbound:
             cellImage.image = #imageLiteral(resourceName: " Flight Filled")
-            label.text = "Add Outbound Flight"
+            label.text = "Add Flights"
             timelineIcon.image = #imageLiteral(resourceName: "Timeline Flight")
             detachTopLine.isHidden = false
             return
-        case "flightInbound":
+        case .flightInbound:
             cellImage.image = #imageLiteral(resourceName: " Flight Filled")
-            label.text = "Add Inbound Flight"
+            label.text = "Add Flights"
             timelineIcon.image = #imageLiteral(resourceName: "Timeline Flight")
             timelinePoint.image = nil
             timelinePoint.backgroundColor = nil
             detachBottomLine.isHidden = false
             return
-        case "hotel":
+        case .hotel:
             cellImage.image = #imageLiteral(resourceName: " Hotel Filled")
             label.text = "Add Hotel to Itinerary"
             timelineIcon.image = #imageLiteral(resourceName: "Timeline Hotel")
@@ -69,18 +79,17 @@ class PlaceholderCell: UITableViewCell {
             timelinePoint.backgroundColor = nil
             fullLine.isHidden = false
             return
-        case "places":
+        case .places:
             cellImage.image = #imageLiteral(resourceName: " Itinerary Filled")
             label.text = "Add Places to Itinerary"
             timelineIcon.image = #imageLiteral(resourceName: "Timeline POI")
             detachTopBottomLine.isHidden = false
             return
-        case "error":
+        default:
             cellImage.image = #imageLiteral(resourceName: " Itinerary Filled")
             label.text = "An Error has Occured. Try Again."
             timelineIcon.image = nil
             return
-        default: return
         }
         
     }

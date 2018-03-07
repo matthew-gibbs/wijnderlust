@@ -24,6 +24,7 @@ extension ItineraryCellViewModel {
         let dateFormatterPrint = DateFormatter()
         dateFormatterPrint.dateFormat = "dd MMM yy"
         
+        
         self.itineraryImage = itinerary.photoState == .downloaded ? itinerary.photo! : #imageLiteral(resourceName: "placeholder")
         self.title = itinerary.name.capitalized
         self.startDate = dateFormatterPrint.string(from: itinerary.startDate)
@@ -34,7 +35,9 @@ extension ItineraryCellViewModel {
         if (itinerary.hotelId != nil) {
             self.hasHotel = true
         }
-        if (itinerary.places != nil) {
+        
+        guard let places = itinerary.unparsedPlaces else { return }
+        if (places.count > 0) {
             self.hasItinerary = true
         }
     }

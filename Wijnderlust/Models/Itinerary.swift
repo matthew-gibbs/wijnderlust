@@ -26,6 +26,7 @@ class Itinerary: NSObject, JSONInitialisable {
     let origin: String
     var photo: UIImage?
     var imageUrl: String
+    var originImageUrl: String
     var photoState = ItineraryPhotoState.placeholder
     var flights: [String: Any]?
     var outboundFlightNumber: String?
@@ -37,7 +38,7 @@ class Itinerary: NSObject, JSONInitialisable {
     var unparsedPlaces: [String]?
     let destination: Coordinate
     
-    init(name: String, startDate: Date, endDate: Date, origin: String, imageUrl: String) {
+    init(name: String, startDate: Date, endDate: Date, origin: String, imageUrl: String, originImageUrl: String) {
         self.id = "\(name)\(startDate)\(endDate)"
         self.name = name
         self.startDate = startDate
@@ -45,6 +46,7 @@ class Itinerary: NSObject, JSONInitialisable {
         self.destination = returnCoords(for: name)
         self.origin = origin
         self.imageUrl = imageUrl
+        self.originImageUrl = originImageUrl
     }
     
     required init?(json: [String : Any]) {
@@ -52,7 +54,8 @@ class Itinerary: NSObject, JSONInitialisable {
         let startDate = json["startDate"] as? String,
         let endDate = json["endDate"] as? String,
         let imageUrl = json["imageUrl"] as? String,
-        let origin = json["origin"] as? String
+        let origin = json["origin"] as? String,
+        let originImageUrl = json["originImageUrl"] as? String
         else { return nil }
         
         let dateFormatterGet = DateFormatter()
@@ -87,6 +90,7 @@ class Itinerary: NSObject, JSONInitialisable {
         self.startDate = formattedStartDate
         self.endDate = formattedEndDate
         self.imageUrl = imageUrl
+        self.originImageUrl = originImageUrl
         self.destination = returnCoords(for: name)
 
         super.init()

@@ -56,6 +56,7 @@ class ItineraryCell: UITableViewCell {
         } else {
             flightStatusLabel.text = "No Flights Yet"
             flightStatusIcon.image = #imageLiteral(resourceName: " Flight Not Filled")
+            flightStatusLabel.textColor = inactiveGrey
         }
         
         if viewModel.hasHotel {
@@ -65,6 +66,7 @@ class ItineraryCell: UITableViewCell {
         } else {
             hotelStatusIcon.image = #imageLiteral(resourceName: " Hotel Not Filled")
             hotelStatusLabel.text = "No Hotel Yet"
+            hotelStatusLabel.textColor = inactiveGrey
         }
         
         if viewModel.hasItinerary {
@@ -74,6 +76,7 @@ class ItineraryCell: UITableViewCell {
         } else {
             itineraryStatusIcon.image = #imageLiteral(resourceName: " Itinerary Not Filled")
             itineraryStatusLabel.text = "No Venues Yet"
+            itineraryStatusLabel.textColor = inactiveGrey
         }
     }
 
