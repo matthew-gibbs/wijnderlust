@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 class ItineraryInteriorDataSource: NSObject, UITableViewDataSource {
     
@@ -128,6 +129,7 @@ class ItineraryInteriorDataSource: NSObject, UITableViewDataSource {
         //MARK: Itinerary Places
         if (places.count > 0) {
             if(indexPath.section == 1) {
+                print(indexPath.row, places.count)
                 let currentVenue = place(at: indexPath)
                 
                 let viewModel = VenueCellViewModel(venue: currentVenue)
@@ -173,6 +175,7 @@ class ItineraryInteriorDataSource: NSObject, UITableViewDataSource {
     //MARK: Helper methods
     func updateHotel(with data: Venue) {
         self.hotel = data
+        tableView.reloadSections([0], with: .right)
     }
     
     func place(at indexPath: IndexPath) -> Venue {
@@ -181,7 +184,7 @@ class ItineraryInteriorDataSource: NSObject, UITableViewDataSource {
 
     func updateVenues(with data: Venue) {
         self.places.append(data)
-        tableView.reloadSections([1], with: .fade)
+        tableView.reloadSections([1], with: .right)
     }
     
     func downloadPhotoForVenue(_ venue: Venue, atIndexPath indexPath: IndexPath) {

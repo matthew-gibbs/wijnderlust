@@ -67,6 +67,8 @@
 		C9F65E0C204E9CEE005D8099 /* Destinations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F65E0B204E9CEE005D8099 /* Destinations.swift */; };
 		C9F65E0E204EA591005D8099 /* ItineraryAddDestinationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F65E0D204EA591005D8099 /* ItineraryAddDestinationController.swift */; };
 		C9F65E10204EA5FF005D8099 /* DestinationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F65E0F204EA5FF005D8099 /* DestinationCell.swift */; };
+		C9FBB9E320516FA600D2667A /* ReviewImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FBB9E220516FA600D2667A /* ReviewImageDownloader.swift */; };
+		C9FBB9E52051BADD00D2667A /* AddPlaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FBB9E42051BADD00D2667A /* AddPlaceController.swift */; };
 		C9FCAD712020C91A00047DC6 /* Helper Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD702020C91A00047DC6 /* Helper Methods.swift */; };
 		C9FCAD752020D16900047DC6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD742020D16900047DC6 /* SignUpViewController.swift */; };
 		C9FCAD772020DF9300047DC6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FCAD762020DF9300047DC6 /* User.swift */; };
@@ -141,6 +143,8 @@
 		C9F65E0B204E9CEE005D8099 /* Destinations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destinations.swift; sourceTree = "<group>"; };
 		C9F65E0D204EA591005D8099 /* ItineraryAddDestinationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryAddDestinationController.swift; sourceTree = "<group>"; };
 		C9F65E0F204EA5FF005D8099 /* DestinationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationCell.swift; sourceTree = "<group>"; };
+		C9FBB9E220516FA600D2667A /* ReviewImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewImageDownloader.swift; sourceTree = "<group>"; };
+		C9FBB9E42051BADD00D2667A /* AddPlaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceController.swift; sourceTree = "<group>"; };
 		C9FCAD702020C91A00047DC6 /* Helper Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper Methods.swift"; sourceTree = "<group>"; };
 		C9FCAD742020D16900047DC6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C9FCAD762020DF9300047DC6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 				C90E8B8E202BC8D20087B8EA /* Pending Operation Queue.swift */,
 				C90E8B90202BC8ED0087B8EA /* Venue Image Downloader.swift */,
 				C96AAA6D20432D6500514151 /* ItineraryImageDownloader.swift */,
+				C9FBB9E220516FA600D2667A /* ReviewImageDownloader.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -282,6 +287,7 @@
 				C96AAA6720432A6A00514151 /* My Trips Controller.swift */,
 				C9F65E0D204EA591005D8099 /* ItineraryAddDestinationController.swift */,
 				C92E6AC32050309400E8ECCC /* AddFlightsController.swift */,
+				C9FBB9E42051BADD00D2667A /* AddPlaceController.swift */,
 				C9F1A13B20506479004C14D6 /* AddHotelController.swift */,
 				C9434800204EC93300BBCA6D /* ItineraryDateController.swift */,
 				C9255A392045BA6C0037B3B8 /* Itinerary Interior Controller.swift */,
@@ -549,6 +555,7 @@
 				C9FCAD7B2020E70D00047DC6 /* SignUpTwoViewController.swift in Sources */,
 				C9582DF4202CB69500A28E88 /* TransparentNavBarController.swift in Sources */,
 				C96AAA6A20432A9100514151 /* My Trips Data Source.swift in Sources */,
+				C9FBB9E52051BADD00D2667A /* AddPlaceController.swift in Sources */,
 				C90E8B73202B5ECE0087B8EA /* Coordinate.swift in Sources */,
 				C90E8B8A202B7D880087B8EA /* API Client Protocol.swift in Sources */,
 				C9434801204EC93300BBCA6D /* ItineraryDateController.swift in Sources */,
@@ -594,6 +601,7 @@
 				C91064D32024C97A00A71F78 /* YourReviewsTableViewController.swift in Sources */,
 				C90E8B8F202BC8D20087B8EA /* Pending Operation Queue.swift in Sources */,
 				C9F02B622039DEEA00F1FF80 /* Map Pin.swift in Sources */,
+				C9FBB9E320516FA600D2667A /* ReviewImageDownloader.swift in Sources */,
 				C9FCAD832021F2D500047DC6 /* FirebaseDBFunctions.swift in Sources */,
 				C9FCAD8720221A3F00047DC6 /* SignInUpViewController.swift in Sources */,
 				C9FCAD7D202151B100047DC6 /* SignInViewController.swift in Sources */,

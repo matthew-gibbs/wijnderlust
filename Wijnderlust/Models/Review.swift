@@ -7,23 +7,27 @@
 //
 
 import Foundation
+import UIKit
 
-class Review {
-    var title: String
-    var body: String
-    var rating: Int
-    var venueId: String
-    var venue: String
-    var date: Date
-    
-    init(title: String, body: String, rating: Int, venueId: String, venue: String, date: Date) {
-        self.title = title
-        self.body = body
-        self.rating = rating
-        self.venueId = venueId
-        self.venue = venue
-        self.date = date
-    }
-}
+//class Review {
+//    var body: String
+//    var rating: Int
+//    var userImageUrl: String
+//    var userName: String
+//    var userPhoto: UIImage
+//    
+//    init(body: String, rating: Int, userImageUrl: String, userName: String) {
+//        self.body = body
+//        self.rating = rating
+//        self.userImageUrl = userImageUrl
+//        self.userName = userName
+//    }
+//    
+//    init(with yelpReview: YelpReview) {
+//        self.body = yelpReview.text
+//        self.rating = yelpReview.rating
+//        self.userImageUrl = yelpReview.user.
+//    }
+//}
 
 

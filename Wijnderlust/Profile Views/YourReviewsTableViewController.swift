@@ -15,7 +15,7 @@ class YourReviewsTableViewController: UITableViewController {
     // MARK: - Table view data source
     let userID = Auth.auth().currentUser?.uid
     var reviewCount: Int = 0
-    var usersReviews = [Review]()
+    var usersReviews = [YelpReview]()
     
     override func viewDidLoad() {
         super.viewDidLoad()

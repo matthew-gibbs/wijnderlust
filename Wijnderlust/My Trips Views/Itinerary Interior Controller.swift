@@ -55,6 +55,35 @@ class ItineraryInteriorController: UITableViewController {
         print("Interior View Loaded")
         guard let itinerary = itinerary else { return }
         itineraryTitleLabel.text = itinerary.name.capitalized
+            
+        if let hotel = itinerary.hotelId {
+            client.venueWithId(hotel) { result in
+                switch result {
+                case .success(let hotel):
+                    self.dataSource.updateHotel(with: hotel)
+                    self.tableView.reloadData()
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }
+        
+        if let venueIds = itinerary.unparsedPlaces {
+            var places: [Venue] = []
+            for id in venueIds {
+                print(id)
+                client.venueWithId(id) { result in
+                    switch result {
+                    case .success(let venue):
+                        print(venue)
+                        places.append(venue)
+                        self.dataSource.updateVenues(with: venue)
+                    case .failure(let error):
+                        print(error)
+                    }
+                }
+            }
+        }
         
         //MARK: Update the day counter
         let calendar = NSCalendar.current
@@ -100,38 +129,6 @@ class ItineraryInteriorController: UITableViewController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
         print("Interior View Appeared")
-        
-        if let itinerary = itinerary {
-            
-            if let hotel = itinerary.hotelId {
-                client.venueWithId(hotel) { result in
-                    switch result {
-                    case .success(let hotel):
-                        self.dataSource.updateHotel(with: hotel)
-                        self.tableView.reloadData()
-                    case .failure(let error):
-                        print(error)
-                    }
-                }
-            }
-            
-            if let venueIds = itinerary.unparsedPlaces {
-                var places: [Venue] = []
-                for id in venueIds {
-                    print(id)
-                    client.venueWithId(id) { result in
-                        switch result {
-                        case .success(let venue):
-                            print(venue)
-                            places.append(venue)
-                            self.dataSource.updateVenues(with: venue)
-                        case .failure(let error):
-                            print(error)
-                        }
-                    }
-                }
-            }
-        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -184,6 +181,9 @@ class ItineraryInteriorController: UITableViewController {
         }
     }
     
+    @IBAction func unwindToItineraryInterior(segue: UIStoryboardSegue) {
+        
+    }
     
 }
 

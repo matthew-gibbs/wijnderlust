@@ -63,6 +63,7 @@ class Itinerary: NSObject, JSONInitialisable {
         
         if let unparsedPlaces = json["places"] as? [String] {
             self.unparsedPlaces = unparsedPlaces
+            print(unparsedPlaces)
         }
         
         if let flights = json["flights"] as? [String : Any] {

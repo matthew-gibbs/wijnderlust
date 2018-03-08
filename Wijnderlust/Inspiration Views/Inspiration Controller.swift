@@ -63,13 +63,9 @@ class InspirationController: UITableViewController {
                 navigationItem.backBarButtonItem = backItem
                 
                 if let interiorImage = selectedVenue.photo {
-                    print(interiorImage)
                     venueDetailController.passedVenueImage = interiorImage
                     venueDetailController.venue = selectedVenue
                 }
-                
-                //TODO: - Reviews
-//                venueDetailController.dataSource.updateData(selectedVenue.reviews)
             }
         }
     }
