@@ -59,6 +59,19 @@ enum Destinations: String {
 func returnCoords(for dest: Destinations.RawValue) -> Coordinate {
     switch dest {
     case "Amsterdam": return(Destinations.amsterdam.data.location)
+    case "Barcelona": return(Destinations.barcelona.data.location)
+    case "Edinburgh": return(Destinations.edinburgh.data.location)
+    case "Berlin": return(Destinations.berlin.data.location)
+    case "Rome": return(Destinations.rome.data.location)
+    case "Florence": return(Destinations.florence.data.location)
+    case "Paris": return(Destinations.paris.data.location)
+    case "London": return(Destinations.london.data.location)
+    case "Vienna": return(Destinations.vienna.data.location)
+    case "Brussels": return(Destinations.brussels.data.location)
+    case "Dublin": return(Destinations.dublin.data.location)
+    case "Lisbon": return(Destinations.lisbon.data.location)
+    case "Milan": return(Destinations.milan.data.location)
+    case "Prague": return(Destinations.prague.data.location)
     default: return(Coordinate(lat: 0, long: 0))
     }
 }

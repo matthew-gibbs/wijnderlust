@@ -11,6 +11,7 @@ import UIKit
 
 class InspirationController: UITableViewController {
     
+    @IBOutlet weak var subtitle: UILabel!
     let client = YelpClient()
     
     lazy var dataSource: InspirationDataSource = {
@@ -19,6 +20,10 @@ class InspirationController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //FIXME: Implement a random selection of a destination on load, then push that into the query, and change the subtitle.
+        
+        subtitle.text = "Some of our Favourites in London."
         
         tableView.dataSource = dataSource
         
@@ -41,8 +46,6 @@ class InspirationController: UITableViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        
-        navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,6 +71,10 @@ class InspirationController: UITableViewController {
                 }
             }
         }
+    }
+    
+    @IBAction func unwindToInspiration(segue: UIStoryboardSegue) {
+        
     }
 
 }

@@ -97,6 +97,11 @@ class VenueInteriorTableController: UITableViewController {
         })
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
     //Configure the venue interior.
     func configure(with venue: Venue) {
         //Do image assignment outside of the view controller to avoid redownload.
@@ -249,6 +254,7 @@ class VenueInteriorTableController: UITableViewController {
                 
                 alert!.addAction(itineraryAction)
             }
+        
             //Cancel action
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (alert: UIAlertAction!) -> Void in
             }

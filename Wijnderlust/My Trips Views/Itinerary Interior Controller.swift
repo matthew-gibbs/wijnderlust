@@ -30,7 +30,7 @@ class ItineraryInteriorController: UITableViewController {
             let itineraryId = self.itinerary!.id
             
             self.ref.child("users/\(self.userId)/itineraries").child(itineraryId).removeValue { error, _ in
-                print(error)
+                print(error as Any)
                 print("Itinerary Deleted!")
             }
             
@@ -159,6 +159,14 @@ class ItineraryInteriorController: UITableViewController {
             }
         }
         
+        if segue.identifier == "addPlaceSegue" {
+            let addPlaceController = segue.destination as! AddPlaceController
+            
+            if let itinerary = self.itinerary {
+                addPlaceController.itinerary = itinerary
+            }
+        }
+        
         if segue.identifier == "showVenue" {
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
                 let selectedVenue = dataSource.place(at: selectedIndexPath)
@@ -175,8 +183,6 @@ class ItineraryInteriorController: UITableViewController {
                     venueDetailController.venue = selectedVenue
                 }
                 
-                //TODO: - Reviews
-                //                venueDetailController.dataSource.updateData(selectedVenue.reviews)
             }
         }
     }

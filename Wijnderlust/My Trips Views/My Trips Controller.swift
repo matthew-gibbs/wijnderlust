@@ -26,13 +26,20 @@ class MyTripsController: UITableViewController {
         super.viewDidLoad()
         
         tableView.dataSource = dataSource
-        
-        self.tripsClient.child("users").child(userId).child("itineraries").observe(DataEventType.value, with: { (snapshot) in
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.tripsClient.child("users").child(userId).child("itineraries").observeSingleEvent(of: .value, with: { (snapshot) in
             
             if (snapshot.childrenCount) > 0 {
-
-            let data = snapshot.children
-            
+                
+                let data = snapshot.children
+                
                 var itineraries: [Itinerary] = []
                 
                 for child in data {
@@ -68,11 +75,6 @@ class MyTripsController: UITableViewController {
                 print("No Itineraries")
             }
         })
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     override func viewDidDisappear(_ animated: Bool) {

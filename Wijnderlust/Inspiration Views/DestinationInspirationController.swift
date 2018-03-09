@@ -1,35 +1,36 @@
 //
-//  AddPlaceController.swift
+//  DestinationInspirationController.swift
 //  Wijnderlust
 //
-//  Created by Matt Gibbs on 08/03/2018.
+//  Created by Matt Gibbs on 09/03/2018.
 //  Copyright © 2018 MG Creative Services. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class AddPlaceController: UITableViewController, UISearchBarDelegate {
-
+class DestinationInspirationController: UITableViewController, UISearchBarDelegate {
+    
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var destinationLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     let client = YelpClient()
-    var itinerary: Itinerary?
+    var destination: Destination?
     var location: Coordinate?
     
-    lazy var dataSource: AddPlaceDataSource = {
-        return AddPlaceDataSource(data: [], tableView: self.tableView)
+    lazy var dataSource: DestinationInspirationDataSource = {
+        return DestinationInspirationDataSource(data: [], tableView: self.tableView)
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let itinerary = itinerary else { print("The itinerary is not set yet"); return }
-        guard let location = Destinations(rawValue: itinerary.name)?.data.location else { print("This destination doesn't exist"); return }
+        guard let location = destination?.location else { return }
         self.location = location
         
         searchBar.delegate = self
         tableView.dataSource = dataSource
         
-        client.search(withTerm: "wine", at: location, categories: baseCategory as! [YelpCategory]) { [weak self] result in
+        client.search(withTerm: "wine", at: location, radius: 40000) { [weak self] result in
             switch result {
             case .success(let businesses):
                 self?.dataSource.update(with: businesses)
@@ -47,8 +48,9 @@ class AddPlaceController: UITableViewController, UISearchBarDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        guard let itinerary = itinerary else { return }
-        subtitleLabel.text = "The Best Places to Drink Wine in \(itinerary.name)."
+        guard let destination = destination else { return }
+        subtitleLabel.text = "The Best Places to Drink Wine in \(destination.name)."
+        destinationLabel.text = "\(destination.name)"
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -121,5 +123,5 @@ class AddPlaceController: UITableViewController, UISearchBarDelegate {
             }
         }
     }
-
+    
 }

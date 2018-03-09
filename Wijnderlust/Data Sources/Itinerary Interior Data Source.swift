@@ -175,7 +175,7 @@ class ItineraryInteriorDataSource: NSObject, UITableViewDataSource {
     //MARK: Helper methods
     func updateHotel(with data: Venue) {
         self.hotel = data
-        tableView.reloadSections([0], with: .right)
+        tableView.reloadSections([0], with: .fade)
     }
     
     func place(at indexPath: IndexPath) -> Venue {
@@ -184,7 +184,7 @@ class ItineraryInteriorDataSource: NSObject, UITableViewDataSource {
 
     func updateVenues(with data: Venue) {
         self.places.append(data)
-        tableView.reloadSections([1], with: .right)
+        tableView.reloadSections([1], with: .fade)
     }
     
     func downloadPhotoForVenue(_ venue: Venue, atIndexPath indexPath: IndexPath) {

@@ -28,24 +28,35 @@ class MyTripsDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itineraries.count
+        
+        if itineraries.count == 0 {
+            return 1
+        } else {
+            return itineraries.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ItineraryCell", for: indexPath) as! ItineraryCell
-        
-        let currentItinerary = itinerary(at: indexPath)
-
-        let viewModel = ItineraryCellViewModel(itinerary: currentItinerary)
-
-        cell.configure(with: viewModel)
-
-        if currentItinerary.photoState == .placeholder {
-            downloadPhotoForItinerary(currentItinerary, atIndexPath: indexPath)
+        if itineraries.count > 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ItineraryCell", for: indexPath) as! ItineraryCell
+            
+            let currentItinerary = itinerary(at: indexPath)
+            
+            let viewModel = ItineraryCellViewModel(itinerary: currentItinerary)
+            
+            cell.configure(with: viewModel)
+            
+            if currentItinerary.photoState == .placeholder {
+                downloadPhotoForItinerary(currentItinerary, atIndexPath: indexPath)
+            }
+            
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "NoTripsCell", for: indexPath) as! NoTripsCell
+            
+            return cell
         }
-
-        return cell
     }
     
     // MARK: Helpers
