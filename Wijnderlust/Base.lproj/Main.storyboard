@@ -20,16 +20,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Around Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1b-Cw-HPy">
-                                <rect key="frame" x="18" y="51" width="173" height="41"/>
+                                <rect key="frame" x="18" y="95" width="173" height="41"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <color key="textColor" red="0.18039215689999999" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J9U-yC-Oj3">
-                                <rect key="frame" x="0.0" y="127" width="375" height="540"/>
+                                <rect key="frame" x="0.0" y="171" width="375" height="496"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1b-g2-oky">
-                                <rect key="frame" x="327" y="56" width="30" height="30"/>
+                                <rect key="frame" x="327" y="100" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="4Tf-K1-X2J"/>
                                     <constraint firstAttribute="height" constant="30" id="kKH-zs-kPz"/>
@@ -40,7 +40,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Great Places to Drink Wine Near You..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="muV-vH-Fur">
-                                <rect key="frame" x="18" y="101" width="339" height="16"/>
+                                <rect key="frame" x="18" y="145" width="339" height="16"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                 <color key="textColor" red="0.68395806349999999" green="0.096892753760000006" blue="0.00096701340960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -64,14 +64,34 @@
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Around Me" image="AroundMe" id="cPa-gy-q4n"/>
+                    <navigationItem key="navigationItem" id="cf0-4n-GCy"/>
                     <connections>
                         <outlet property="aroundMeMap" destination="J9U-yC-Oj3" id="zLT-hS-1oK"/>
                         <outlet property="searchLabel" destination="muV-vH-Fur" id="gsx-G9-Mh6"/>
+                        <segue destination="Zs6-vp-29a" kind="show" identifier="showVenue" id="lOc-Nw-bz6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1517.5999999999999" y="-321.58920539730138"/>
+            <point key="canvasLocation" x="1538" y="394"/>
+        </scene>
+        <!--Around Me-->
+        <scene sceneID="ezR-wg-amR">
+            <objects>
+                <navigationController id="ous-qx-DSF" customClass="TransparentNavBarController" customModule="Wijnderlust" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Around Me" image="AroundMe" id="Nk3-Tt-Ea1"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Bi7-np-7dw">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="AtK-Ha-edn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RjJ-vF-D5h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1537" y="-322"/>
         </scene>
         <!--My Trips-->
         <scene sceneID="jeh-yU-lw9">
@@ -351,9 +371,9 @@
                         <outlet property="subheadingLabel" destination="ueP-3U-VvN" id="wXp-eT-5Id"/>
                         <segue destination="87p-Jj-C22" kind="presentation" identifier="logOut" modalTransitionStyle="flipHorizontal" id="q7w-Nt-Xvl"/>
                         <segue destination="Q8x-1y-AVA" kind="show" identifier="editProfileSegue" id="6C5-88-cb2"/>
-                        <segue destination="cIJ-Bz-vDs" kind="show" identifier="settingsSegue" id="Ncs-wA-Nza"/>
                         <segue destination="560-yQ-yMY" kind="show" identifier="yourReviewsSegue" id="Mgf-00-o7a"/>
                         <segue destination="0Tv-Af-SD7" kind="show" identifier="tripHistorySegue" id="SRY-2V-ZSO"/>
+                        <segue destination="fae-aU-R4n" kind="show" identifier="settingsSegue" id="pxg-mS-mdG"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vau-94-qpi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -389,19 +409,53 @@
             <point key="canvasLocation" x="4833" y="-52"/>
         </scene>
         <!--Settings-->
-        <scene sceneID="2rI-8W-TjC">
+        <scene sceneID="4Hk-LD-HAJ">
             <objects>
-                <viewController title="Settings" id="cIJ-Bz-vDs" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NQH-Vn-ic2">
+                <tableViewController title="Settings" id="fae-aU-R4n" customClass="SettingsController" customModule="Wijnderlust" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Op8-V3-kub">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="r7E-Mj-39g"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mh3-jw-qzl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <sections>
+                            <tableViewSection id="9Rs-rh-vVK">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="80" id="dF9-vr-Ojk">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dF9-vr-Ojk" id="l9a-Pk-Naq">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDa-5N-U08">
+                                                    <rect key="frame" x="16" y="29" width="97" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dOZ-Ta-lOb">
+                                                    <rect key="frame" x="310" y="24" width="51" height="31"/>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="LDa-5N-U08" firstAttribute="centerY" secondItem="l9a-Pk-Naq" secondAttribute="centerY" id="9jO-WS-x0f"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="dOZ-Ta-lOb" secondAttribute="trailing" id="I7l-Hz-2mj"/>
+                                                <constraint firstItem="LDa-5N-U08" firstAttribute="leading" secondItem="l9a-Pk-Naq" secondAttribute="leadingMargin" id="Mzx-YC-PsQ"/>
+                                                <constraint firstItem="dOZ-Ta-lOb" firstAttribute="centerY" secondItem="l9a-Pk-Naq" secondAttribute="centerY" id="mb2-M1-kfN"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="fae-aU-R4n" id="mHj-kV-tcR"/>
+                            <outlet property="delegate" destination="fae-aU-R4n" id="yj3-cy-79D"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u8j-Yb-I0e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4833" y="637"/>
+            <point key="canvasLocation" x="4833" y="635"/>
         </scene>
         <!--Your Reviews-->
         <scene sceneID="Ctn-Fl-LFB">
@@ -1432,7 +1486,7 @@
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="66l-Aj-Vs9" userLabel="venueRating" customClass="CosmosView" customModule="Wijnderlust" customModuleProvider="target">
+                                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="66l-Aj-Vs9" userLabel="venueRating" customClass="CosmosView" customModule="Wijnderlust" customModuleProvider="target">
                                                             <rect key="frame" x="113" y="1.5" width="65" height="13"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <userDefinedRuntimeAttributes>
@@ -1640,7 +1694,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rOa-05-Ngz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="VVb-yH-eDl" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1517.5999999999999" y="393.55322338830587"/>
+            <point key="canvasLocation" x="1538" y="1110"/>
         </scene>
         <!--My Trips Controller-->
         <scene sceneID="rXb-GM-jZH">
@@ -2525,7 +2579,7 @@
                                                             <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D5E-cM-vyx" customClass="CosmosView" customModule="Wijnderlust" customModuleProvider="target">
+                                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D5E-cM-vyx" customClass="CosmosView" customModule="Wijnderlust" customModuleProvider="target">
                                                             <rect key="frame" x="111.5" y="0.0" width="65" height="13"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
@@ -2858,7 +2912,7 @@
                                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BSj-nW-Fff" userLabel="venueRating" customClass="CosmosView" customModule="Wijnderlust" customModuleProvider="target">
+                                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BSj-nW-Fff" userLabel="venueRating" customClass="CosmosView" customModule="Wijnderlust" customModuleProvider="target">
                                                             <rect key="frame" x="113" y="1.5" width="65" height="13"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <userDefinedRuntimeAttributes>
@@ -3384,7 +3438,7 @@
                                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hm9-po-HUd" userLabel="venueRating" customClass="CosmosView" customModule="Wijnderlust" customModuleProvider="target">
+                                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hm9-po-HUd" userLabel="venueRating" customClass="CosmosView" customModule="Wijnderlust" customModuleProvider="target">
                                                             <rect key="frame" x="113" y="1.5" width="65" height="13"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <userDefinedRuntimeAttributes>
@@ -3768,7 +3822,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="109.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xk9-qF-7h2">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xk9-qF-7h2">
                                                     <rect key="frame" x="16" y="16" width="47" height="47"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="47" id="4b3-rZ-esT"/>
@@ -3856,7 +3910,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="109.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VUg-0F-w49">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VUg-0F-w49">
                                                     <rect key="frame" x="16" y="16" width="47" height="47"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="47" id="7dj-lK-7Mc"/>
@@ -4003,7 +4057,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hCf-sY-nKq">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hCf-sY-nKq">
                                                     <rect key="frame" x="16" y="16" width="47" height="47"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="47" id="Hom-WY-fEY"/>
@@ -4091,7 +4145,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="CvJ-U3-6G3" kind="relationship" relationship="viewControllers" id="fGG-rm-Z1H"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="ous-qx-DSF" kind="relationship" relationship="viewControllers" id="3J3-nh-Wsk"/>
                         <segue destination="v6h-Qq-0t7" kind="relationship" relationship="viewControllers" id="Za6-2Q-coI"/>
                         <segue destination="Ftd-94-4kn" kind="relationship" relationship="viewControllers" id="oXd-6d-pGB"/>
                     </connections>
@@ -4132,9 +4186,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="1fO-Tv-BKH"/>
-        <segue reference="ffT-5M-0EA"/>
+        <segue reference="lOc-Nw-bz6"/>
         <segue reference="Vi8-cb-mQF"/>
         <segue reference="ZVa-tz-TvT"/>
-        <segue reference="pXQ-VG-eVd"/>
+        <segue reference="q7w-Nt-Xvl"/>
     </inferredMetricsTieBreakers>
 </document>

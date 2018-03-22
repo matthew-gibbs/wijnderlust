@@ -90,6 +90,8 @@ func doesServeWine(categories: [YelpCategory]) -> Bool {
         case "wineries": wineResult = true
         case "winetastingroom": wineResult = true
         case "beer_and_wine": wineResult = true
+        case "pubs": wineResult = true
+        case "gastropubs": wineResult = true
         case "champagne_bars": wineResult = true
         case "bars": wineResult = true
         case "pianobars": wineResult = true
@@ -113,6 +115,7 @@ func doesServeFood(categories: [YelpCategory]) -> Bool {
             continue
         }
         switch category.alias {
+        case "food": foodResult = true
         case "acaibowls": foodResult = true
         case "backshop": foodResult = true
         case "bagels": foodResult = true

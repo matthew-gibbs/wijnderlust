@@ -11,9 +11,11 @@ import MapKit
 class VenuePin: NSObject, MKAnnotation {
     var title: String?
     var subtitle: String?
+    var venue: Venue
     var coordinate: CLLocationCoordinate2D
     
-    init(title: String, subtitle: String, coordinate: Coordinate) {
+    init(title: String, subtitle: String, coordinate: Coordinate, venue: Venue) {
+        self.venue = venue
         self.title = title
         self.subtitle = subtitle
         self.coordinate = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)

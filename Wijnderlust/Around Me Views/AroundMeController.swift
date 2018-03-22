@@ -10,7 +10,12 @@ import UIKit
 import CoreLocation
 import MapKit
 
-class AroundMeController: UIViewController, LocationPermissionsDelegate, LocationManagerDelegate {
+class AroundMeController: UIViewController, LocationPermissionsDelegate, LocationManagerDelegate, MKMapViewDelegate {
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
     
     //Create a Location Manager
     lazy var locationManager: LocationManager = {
@@ -28,6 +33,9 @@ class AroundMeController: UIViewController, LocationPermissionsDelegate, Locatio
     
     //If the user is searching
     var searchTerm: String = "wine"
+    
+    //Store venue when the pin is tapped
+    var selectedVenue: Venue?
 
     
     //Outlets
@@ -35,9 +43,11 @@ class AroundMeController: UIViewController, LocationPermissionsDelegate, Locatio
     @IBOutlet weak var searchLabel: UILabel!
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        aroundMeMap.delegate = self
         searchLabel.text = "Great Places to Drink Wine Near You..."
         
     }
@@ -105,7 +115,7 @@ class AroundMeController: UIViewController, LocationPermissionsDelegate, Locatio
     
     //MARK: Get Nearby Venues
     func getVenues(_ coordinate: Coordinate) {
-        client.search(withTerm: searchTerm, at: coordinate, radius: 3000) { [weak self] result in
+        client.search(withTerm: searchTerm, at: coordinate, radius: 5000) { [weak self] result in
             switch result {
             case .success(let businesses):
                 self?.nearbyVenues = businesses
@@ -120,10 +130,10 @@ class AroundMeController: UIViewController, LocationPermissionsDelegate, Locatio
     //MARK: Map Setup
     func mapSetup(coordinate: Coordinate, venues: [Venue]) {
         aroundMeMap.removeAnnotations(aroundMeMap.annotations)
-        
         adjustMap(with: coordinate, on: aroundMeMap)
+        
         for venue in venues {
-            let pin = VenuePin(title: venue.name, subtitle: "\(venue.rating) ⭐️", coordinate: venue.location)
+            let pin = VenuePin(title: venue.name, subtitle: "\(venue.rating) ⭐️", coordinate: venue.location, venue: venue)
             aroundMeMap.addAnnotation(pin)
         }
     }
@@ -158,4 +168,51 @@ class AroundMeController: UIViewController, LocationPermissionsDelegate, Locatio
         searchLabel.text = "Great Places to Drink Wine Near You..."
     }
     
+    //MARK: View for annotations
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        // If annotation is not of type RestaurantAnnotation (MKUserLocation types for instance), return nil
+        if !(annotation is VenuePin){
+            return nil
+        }
+        
+        var annotationView = self.aroundMeMap.dequeueReusableAnnotationView(withIdentifier: "Pin")
+        
+        if annotationView == nil{
+            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "Pin")
+            annotationView?.canShowCallout = true
+        }else{
+            annotationView?.annotation = annotation
+        }
+        
+        // Right accessory view
+        let button = UIButton(type: .detailDisclosure)
+        annotationView?.rightCalloutAccessoryView = button
+        
+        return annotationView
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        print("Map Annotation Tapped")
+        let pin = view.annotation as! VenuePin
+        selectedVenue = pin.venue
+        if let selectedVenue = selectedVenue {
+            performSegue(withIdentifier: "showVenue", sender: self)
+        }
+    }
+    
+    //MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showVenue" {
+            print("Segue Handler")
+            let venueDetailController = segue.destination as! VenueInteriorTableController
+            
+            //Set custom back image
+            let backItem = UIBarButtonItem()
+            backItem.title = ""
+            navigationItem.backBarButtonItem = backItem
+            
+            venueDetailController.venue = self.selectedVenue
+        }
+    }
 }

@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import MapKit
 import Firebase
+import Kingfisher
 
 class VenueInteriorTableController: UITableViewController {
     
@@ -56,19 +57,6 @@ class VenueInteriorTableController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let currentVenue = venue {
-            configure(with: currentVenue)
-           
-            client.reviews(for: currentVenue) { [weak self] result in
-                switch result {
-                case .success(let reviews):
-                    currentVenue.reviews = reviews
-                    self?.configure(with: currentVenue)
-                case .failure(let error):
-                    print(error)
-                }
-            }
-        }
         
         //MARK: Add To Itinerary Query
         var itineraries: [Itinerary] = []
@@ -99,14 +87,34 @@ class VenueInteriorTableController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        if let currentVenue = venue {
+            print(currentVenue)
+            configure(with: currentVenue)
+            
+            client.reviews(for: currentVenue) { [weak self] result in
+                switch result {
+                case .success(let reviews):
+                    currentVenue.reviews = reviews
+                    self?.configure(with: currentVenue)
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     //Configure the venue interior.
     func configure(with venue: Venue) {
         //Do image assignment outside of the view controller to avoid redownload.
-        guard let interiorImage = passedVenueImage else { return }
-        venueImage.image = interiorImage
+        if let interiorImage = passedVenueImage {
+            venueImage.image = interiorImage
+        } else {
+            let url = URL(string: venue.imageUrl)
+            if let url = url {
+                venueImage.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "placeholder"))
+            }
+        }
         
         let viewModel = VenueInteriorViewModel(venue: venue)
         venueNameLabel.text = viewModel.venueName
@@ -150,7 +158,6 @@ class VenueInteriorTableController: UITableViewController {
         venueLocationOnMap.addAnnotation(venue)
         
         if !(venue.reviews.isEmpty) {
-            print(venue.reviews)
             //Set Up Reviews
             
             if venue.reviews.count > 0 {
@@ -235,8 +242,6 @@ class VenueInteriorTableController: UITableViewController {
             saveToItineraryButton.alpha = 1
             //Initialise the alert
             alert = UIAlertController(title: "\n Choose Itinerary", message: "Select an itinerary from the list below to add this venue to it.", preferredStyle: .actionSheet)
-            let height:NSLayoutConstraint = NSLayoutConstraint(item: alert!.view, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: self.view.frame.height * 0.80)
-            alert!.view.addConstraint(height);
             let dateFormatterPrint = DateFormatter()
             dateFormatterPrint.dateFormat = "dd MMM"
             

@@ -13,6 +13,7 @@ class InspirationController: UITableViewController {
     
     @IBOutlet weak var subtitle: UILabel!
     let client = YelpClient()
+    let randomLocationIndex = random(0...Int(Destinations.count))
     
     lazy var dataSource: InspirationDataSource = {
         return InspirationDataSource(data: [], tableView: self.tableView)
@@ -21,13 +22,15 @@ class InspirationController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //FIXME: Implement a random selection of a destination on load, then push that into the query, and change the subtitle.
+        let randomLocation = Destinations.allDestinations[randomLocationIndex]
         
-        subtitle.text = "Some of our Favourites in London."
+        print(randomLocation)
+        
+        subtitle.text = "Some of our Favourites in \(randomLocation.name)."
         
         tableView.dataSource = dataSource
         
-        client.search(withTerm: "wine", at: Coordinate(lat: 51.5033640, long: -0.1276250), categories: baseCategory as! [YelpCategory]) { [weak self] result in
+        client.search(withTerm: "wine", at: randomLocation.location, categories: baseCategory as! [YelpCategory]) { [weak self] result in
             switch result {
             case .success(let businesses):
                 self?.dataSource.update(with: businesses)
@@ -77,4 +80,10 @@ class InspirationController: UITableViewController {
         
     }
 
+}
+
+//Random Number Generator
+func random(_ range:ClosedRange<Int>) -> Int
+{
+    return range.lowerBound + Int(arc4random_uniform(UInt32(range.upperBound - range.lowerBound)))
 }

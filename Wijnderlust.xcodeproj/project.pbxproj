@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B8563E5F761C96BAEF340DD8 /* Pods_Wijnderlust.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C74C7A61C3D6CBCF37CBB59 /* Pods_Wijnderlust.framework */; };
+		C907D9A7205C3450004EAD6B /* Settings Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C907D9A6205C3450004EAD6B /* Settings Controller.swift */; };
 		C9085E632030FBA9005BE89E /* Venue Interior Table Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9085E622030FBA9005BE89E /* Venue Interior Table Controller.swift */; };
 		C90E8B6B202B5DF20087B8EA /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B6A202B5DF20087B8EA /* Venue.swift */; };
 		C90E8B6E202B5E400087B8EA /* JSON Initialisable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B6D202B5E400087B8EA /* JSON Initialisable.swift */; };
@@ -87,6 +88,7 @@
 /* Begin PBXFileReference section */
 		4C74C7A61C3D6CBCF37CBB59 /* Pods_Wijnderlust.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wijnderlust.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D04B44D66B102F96051011D /* Pods-Wijnderlust.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wijnderlust.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wijnderlust/Pods-Wijnderlust.release.xcconfig"; sourceTree = "<group>"; };
+		C907D9A6205C3450004EAD6B /* Settings Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Settings Controller.swift"; sourceTree = "<group>"; };
 		C9085E622030FBA9005BE89E /* Venue Interior Table Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Venue Interior Table Controller.swift"; sourceTree = "<group>"; };
 		C90E8B6A202B5DF20087B8EA /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 		C90E8B6D202B5E400087B8EA /* JSON Initialisable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSON Initialisable.swift"; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				C91064CD2023555400A71F78 /* Profile Menu Controller.swift */,
+				C907D9A6205C3450004EAD6B /* Settings Controller.swift */,
 				C91064D020237AE700A71F78 /* EditProfileViewController.swift */,
 				C91064D22024C97A00A71F78 /* YourReviewsTableViewController.swift */,
 				C91064D82028E48E00A71F78 /* TripHistoryTableViewController.swift */,
@@ -510,6 +513,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Wijnderlust/Pods-Wijnderlust-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -517,6 +521,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -612,6 +617,7 @@
 				C90E8B6E202B5E400087B8EA /* JSON Initialisable.swift in Sources */,
 				C96AAA6E20432D6500514151 /* ItineraryImageDownloader.swift in Sources */,
 				C91064D92028E48E00A71F78 /* TripHistoryTableViewController.swift in Sources */,
+				C907D9A7205C3450004EAD6B /* Settings Controller.swift in Sources */,
 				C91064D72028D15C00A71F78 /* Review.swift in Sources */,
 				C94E3EAD2052E5020071AB47 /* DestinationInspirationController.swift in Sources */,
 				C9255A3C2045BABE0037B3B8 /* Itinerary Interior Data Source.swift in Sources */,

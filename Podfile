@@ -9,5 +9,6 @@ target 'Wijnderlust' do
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
+  pod 'Kingfisher', '~> 4.0'
 
 end
