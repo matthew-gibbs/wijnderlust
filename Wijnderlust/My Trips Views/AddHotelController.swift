@@ -101,17 +101,6 @@ class AddHotelController: UITableViewController, UISearchBarDelegate  {
         }
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "showHotelSegue" {
-//            if let selectedIndexPath = tableView.indexPathForSelectedRow {
-//                guard let cell = tableView.cellForRow(at: selectedIndexPath) as? HotelListCell  else { return }
-//                guard let hotel = cell.hotel else { return }
-//                let venueDetailController = segue.destination as! VenueInteriorTableController
-//
-//                venueDetailController.venue = hotel
-//            }
-//        }
-//    }
 
     
     //MARK: Search Bar Delegate Methods

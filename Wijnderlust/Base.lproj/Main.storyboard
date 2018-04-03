@@ -1402,7 +1402,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hl2-Pn-eFo" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="JUg-KA-Cfr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-55" y="1162"/>
+            <point key="canvasLocation" x="-86" y="410"/>
         </scene>
         <!--Inspiration-->
         <scene sceneID="8za-sp-Eyp">
@@ -1530,7 +1530,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XTV-fo-ZOj">
                                                     <rect key="frame" x="8" y="195" width="120" height="30"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="UJv-Wt-3lS" userLabel="wineStatusImage">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UJv-Wt-3lS" userLabel="wineStatusImage">
                                                             <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                                             <color key="tintColor" red="0.68395806349999999" green="0.096892753760000006" blue="0.00096701340960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
@@ -1600,7 +1600,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FND-FT-Oy4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="736.79999999999995" y="394.45277361319341"/>
+            <point key="canvasLocation" x="-930" y="410"/>
         </scene>
         <!--AroundMeSearchController-->
         <scene sceneID="Gdy-cR-e7o">
@@ -1694,7 +1694,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rOa-05-Ngz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="VVb-yH-eDl" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1538" y="1110"/>
+            <point key="canvasLocation" x="1537" y="1197"/>
         </scene>
         <!--My Trips Controller-->
         <scene sceneID="rXb-GM-jZH">
@@ -1893,7 +1893,7 @@
                                     <segue destination="oia-Dv-4OL" kind="show" identifier="showItinerary" id="XBV-Uh-QCb"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="NoTripsCell" rowHeight="105" id="01n-1l-Wcs" userLabel="NoTripsCell" customClass="NoTripsCell" customModule="Wijnderlust" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="NoTripsCell" rowHeight="105" id="01n-1l-Wcs" userLabel="NoTripsCell" customClass="NoTripsCell" customModule="Wijnderlust" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="455.5" width="375" height="105"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="01n-1l-Wcs" id="UVm-b7-2vm">
@@ -1937,6 +1937,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="containerCell" destination="oOw-me-Dli" id="WZh-IK-efK"/>
+                                    <segue destination="U2a-RZ-MQl" kind="show" id="DKy-uE-pLo"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -3554,7 +3555,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9LA-wA-wFk" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="dqa-Sg-Mig" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-55" y="1869"/>
+            <point key="canvasLocation" x="737" y="410"/>
         </scene>
         <!--Venue Interior Table Controller-->
         <scene sceneID="bKv-aQ-ZJx">
@@ -3759,7 +3760,7 @@
                                                         <constraint firstAttribute="height" constant="1" id="vib-43-xnM"/>
                                                     </constraints>
                                                 </view>
-                                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NLE-jJ-Y3h">
+                                                <mapView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsBuildings="NO" showsCompass="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLE-jJ-Y3h">
                                                     <rect key="frame" x="16" y="164" width="343" height="128"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="128" id="Rs0-0g-ynw"/>
@@ -4123,7 +4124,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AbP-p6-rze" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="737" y="1312"/>
+            <point key="canvasLocation" x="737" y="1428"/>
         </scene>
         <!--Main Nav Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -4186,9 +4187,10 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="1fO-Tv-BKH"/>
-        <segue reference="lOc-Nw-bz6"/>
+        <segue reference="ffT-5M-0EA"/>
         <segue reference="Vi8-cb-mQF"/>
+        <segue reference="Qaa-0e-Rg6"/>
         <segue reference="ZVa-tz-TvT"/>
-        <segue reference="q7w-Nt-Xvl"/>
+        <segue reference="dPf-fs-d6J"/>
     </inferredMetricsTieBreakers>
 </document>

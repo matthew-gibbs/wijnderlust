@@ -190,9 +190,8 @@ class VenueInteriorTableController: UITableViewController {
         if let alert = alert {
             present(alert, animated: true, completion: nil)
         } else {
-            print("It hasn't been initialised yet.")
+            print("Alert still being configured...")
         }
-        
     }
     
  

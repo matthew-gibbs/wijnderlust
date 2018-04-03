@@ -12,20 +12,12 @@ class SignInUpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 
     override func viewDidAppear(_ animated: Bool) {
         // Check if user is signed in.
         if UserDefaults.standard.isLoggedIn() == true {
             self.performSegue(withIdentifier: "isSignedIn", sender: self)
-            print("Is signed in")
         }
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 }

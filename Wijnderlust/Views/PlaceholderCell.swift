@@ -59,13 +59,13 @@ class PlaceholderCell: UITableViewCell {
         switch type {
         case .flightOutbound:
             cellImage.image = #imageLiteral(resourceName: " Flight Filled")
-            label.text = "Add Flights"
+            label.text = "Add Flights to Itinerary"
             timelineIcon.image = #imageLiteral(resourceName: "Timeline Flight")
             detachTopLine.isHidden = false
             return
         case .flightInbound:
             cellImage.image = #imageLiteral(resourceName: " Flight Filled")
-            label.text = "Add Flights"
+            label.text = "Add Flights to Itinerary"
             timelineIcon.image = #imageLiteral(resourceName: "Timeline Flight")
             timelinePoint.image = nil
             timelinePoint.backgroundColor = nil

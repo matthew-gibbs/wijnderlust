@@ -31,9 +31,7 @@ class MyTripsController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
+        
         self.tripsClient.child("users").child(userId).child("itineraries").observeSingleEvent(of: .value, with: { (snapshot) in
             
             if (snapshot.childrenCount) > 0 {
@@ -77,16 +75,6 @@ class MyTripsController: UITableViewController {
         })
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        
-//        navigationController?.setNavigationBarHidden(false, animated: true)
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

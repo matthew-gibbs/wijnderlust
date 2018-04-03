@@ -60,7 +60,7 @@ class SignUpTwoViewController: UIViewController {
     @IBAction func SignUp(_ sender: Any) {
         if let email = EmailField.text, let password = PasswordField.text {
             guard !email.isEmpty, !password.isEmpty else {
-                self.showAlertWith(title: "Are you dumb?", message: "We need an email and password to make you an account... It's not rocket science.")
+                self.showAlertWith(title: "Not Enough Data", message: "We need an email and password to make you an account.")
                 return
             }
             //TODO: Asbtract this into another file.
